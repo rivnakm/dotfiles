@@ -62,7 +62,6 @@ c0="${reset}${cyan}"                # first color
 ## OUTPUT
 
 cat <<EOF
-
 ${c0}       /\\	    ${nc}${USER}${ic}@${nc}${host}${reset}
 ${c0}      /  \\	    ${lc}os        ${ic}${os}${reset}
 ${c0}     /\\   \\	    ${lc}kernel    ${ic}${kernel}${reset}
