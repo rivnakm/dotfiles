@@ -108,7 +108,7 @@ alias dotf='/usr/bin/git --git-dir=$HOME/dotfiles.git --work-tree=$HOME'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source /opt/ros/melodic/setup.zsh
+# source /opt/ros/melodic/setup.zsh
 
 export PF_INFO='ascii title os kernel de wm shell memory palette'
 pfetch
