@@ -80,7 +80,7 @@ bindsym $mod+Shift+e exec ~/.config/dmenu/dmenu-edit-configs.sh
 
 # Application shortcuts
 bindsym $mod+backslash exec code
-bindsym $mod+b exec chromium
+bindsym $mod+b exec firefox
 
 # change focus
 bindsym $mod+j focus left

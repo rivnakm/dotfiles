@@ -44,4 +44,4 @@ case "$choice" in
 		exit 1
 	;;
 esac
-code "$choice"
+konsole -e vim "$choice"
