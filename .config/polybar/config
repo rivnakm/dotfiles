@@ -216,17 +216,17 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-;format-prefix = " "
+format-prefix = "cpu "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.green}
+format-underline = ${colors.cyan}
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-;format-prefix = " "
+format-prefix = "ram "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.purple}
+format-underline = ${colors.green}
 label = %percentage_used%%
 
 [module/wlan]
@@ -281,7 +281,7 @@ time-alt = %I:%M:%S %p
 
 ;format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.purple}
+format-underline = ${colors.cyan}
 
 label = %date% %time%
 
@@ -291,7 +291,7 @@ type = internal/pulseaudio
 format-volume = <label-volume>
 format-volume-underline = #8be9fd
 format-muted-underline = #8be9fd
-label-volume = VOL %percentage%%
+label-volume = vol %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = muted
@@ -348,13 +348,15 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
+;format-prefix = "bat "
 format-charging = <label-charging>
-format-charging-underline = ${colors.magenta}
+format-charging-underline = ${colors.green}
 
+;format-discharging = "batt "
 format-discharging = <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-;format-full-prefix = " "
+;format-full-prefix = "bat "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
@@ -381,7 +383,7 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <label>
-format-underline = ${colors.cyan}
+format-underline = ${colors.magenta}
 format-warn = !! <label-warn>
 format-warn-underline = ${colors.warning}
 
