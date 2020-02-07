@@ -205,29 +205,32 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # i3bar
-bar {
-        verbose yes
-        position top 
-        tray_output primary
-        status_command i3status
-        colors {
-    		background #282A36
-    		statusline #F8F8F2
-    		separator  #44475A
-
-    		focused_workspace  #44475A #44475A #F8F8F2
-    		active_workspace   #282A36 #44475A #F8F8F2
-    		inactive_workspace #282A36 #282A36 #BFBFBF
-    		urgent_workspace   #FF5555 #FF5555 #F8F8F2
-    		binding_mode       #FF5555 #FF5555 #F8F8F2
-	}
-}
+# bar {
+#        verbose yes
+#        position top 
+#        tray_output primary
+#        status_command i3status
+#        colors {
+#    		background #282A36
+#    		statusline #F8F8F2
+#    		separator  #44475A
+#
+#    		focused_workspace  #44475A #44475A #F8F8F2
+#    		active_workspace   #282A36 #44475A #F8F8F2
+#    		inactive_workspace #282A36 #282A36 #BFBFBF
+#     		urgent_workspace   #FF5555 #FF5555 #F8F8F2
+#     		binding_mode       #FF5555 #FF5555 #F8F8F2
+# 	}
+# }
 
 # Starting things with i3
 # exec --no-startup-id xcompmgr -C &    # Bare compositor to allow transparency
 for_window [class="yakuake"] floating enable
 for_window [class="systemsettings"] floating enable
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg 
+
+# Stating Polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 ## Plasma Integration
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
@@ -305,7 +308,6 @@ client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
 client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
 client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
-
 client.background       #F8F8F2
 
 # Pulse Audio controls
