@@ -58,6 +58,9 @@ floating_modifier $mod
 # Start a terminal
 bindsym $mod+Return exec konsole
 
+# Open Volume Mixer
+bindsym $mod+Shift+a exec pavucontrol-qt
+
 # Kill focused window
 bindsym $mod+Shift+q kill
 
@@ -304,3 +307,12 @@ client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
 client.background       #F8F8F2
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up 2% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down 2% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pulseaudio-ctl mute # mute sound
+
+# Sreen brightness controls
+# bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+# bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
