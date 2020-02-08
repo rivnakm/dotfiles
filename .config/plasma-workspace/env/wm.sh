@@ -9,4 +9,4 @@ export KDEWM=/usr/bin/i3
 # https://wiki.archlinux.org/index.php/compton
 
 # Start Compton
-compton & --config ~/.config/compton/compton.conf
+# compton & --config ~/.config/compton/compton.conf

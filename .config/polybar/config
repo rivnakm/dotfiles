@@ -48,14 +48,15 @@ height = 30
 radius = 0
 fixed-center = true
 
-background = ${colors.background}
+background = #F2282A36
 foreground = ${colors.foreground}
 
 line-size = 3
 line-color = #f00
 
-border-size = 0
+border-size = 6
 border-color = #00000000
+border-bottom-size = 0
 
 padding-left = 0
 padding-right = 2

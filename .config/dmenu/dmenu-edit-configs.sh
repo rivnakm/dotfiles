@@ -8,19 +8,27 @@
 # Dmenu script for editing some of my more frequently edited config files.
 
 
-declare options=("
+declare options=("compton
+editor
 i3
 i3status
 kde
 polybar
+rofi
 vim
 zsh")
 
-choice=$(echo -e "${options[@]}" | dmenu -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'Hack-10' -i -p 'Edit a config file: ')
+choice=$(echo -e "${options[@]}" | rofi -i -dmenu -p "Edit a config file: " -font "Hack 10" )
 
 case "$choice" in
 	quit)
 		echo "Program terminated." && exit 1
+	;;
+	compton)
+		choice="$HOME/.config/compton/compton.conf"
+	;;
+	editor)
+		choice="$HOME/.config/dmenu/dmenu-edit-configs.sh"
 	;;
 	i3)
 		choice="$HOME/.config/i3/config"
@@ -34,6 +42,9 @@ case "$choice" in
 	polybar)
 		choice="$HOME/.config/polybar/config"
 	;;
+	rofi)
+		choice="$HOME/.config/rofi/config.rasi"
+	;;
     vim)
 		choice="$HOME/.vimrc"
 	;;
@@ -44,4 +55,4 @@ case "$choice" in
 		exit 1
 	;;
 esac
-konsole -e vim "$choice"
+code "$choice"
