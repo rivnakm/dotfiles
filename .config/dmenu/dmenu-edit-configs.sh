@@ -1,9 +1,12 @@
 #!/bin/bash
-#  ____ _____
-# |  _ \_   _|  Derek Taylor (DistroTube)
-# | | | || |    http://www.youtube.com/c/DistroTube
-# | |_| || |    http://www.gitlab.com/dwt1/
-# |____/ |_|
+#  __  __ ____  
+# |  \/  |  _ \ 
+# | |\/| | |_) |
+# | |  | |  _ < 
+# |_|  |_|_| \_\
+#
+# Michael Rivnak
+# [https://github.com/mrivnak]
 #
 # Dmenu script for editing some of my more frequently edited config files.
 

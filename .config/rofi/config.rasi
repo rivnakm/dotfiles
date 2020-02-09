@@ -1,3 +1,4 @@
+
 // Dracula colors
 * {
     background: 	#282a36;
@@ -14,7 +15,7 @@
     yellow: 	    #f1fa8c;
 }
 * {
-    selected-normal-background:     @comment;
+    selected-normal-background:     @cyan;
     normal-background:              @background;
     normal-foreground:              @foreground;
     alternate-normal-background:    @normal-background;

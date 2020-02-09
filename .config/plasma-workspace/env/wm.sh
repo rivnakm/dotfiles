@@ -1,3 +1,14 @@
+#  __  __ ____  
+# |  \/  |  _ \ 
+# | |\/| | |_) |
+# | |  | |  _ < 
+# |_|  |_|_| \_\
+#
+# Michael Rivnak
+# [https://github.com/mrivnak]
+#
+# KDE window manager config file
+
 # Disable KWin and use i3gaps as WM
 export KDEWM=/usr/bin/i3
 

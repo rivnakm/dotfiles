@@ -1,5 +1,13 @@
-# i3status configuration file.
-# see "man i3status" for documentation.
+#  __  __ ____  
+# |  \/  |  _ \ 
+# | |\/| | |_) |
+# | |  | |  _ < 
+# |_|  |_|_| \_\
+#
+# Michael Rivnak
+# [https://github.com/mrivnak]
+#
+# i3status config file
 
 # It is important that this file is edited as UTF-8.
 # The following line should contain a sharp s:

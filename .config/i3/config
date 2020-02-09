@@ -1,26 +1,13 @@
-# (No) Title Bars
-for_window [class="^.*"] border pixel 0
-
-# Gaps
-#gaps inner 10
-#gaps outer 0
-#smart_gaps on
-
-# Assign workspaces to screens
-#  On E560, eDP-1 is the first display, while DP-2 is VGA output
-workspace 1 output eDP-1
-workspace 2 output eDP-1
-workspace 3 output eDP-1
-workspace 4 output eDP-1
-workspace 5 output DP-2
-workspace 6 output DP-2
-workspace 7 output DP-2
-workspace 8 output DP-2
-
-# Assign applications to workspaces
-#  xprop | grep "CLASS"
-#assign [class="Firefox"] 1
-#assign [class="sublime_text"] 2
+#  __  __ ____  
+# |  \/  |  _ \ 
+# | |\/| | |_) |
+# | |  | |  _ < 
+# |_|  |_|_| \_\
+#
+# Michael Rivnak
+# [https://github.com/mrivnak]
+#
+# i3-gaps config file
 
 set $black       #44475A
 set $darkblack   #282A36
@@ -68,7 +55,7 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+x move workspace to output right
 
 # rofi
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -p "Run: " -font "Hack 10" '
+bindsym $mod+space exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -width 25 -p "Run: " -font "Hack 10" '
 
 # dmenu
 # bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'Hack-10' -p 'dmenu:'"
@@ -109,8 +96,6 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# bindsym $mod+space exec rofi -show run
-
 # split in horizontal orientation
 bindsym $mod+h split v
 
@@ -129,7 +114,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -174,10 +159,6 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-# Audio controls (now provided by Plasma)
-# bindsym XF86AudioLowerVolume exec ~/audio.sh --down
-# bindsym XF86AudioRaiseVolume exec ~/audio.sh --up
-
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -204,6 +185,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+##############################
+#       Desktop Setup
+##############################
+
 # i3bar
 # bar {
 #        verbose yes
@@ -225,10 +210,10 @@ bindsym $mod+r mode "resize"
 
 # Starting things with i3
 # exec --no-startup-id xcompmgr -C &    # Bare compositor to allow transparency
-exec --no-startup-id "compton & --config ~/.config/compton/compton.conf"
+exec --no-startup-id "compton --config ~/.config/compton/compton.conf"
 for_window [class="yakuake"] floating enable
 for_window [class="systemsettings"] floating enable
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg 
+exec --no-startup-id "feh --bg-fill ~/Pictures/wallpaper.jpg"
 
 # Stating Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -249,10 +234,12 @@ for_window [class="Kmix"] floating enable, border none
 for_window [class="Klipper"] floating enable, border none
 for_window [class="Plasmoidviewer"] floating enable, border none
 
-### i3-gaps stuff ###
+##############################
+#       i3-gaps stuff 
+##############################
 
 # Necessary for i3-gaps to work properly (pixel can be any value)
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 3
 
 # Smart Gaps
 # smart_gaps on
@@ -261,7 +248,7 @@ for_window [class="^.*"] border pixel 0
 smart_borders on
 
 # Set inner/outer gaps
-gaps inner 12
+gaps inner 15
 gaps outer 0
 
 # Gaps mode
@@ -304,12 +291,17 @@ mode "$mode_gaps_outer" {
 }
 
 # class                 border  bground text    indicator child_border
-client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+# client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused          #8BE9FD #8BE9FD #282A36 #8BE9FD   #8BE9FD
 client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
 client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
 client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 client.background       #F8F8F2
+
+#################################
+#       Desktop Controls
+#################################
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up 2% #increase sound volume
