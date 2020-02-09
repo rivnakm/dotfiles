@@ -65,7 +65,7 @@ bindsym $mod+Shift+a exec pavucontrol-qt
 bindsym $mod+Shift+q kill
 
 # Move workspace to another display
-bindsym $mod+x move workspace to output right
+# bindsym $mod+x move workspace to output right
 
 # rofi
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -p "Run: " -font "Hack 10" '
