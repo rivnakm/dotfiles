@@ -41,7 +41,8 @@ height = 30
 radius = 0
 fixed-center = true
 
-background = #F2282A36
+;background = #F2282A36
+background = #282A36
 foreground = ${colors.foreground}
 
 line-size = 3

@@ -11,11 +11,11 @@
 # Dmenu script for editing some of my more frequently edited config files.
 
 
-declare options=("compton
-editor
+declare options=("editor
 i3
 i3status
 kde
+picom
 polybar
 rofi
 vim
@@ -26,9 +26,6 @@ choice=$(echo -e "${options[@]}" | rofi -i -dmenu -p "Edit a config file: " -fon
 case "$choice" in
 	quit)
 		echo "Program terminated." && exit 1
-	;;
-	compton)
-		choice="$HOME/.config/compton/compton.conf"
 	;;
 	editor)
 		choice="$HOME/.config/dmenu/dmenu-edit-configs.sh"
@@ -41,6 +38,9 @@ case "$choice" in
 	;;
     kde)
 		choice="$HOME/.config/plasma-workspace/env/wm.sh"
+	;;
+	picom)
+		choice="$HOME/.config/picom.conf"
 	;;
 	polybar)
 		choice="$HOME/.config/polybar/config"
