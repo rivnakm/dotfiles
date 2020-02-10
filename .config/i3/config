@@ -55,10 +55,10 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+x move workspace to output right
 
 # rofi
-bindsym $mod+space exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -width 25 -p "Run: " -font "Hack 10" '
+# bindsym $mod+space exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -width 25 -p "Run: " -font "Hack 10" '
 
 # dmenu
-# bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'Hack-10' -p 'dmenu:'"
+bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'Hack-10' -p 'dmenu:'"
 bindsym $mod+Shift+e exec ~/.config/dmenu/dmenu-edit-configs.sh
 
 # Screenshot (now provided by Plasma)
@@ -69,8 +69,8 @@ bindsym $mod+Shift+e exec ~/.config/dmenu/dmenu-edit-configs.sh
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # Application shortcuts
-bindsym $mod+backslash exec code
-bindsym $mod+b exec firefox
+bindsym $mod+backslash exec codium
+bindsym $mod+b exec chromium-browser
 
 # change focus
 bindsym $mod+j focus left
@@ -161,26 +161,26 @@ bindsym $mod+Shift+r restart
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+	# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 5 ppt
-        bindsym k resize grow height 10 px or 5 ppt
-        bindsym l resize shrink height 10 px or 5 ppt
-        bindsym semicolon resize grow width 10 px or 5 ppt
+	# Pressing left will shrink the window’s width.
+	# Pressing right will grow the window’s width.
+	# Pressing up will shrink the window’s height.
+	# Pressing down will grow the window’s height.
+	bindsym j resize shrink width 10 px or 5 ppt
+	bindsym k resize grow height 10 px or 5 ppt
+	bindsym l resize shrink height 10 px or 5 ppt
+	bindsym semicolon resize grow width 10 px or 5 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 5 ppt
-        bindsym Down resize grow height 10 px or 5 ppt
-        bindsym Up resize shrink height 10 px or 5 ppt
-        bindsym Right resize grow width 10 px or 5 ppt
+	# same bindings, but for the arrow keys
+	bindsym Left resize shrink width 10 px or 5 ppt
+	bindsym Down resize grow height 10 px or 5 ppt
+	bindsym Up resize shrink height 10 px or 5 ppt
+	bindsym Right resize grow width 10 px or 5 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+	# back to normal: Enter or Escape
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -245,50 +245,50 @@ for_window [class="^.*"] border pixel 3
 # smart_gaps on
 
 # Smart Borders
-smart_borders on
+# smart_borders on
 
 # Set inner/outer gaps
-gaps inner 15
-gaps outer 0
+# gaps inner 15
+# gaps outer 0
 
 # Gaps mode
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
+# set $mode_gaps Gaps: (o) outer, (i) inner
+# set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+# set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+# bindsym $mod+Shift+g mode "$mode_gaps"
 
-mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
+# mode "$mode_gaps" {
+#       bindsym o      mode "$mode_gaps_outer"
+#	bindsym i      mode "$mode_gaps_inner"
+#	bindsym Return mode "default"
+#	bindsym Escape mode "default"
+# }
 
-mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
+# mode "$mode_gaps_inner" {
+#	bindsym plus  gaps inner current plus 5
+#	bindsym minus gaps inner current minus 5
+#	bindsym 0     gaps inner current set 0
+#
+#	bindsym Shift+plus  gaps inner all plus 5
+#	bindsym Shift+minus gaps inner all minus 5
+#	bindsym Shift+0     gaps inner all set 0
+#
+#	bindsym Return mode "default"
+#	bindsym Escape mode "default"
+# }
 
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
-
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     gaps outer all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
+# mode "$mode_gaps_outer" {
+#	bindsym plus  gaps outer current plus 5
+#	bindsym minus gaps outer current minus 5
+#	bindsym 0     gaps outer current set 0
+#
+#	bindsym Shift+plus  gaps outer all plus 5
+#	bindsym Shift+minus gaps outer all minus 5
+#	bindsym Shift+0     gaps outer all set 0
+#
+#	bindsym Return mode "default"
+#	bindsym Escape mode "default"
+# }
 
 # class                 border  bground text    indicator child_border
 # client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4

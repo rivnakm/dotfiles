@@ -21,7 +21,8 @@ rofi
 vim
 zsh")
 
-choice=$(echo -e "${options[@]}" | rofi -i -dmenu -p "Edit a config file: " -font "Hack 10" )
+choice=$(echo -e "${options[@]}" | dmenu -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'Hack-10' -i -p 'Edit a config file: ')
+# choice=$(echo -e "${options[@]}" | rofi -i -dmenu -p "Edit a config file: " -font "Hack 10" )
 
 case "$choice" in
 	quit)
@@ -58,4 +59,4 @@ case "$choice" in
 		exit 1
 	;;
 esac
-code "$choice"
+codium "$choice"
