@@ -48,7 +48,7 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 6
+border-size = 0
 border-color = #00000000
 border-bottom-size = 0
 
