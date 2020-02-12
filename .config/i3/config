@@ -213,7 +213,7 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id "picom"
 for_window [class="yakuake"] floating enable
 for_window [class="systemsettings"] floating enable
-exec --no-startup-id "feh --bg-fill ~/Pictures/wallpaper.jpg"
+exec_always --no-startup-id "feh --bg-fill ~/Pictures/girl.png"
 
 # Stating Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

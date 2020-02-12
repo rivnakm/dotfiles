@@ -117,3 +117,4 @@ export PF_COL1=6
 export PF_COL2=8
 export PF_COL3=6
 pfetch
+PATH=$PATH:~/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin

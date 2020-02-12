@@ -352,8 +352,8 @@ format-charging-underline = ${colors.green}
 format-discharging = bat <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-;format-full-prefix = "bat "
-format-full-prefix-foreground = bat ${colors.foreground}
+format-full-prefix = "bat "
+format-full-prefix-foreground = ${colors.foreground}
 format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = 
@@ -380,7 +380,7 @@ warn-temperature = 60
 
 format = cpu <label>
 format-underline = ${colors.magenta}
-format-warn = !! <label-warn>
+format-warn = <label-warn>
 format-warn-underline = ${colors.warning}
 
 label = %temperature-c%
