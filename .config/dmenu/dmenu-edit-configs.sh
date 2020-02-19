@@ -17,11 +17,12 @@ i3status
 kde
 picom
 polybar
+qtile
 rofi
 vim
 zsh")
 
-choice=$(echo -e "${options[@]}" | rofi -i -dmenu -p "Edit a config file: " -font "Hack 10" )
+choice=$(echo -e "${options[@]}" | rofi -width 25 -font 'Hack 10' -padding 10 -icon-theme 'Breeze-Dark' -dmenu -p "config >>> ")
 
 case "$choice" in
 	quit)
@@ -44,6 +45,9 @@ case "$choice" in
 	;;
 	polybar)
 		choice="$HOME/.config/polybar/config"
+	;;
+	qtile)
+		choice="$HOME/.config/qtile/config.py"
 	;;
 	rofi)
 		choice="$HOME/.config/rofi/config.rasi"

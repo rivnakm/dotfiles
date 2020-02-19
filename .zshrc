@@ -112,7 +112,7 @@ alias dotf='/usr/bin/git --git-dir=$HOME/dotfiles.git --work-tree=$HOME'
 source /opt/ros/melodic/setup.zsh
 source $HOME/catkin_ws/devel/setup.zsh
 
-export PF_INFO='ascii title os kernel de wm shell memory palette'
+export PF_INFO='ascii title os kernel pkgs wm shell memory palette'
 export PF_COL1=6
 export PF_COL2=8
 export PF_COL3=6

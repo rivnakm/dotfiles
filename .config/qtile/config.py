@@ -30,11 +30,15 @@ def window_to_next_group(qtile):
 keys = [
     Key(
         [mod], "Return",
-        lazy.spawn(term)                      # Open terminal
+        lazy.spawn(term)                        # Open terminal
         ),
     Key(
         [mod], "Tab",
         lazy.next_layout()                      # Toggle through layouts
+        ),
+    Key(
+        [mod, 'shift'], "Tab",
+        lazy.prev_layout()                  # Toggle through layouts
         ),
     Key(
         [mod, "shift"], "c",
@@ -121,12 +125,39 @@ keys = [
     ### Dmenu scripts launched with ALT + CTRL + KEY
     Key(
         [mod, "control"], "e",
-        lazy.spawn("~/.config/dmenu/dmenu-edit-configs.sh")
+        lazy.spawn("/home/michaelrivnak/.config/dmenu/dmenu-edit-configs.sh")
         ),
     Key(
         [mod, "control"], "s",
         lazy.spawn("rofi -show ssh -display-ssh \"ssh >>> \" -width 25 -font 'Hack 10' -padding 10 -icon-theme 'Breeze-Dark'")
         ),
+    ### Volume and Brightness
+    Key(
+        [], 'XF86AudioRaiseVolume',
+        lazy.spawn("amixer -c 0 -q set Master 3dB+")
+    ),
+    Key(
+        [], 'XF86AudioLowerVolume',
+        lazy.spawn("amixer -c 0 -q set Master 3dB-")
+    ),
+    Key(
+        [], 'XF86AudioMute',
+        lazy.spawn("pulseaudio-ctl mute")
+    ),
+    Key(
+        [], 'XF86MonBrightnessUp',
+        lazy.spawn('xbacklight -inc 20')
+    ),
+    Key(
+        [], 'XF86MonBrightnessDown',
+        lazy.spawn('xbacklight -dec 20')
+    ),
+
+    ### Extras
+    Key(
+        ['mod4', 'shift'], 's',
+        lazy.spawn('spectacle')
+    )
 ]
 
 ##### BAR COLORS #####
@@ -152,11 +183,11 @@ group_names = [
     ("III", {'layout': 'monadtall'}),
     ("IV", {'layout': 'monadtall'}),
     ("V", {'layout': 'monadtall'}),
-    ("VI", {'layout': 'monadtall', 'persist': False}),
-    ("VII", {'layout': 'monadtall', 'persist': False}),
-    ("VIII", {'layout': 'monadtall', 'persist': False}),
-    ("IX", {'layout': 'monadtall', 'persist': False}),
-    ("X", {'layout': 'monadtall', 'persist': False})
+    ("VI", {'layout': 'monadtall'}),
+    ("VII", {'layout': 'monadtall'}),
+    ("VIII", {'layout': 'monadtall'}),
+    ("IX", {'layout': 'monadtall'}),
+    ("X", {'layout': 'monadtall'})
 ]
 
 groups = [Group(name, **kwargs) for name, kwargs in group_names]
@@ -206,7 +237,7 @@ layouts = [
 widget_defaults = dict(
     font='Hack Bold',
     fontsize=14,
-    padding=2,
+    padding=3,
     background=colors_dict['background'],
     foreground=colors_dict['foreground'],
     inactive=colors_dict['comment']
@@ -227,7 +258,9 @@ screens = [
                     highlight_color=colors_dict['highlight'],
                     highlight_method='block',
                     rounded=False,
-                    this_current_screen_border=colors_dict['highlight']
+                    this_current_screen_border=colors_dict['highlight'],
+                    urgent_alert_method='text',
+                    urgent_text=colors_dict['red']
                 ),
                 #widget.TaskList(
                 #    foreground = "2e3440",
@@ -249,10 +282,10 @@ screens = [
                     size_percent=60
                 ),
                 widget.TextBox(
-                    text='',
+                    text='',
                     foreground=colors_dict['cyan']
                 ),
-                widget.Pacman(
+                widget.CurrentLayout(
                     foreground=colors_dict['cyan']
                 ),
                 widget.Sep(
@@ -261,11 +294,36 @@ screens = [
                     size_percent=60
                 ),
                 widget.TextBox(
-                    text='',
+                    text='',
                     foreground=colors_dict['pink']
                 ),
-                widget.CurrentLayout(
+                widget.Volume(
                     foreground=colors_dict['pink']
+                ),
+                widget.Sep(
+                    foreground=colors_dict['comment'],
+                    padding=8,
+                    size_percent=60
+                ),
+                widget.TextBox(
+                    text='',
+                    foreground=colors_dict['green']
+                ),
+                widget.Wlan(
+                    foreground=colors_dict['green'],
+                    interface='wlp4s0'
+                ),
+                widget.Sep(
+                    foreground=colors_dict['comment'],
+                    padding=8,
+                    size_percent=60
+                ),
+                widget.TextBox(
+                    text='',
+                    foreground=colors_dict['purple']
+                ),
+                widget.Pacman(
+                    foreground=colors_dict['purple']
                 ),
                 widget.Sep(
                     foreground=colors_dict['comment'],
@@ -274,11 +332,11 @@ screens = [
                 ),
                 widget.TextBox(
                     text='',
-                    foreground=colors_dict['green']
+                    foreground=colors_dict['cyan']
                 ),
                 widget.Memory(
                     format='{MemUsed}M/{MemTotal}M',
-                    foreground=colors_dict['green']
+                    foreground=colors_dict['cyan']
                 ),
                 widget.Sep(
                     foreground=colors_dict['comment'],
@@ -287,11 +345,46 @@ screens = [
                 ),
                 widget.TextBox(
                     text='',
-                    foreground=colors_dict['purple']
+                    foreground=colors_dict['pink']
                 ),
                 widget.CPU(
-                    format='CPU {freq_current}GHz {load_percent}%',
+                    format='{freq_current}GHz {load_percent}%',
+                    foreground=colors_dict['pink']
+                ),
+                widget.Sep(
+                    foreground=colors_dict['comment'],
+                    padding=8,
+                    size_percent=60
+                ),
+                widget.TextBox(
+                    text='',
+                    foreground=colors_dict['green']
+                ),
+                widget.TextBox(
+                    text='',
+                    foreground=colors_dict['green'],
+                ),
+                widget.ThermalSensor(
+                    foreground=colors_dict['green'],
+                    foreground_alert=colors_dict['red']
+                ),
+                widget.Sep(
+                    foreground=colors_dict['comment'],
+                    padding=8,
+                    size_percent=60
+                ),
+                widget.TextBox(
+                    text='',
                     foreground=colors_dict['purple']
+                ),
+                widget.Battery(
+                    foreground=colors_dict['purple'],
+                    format='{percent:.0%}{char}',
+                    low_foreground=colors_dict['red'],
+                    charge_char=' ',
+                    discharge_char='',
+                    empty_char='',
+                    update_interval=30
                 ),
                 widget.Sep(
                     foreground=colors_dict['comment'],
@@ -334,22 +427,27 @@ if __name__ in ["config", "__main__"]:
     follow_mouse_focus = True
     bring_front_click = False
     cursor_warp = False
-    floating_layout = layout.Floating(float_rules=[
-        {'wmclass': 'confirm'},
-        {'wmclass': 'dialog'},
-        {'wmclass': 'download'},
-        {'wmclass': 'error'},
-        {'wmclass': 'file_progress'},
-        {'wmclass': 'notification'},
-        {'wmclass': 'splash'},
-        {'wmclass': 'toolbar'},
-        {'wmclass': 'confirmreset'},  # gitk
-        {'wmclass': 'makebranch'},  # gitk
-        {'wmclass': 'maketag'},  # gitk
-        {'wname': 'branchdialog'},  # gitk
-        {'wname': 'pinentry'},  # GPG key password entry
-        {'wmclass': 'ssh-askpass'},  # ssh-askpass
-    ])
+    floating_layout = layout.Floating(
+        float_rules=[
+            {'wmclass': 'confirm'},
+            {'wmclass': 'dialog'},
+            {'wmclass': 'download'},
+            {'wmclass': 'error'},
+            {'wmclass': 'file_progress'},
+            {'wmclass': 'notification'},
+            {'wmclass': 'splash'},
+            {'wmclass': 'toolbar'},
+            {'wmclass': 'confirmreset'},  # gitk
+            {'wmclass': 'makebranch'},  # gitk
+            {'wmclass': 'maketag'},  # gitk
+            {'wname': 'branchdialog'},  # gitk
+            {'wname': 'pinentry'},  # GPG key password entry
+            {'wmclass': 'ssh-askpass'},  # ssh-askpass
+        ],
+        border_focus=colors_dict['cyan'],
+        border_normal=colors_dict['background'],
+        border_width=2
+    )
     auto_fullscreen = True
     focus_on_window_activation = "smart"
 
