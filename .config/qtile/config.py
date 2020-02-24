@@ -251,6 +251,9 @@ screens = [
     Screen(
         top=bar.Bar(
             [
+                widget.Image(
+                    filename='/home/michaelrivnak/Pictures/manjaro.png'
+                ),
                 widget.GroupBox(
                     active=colors_dict['cyan'],
                     font='SF Pro Display',
