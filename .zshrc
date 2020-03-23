@@ -10,7 +10,7 @@ fi
 export PATH=$PATH:$HOME/.local/bin:$HOME/.emacs.d/bin
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/michaelrivnak/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -109,12 +109,9 @@ alias dotf='/usr/bin/git --git-dir=$HOME/dotfiles.git --work-tree=$HOME'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source /opt/ros/melodic/setup.zsh
-source $HOME/catkin_ws/devel/setup.zsh
 
 export PF_INFO='ascii title os kernel pkgs wm shell memory palette'
 export PF_COL1=6
 export PF_COL2=8
 export PF_COL3=6
 pfetch
-PATH=$PATH:~/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin
