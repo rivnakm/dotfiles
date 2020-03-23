@@ -1,0 +1,17 @@
+[Desktop Entry]
+DefaultProfile=Dracula.profile
+
+[Favorite Profiles]
+Favorites=Dracula.profile
+
+[KonsoleWindow]
+SaveGeometryOnExit=false
+ShowMenuBarByDefault=false
+
+[MainWindow]
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAAvwAAAHWAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+
+[Notification Messages]
+CloseAllTabs=true
