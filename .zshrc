@@ -110,7 +110,7 @@ alias dotf='/usr/bin/git --git-dir=$HOME/dotfiles.git --work-tree=$HOME'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PF_INFO='ascii title os kernel pkgs wm shell memory palette'
+export PF_INFO='ascii title os kernel pkgs uptime shell memory palette'
 export PF_COL1=6
 export PF_COL2=8
 export PF_COL3=6
