@@ -76,7 +76,37 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	alias-finder
+	archlinux
+	autopep8
+	aws
+#	brew
+	cargo
+	colored-man-pages
+	command-not-found
+	copydir
+	copyfile
+#	debian
+	direnv
+	dirhistory
+	django
+#	dnf
+	docker
+	docker-compose
+	emoji
+	extract
+	gcloud
+	git
+	gitignore
+	kate
+	pip
+	python
+	rust
+#	suse
+#	ubuntu
+	vscode
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,6 +123,8 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
