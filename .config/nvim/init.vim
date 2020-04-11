@@ -15,8 +15,10 @@ colorscheme dracula
 
 " Set backgrounds to transparent
 hi Normal guibg=NONE ctermbg=NONE
-hi StatusLine guibg=NONE ctermfg=0 ctermbg=6
-hi StatusLineNC guibg=NONE ctermfg=6 ctermbg=NONE
+hi StatusLine guibg=NONE ctermfg=0 ctermbg=4
+hi StatusLineNC guibg=NONE ctermfg=4 ctermbg=NONE
+hi VertSplit cterm=NONE ctermfg=4 ctermbg=NONE guibg=NONE
+hi NonText ctermfg=4
 
 " let g:lightline = {'colorscheme': 'dracula'}
 
