@@ -31,7 +31,7 @@ PreloadWeight=42
 
 [Containments][1][Applets][2][Configuration][General]
 isInLatteDock=true
-launchers59=applications:firefox.desktop,applications:org.kde.konsole.desktop,applications:org.kde.dolphin.desktop,applications:visual-studio-code.desktop
+launchers59=applications:firefox.desktop,applications:org.kde.konsole.desktop,applications:org.kde.dolphin.desktop,applications:visual-studio-code.desktop,applications:spotify.desktop
 
 [Containments][1][Applets][23]
 immutability=1
@@ -42,12 +42,12 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][1][Applets][23][Configuration][General]
-customButtonImage=/home/michaelrivnak/.assets/icons/Arch_85.png
+customButtonImage=/home/michaelrivnak/.assets/icons/Arch.png
 favoritesPortedToKAstats=true
 useCustomButtonImage=true
 
 [Containments][1][ConfigDialog]
-DialogHeight=1252
+DialogHeight=906
 DialogWidth=509
 
 [Containments][1][Configuration]
@@ -56,6 +56,7 @@ PreloadWeight=42
 [Containments][1][General]
 advanced=false
 appletOrder=23;2
+iconSize=54
 panelSize=26
 panelTransparency=85
 shadowOpacity=60
@@ -131,6 +132,17 @@ plugin=org.kde.plasma.katesessions
 immutability=1
 plugin=touchpad
 
+[Containments][12][Applets][27]
+immutability=1
+plugin=org.kde.plasma.networkmanagement
+
+[Containments][12][Applets][28]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][12][Applets][28][Configuration]
+PreloadWeight=42
+
 [Containments][12][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
@@ -194,7 +206,7 @@ PreloadWeight=42
 animationLauncherBouncing=false
 animationWindowAddedInGroup=false
 animationWindowInAttention=false
-appletOrder=7;24;11;6
+appletOrder=7;11;6
 dragActiveWindowEnabled=true
 iconSize=24
 inConfigureAppletsMode=true
@@ -205,8 +217,8 @@ panelTransparency=85
 plasmaBackgroundForPopups=true
 shadows=None
 shrinkThickMargins=true
-splitterPosition=2
-splitterPosition2=3
+splitterPosition=1
+splitterPosition2=2
 titleTooltips=false
 zoomLevel=0
 
