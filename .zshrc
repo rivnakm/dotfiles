@@ -144,7 +144,7 @@ alias dotf='/usr/bin/git --git-dir=$HOME/dotfiles.git --work-tree=$HOME'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export PF_INFO='ascii title os kernel pkgs uptime shell memory palette'
-export PF_COL1=6
+export PF_COL1=4
 export PF_COL2=8
-export PF_COL3=6
+export PF_COL3=4
 pfetch
