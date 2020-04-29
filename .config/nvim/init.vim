@@ -1,6 +1,6 @@
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'dracula/vim', {'as': 'dracula'}
+" Plug 'dracula/vim', {'as': 'dracula'}
 " Plug 'itchyny/lightline.vim'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'preservim/nerdtree'
@@ -11,7 +11,7 @@ set ts=4 sw=4
 syntax on
 
 " Set colorscheme
-colorscheme dracula
+" colorscheme dracula
 
 " Set backgrounds to transparent
 hi Normal guibg=NONE ctermbg=NONE
