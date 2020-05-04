@@ -81,7 +81,7 @@ plugins=(
 	archlinux
 	autopep8
 	aws
-	brew
+#	brew
 	cargo
 	colored-man-pages
 	command-not-found
