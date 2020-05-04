@@ -81,17 +81,17 @@ plugins=(
 	archlinux
 	autopep8
 	aws
-#	brew
+	brew
 	cargo
 	colored-man-pages
 	command-not-found
 	copydir
 	copyfile
-#	debian
+	debian
 	direnv
 	dirhistory
 	django
-#	dnf
+	dnf
 	docker
 	docker-compose
 	emoji
@@ -103,8 +103,8 @@ plugins=(
 	pip
 	python
 	rust
-#	suse
-#	ubuntu
+	suse
+	ubuntu
 	vscode
 )
 
