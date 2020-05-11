@@ -1,10 +1,10 @@
 cd $HOME;
 echo 'Cloning dotfiles...';
-tempnum = (awk -v min=1 -v max=100 'BEGIN{srand(); print int(min+rand()*(max-min+1))}');
+tempnum = $(awk -v min=1 -v max=100 'BEGIN{srand(); print int(min+rand()*(max-min+1))}');
 git clone https://github.com/mrivnak/dotfiles.git /tmp/dotfiles${tempnum};
 
 echo 'Changing Shell to Zsh...';
-if ! has 'zsh' then
+if which zsh; then
     echo 'Cannot continue, Zsh is not installed!';
     exit;
 fi
@@ -29,14 +29,14 @@ curl -fLo "Hack Bold Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-f
 curl -fLo "Hack Bold Nerd Font Complete Mono.ttf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Bold/complete/Hack%20Bold%20Nerd%20Font%20Complete%20Mono.ttf;
 cd $HOME;
 
-echo 'Installing Fast Syntax Highlighting...';
-git clone https://github.com/zdharma/fast-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting;
+# echo 'Installing Fast Syntax Highlighting...';
+# git clone https://github.com/zdharma/fast-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting;
 
 echo 'Installing Zsh Autosuggestions...';
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 echo 'Copying Dotfiles...';
-fd -f /tmp/dotfiles${tempnum} -E ".git*(ND)" -x cp -r {} $HOME/;
+# fd -f /tmp/dotfiles${tempnum} -E ".git*(ND)" -x cp -r {} $HOME/;
 
 echo 'Cleaning up...';
 rm -rf /tmp/dotfiles${tempnum};
