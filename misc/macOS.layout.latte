@@ -30,22 +30,21 @@ plugin=org.kde.latte.plasmoid
 PreloadWeight=0
 
 [Containments][1][Applets][2][Configuration][General]
-isInLatteDock=true
-launchers59=applications:firefox.desktop,applications:org.kde.konsole.desktop,applications:org.kde.dolphin.desktop,applications:Visual Studio Code.desktop,applications:systemsettings.desktop
+launchers59=applications:firefox.desktop,applications:org.kde.konsole.desktop,applications:org.kde.dolphin.desktop,applications:visual-studio-code.desktop,applications:GitKraken.desktop,applications:discord.desktop,applications:spotify.desktop,applications:slack.desktop,applications:systemsettings.desktop
 
 [Containments][1][Applets][23]
 immutability=1
 plugin=org.kde.plasma.kickerdash
 
 [Containments][1][Applets][23][Configuration]
-PreloadWeight=11
+PreloadWeight=0
 
 [Containments][1][Applets][23][Configuration][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
 [Containments][1][Applets][23][Configuration][General]
-customButtonImage=/home/michaelrivnak/.assets/icons/Void90.png
+customButtonImage=/home/michaelrivnak/.assets/icons/Arch90.png
 favoritesPortedToKAstats=true
 useCustomButtonImage=true
 
@@ -98,7 +97,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][12][Applets][13][Configuration]
-PreloadWeight=0
+PreloadWeight=7
 
 [Containments][12][Applets][14]
 immutability=1
@@ -146,14 +145,59 @@ PreloadWeight=0
 immutability=1
 plugin=org.kde.plasma.battery
 
+[Containments][12][Applets][35][Configuration]
+PreloadWeight=0
+
+[Containments][12][Applets][36]
+immutability=1
+plugin=org.kde.plasma.bluetooth
+
+[Containments][12][Applets][36][Configuration]
+PreloadWeight=0
+
+[Containments][12][Applets][37]
+immutability=1
+plugin=org.kde.plasma.networkmanagement
+
+[Containments][12][Applets][37][Configuration]
+PreloadWeight=2
+
+[Containments][12][Applets][38]
+immutability=1
+plugin=org.kde.ktp-contactlist
+
+[Containments][12][Applets][38][Configuration]
+PreloadWeight=0
+
+[Containments][12][Applets][43]
+immutability=1
+plugin=org.kde.kdeconnect
+
+[Containments][12][Applets][43][Configuration]
+PreloadWeight=42
+
+[Containments][12][Applets][44]
+immutability=1
+plugin=org.kde.plasma.printmanager
+
+[Containments][12][Applets][44][Configuration]
+PreloadWeight=42
+
+[Containments][12][Applets][45]
+immutability=1
+plugin=org.kde.plasma.vault
+
+[Containments][12][Applets][45][Configuration]
+PreloadWeight=42
+
 [Containments][12][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
 [Containments][12][General]
-extraItems=org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.nightcolorcontrol,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.vault,org.kde.plasma.printmanager,org.kde.ktp-contactlist,KDE Daemon,KOrganizer Reminder Daemon,Discover Notifier_org.kde.DiscoverNotifier,touchpad,KMix,org.kde.plasma.clipboard,org.kde.plasma.katesessions
+extraItems=org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.nightcolorcontrol,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.vault,org.kde.plasma.printmanager,org.kde.ktp-contactlist,KDE Daemon,KOrganizer Reminder Daemon,Discover Notifier_org.kde.DiscoverNotifier,touchpad,KMix,org.kde.plasma.clipboard,org.kde.plasma.katesessions,org.kde.kdeconnect
 hiddenItems=KDE Daemon,KOrganizer Reminder Daemon,org.kde.plasma.mediacontroller,Discover Notifier_org.kde.DiscoverNotifier,org.kde.ktp-contactlist,org.kde.plasma.printmanager,touchpad,KMix,org.kde.plasma.clipboard,org.kde.plasma.nightcolorcontrol,org.kde.plasma.vault,org.kde.plasma.katesessions
-knownItems=org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardindicator,org.kde.plasma.nightcolorcontrol,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.vault,org.kde.plasma.printmanager,org.kde.ktp-contactlist
+knownItems=org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardindicator,org.kde.plasma.nightcolorcontrol,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.vault,org.kde.plasma.printmanager,org.kde.ktp-contactlist,org.kde.kdeconnect
 
 [Containments][3]
 activityId=
@@ -180,7 +224,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][3][Applets][11][Configuration]
-PreloadWeight=0
+PreloadWeight=22
 SystrayContainmentId=12
 
 [Containments][3][Applets][28]
@@ -196,7 +240,7 @@ DialogWidth=720
 
 [Containments][3][Applets][28][Configuration][General]
 bold=true
-noWindowText=Void Linux
+noWindowText=Arch Linux
 noWindowType=text
 textType=1
 
@@ -212,7 +256,7 @@ immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][3][Applets][32][Configuration]
-PreloadWeight=52
+PreloadWeight=0
 
 [Containments][3][Applets][32][Configuration][ConfigDialog]
 DialogHeight=540
@@ -220,14 +264,14 @@ DialogWidth=720
 
 [Containments][3][Applets][32][Configuration][General]
 favoritesPortedToKAstats=true
-icon=/home/michaelrivnak/.assets/icons/Void75.png
+icon=/home/michaelrivnak/.assets/icons/Arch75.png
 
 [Containments][3][Applets][33]
 immutability=1
 plugin=org.kde.latte.spacer
 
 [Containments][3][Applets][33][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][3][Applets][33][Configuration][ConfigDialog]
 DialogHeight=540
@@ -242,7 +286,7 @@ immutability=1
 plugin=org.kde.latte.spacer
 
 [Containments][3][Applets][34][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][3][Applets][34][Configuration][ConfigDialog]
 DialogHeight=540
@@ -251,6 +295,17 @@ DialogWidth=720
 [Containments][3][Applets][34][Configuration][General]
 containmentType=Latte
 lengthPixels=4
+
+[Containments][3][Applets][46]
+immutability=1
+plugin=org.kde.plasma.pager
+
+[Containments][3][Applets][46][Configuration]
+PreloadWeight=42
+
+[Containments][3][Applets][46][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
 
 [Containments][3][Applets][7]
 immutability=1
@@ -274,7 +329,7 @@ PreloadWeight=0
 animationLauncherBouncing=false
 animationWindowAddedInGroup=false
 animationWindowInAttention=false
-appletOrder=33;32;28;7;11;30;34
+appletOrder=33;32;28;7;46;11;30;34
 dragActiveWindowEnabled=true
 iconSize=24
 inConfigureAppletsMode=true
