@@ -50,8 +50,8 @@ export PF_INFO='ascii title os kernel pkgs uptime shell editor memory palette'
 export PF_COL2=8
 
 # pfetch title and ascii color
-export PF_COL1=4
-export PF_COL3=4
+export PF_COL1=6
+export PF_COL3=6
 
 # Run pfetch
 pfetch
