@@ -1,12 +1,14 @@
 #!/bin/zsh
 cd /tmp/
 echo "Installing Visual Studio Code"
-echo "[1/4] Fetching binary..."
+echo "[1/5] Fetching binary..."
 wget https://update.code.visualstudio.com/latest/linux-x64/stable -O code.tar.gz
-echo "\n[2/4] Extracting tarball..."
+echo "\n[2/5] Extracting tarball..."
 tar xpvf code.tar.gz
-echo "\n[3/4] Copying files..."
+echo "\n[3/5] Copying files..."
 cp -rv VSCode-linux-x64 /home/michaelrivnak/.local/bin/
-echo "\n[4/4] Cleaning up..."
+echo "\n[4/5] Adding symlink..."
+sudo ln -s /home/michaelrivnak/.local/bin/VSCode-linux-x64/code /usr/bin/code
+echo "\n[5/5] Cleaning up..."
 rm -rvf VSCode-linux-x64 code.tar.gz
 echo "Visual Studio Code successfully installed!"
