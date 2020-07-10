@@ -1,0 +1,15 @@
+#!/bin/zsh
+cd /tmp/
+echo "Installing Visual Studio Code - Insiders"
+echo "[1/5] Fetching binary..."
+wget https://update.code.visualstudio.com/latest/linux-x64/insider -O code-insiders.tar.gz
+echo "\n[2/5] Extracting tarball..."
+tar xpvf code-insiders.tar.gz
+echo "\n[3/5] Copying files..."
+mv VSCode-linux-x64 VSCode-insiders-linux-x64
+cp -rv VSCode-insiders-linux-x64 /home/michael/.local/bin/
+echo "\n[4/5] Adding symlink..."
+sudo ln -s /home/michael/.local/bin/VSCode-insiders-linux-x64/code-insiders /usr/bin/code-insiders
+echo "\n[5/5] Cleaning up..."
+rm -rvf VSCode-insiders-linux-x64 code-insiders.tar.gz
+echo "Visual Studio Code - Insiders successfully installed!"
