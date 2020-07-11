@@ -7,7 +7,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:$HOME/.local/bin:$HOME/.emacs.d/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/.emacs.d/bin:/usr/local/Cellar/sdl2/2.0.12_1/include
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -28,12 +28,21 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# CMake
+export CMAKE_GENERATOR='Unix Makefiles'
+
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
 # Nvim
-export EDITOR='nvim'
+# export EDITOR='nvim'
 alias vim='nvim'
+
+# Visual Studio Code
+# export EDITOR=code
+export EDITOR=code-insiders
+alias sudo-code='sudo code --user-data-dir="~/.vscode-root"'
+alias sudo-code-insiders='sudo code-insiders --user-data-dir="~/.vscode-root"'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -50,8 +59,8 @@ export PF_INFO='ascii title os kernel pkgs uptime shell editor memory palette'
 export PF_COL2=8
 
 # pfetch title and ascii color
-export PF_COL1=6
-export PF_COL3=6
+export PF_COL1=4
+export PF_COL3=4
 
 # Run pfetch
 pfetch
