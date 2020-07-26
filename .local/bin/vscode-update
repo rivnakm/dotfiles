@@ -1,14 +1,55 @@
 #!/bin/zsh
 cd /tmp/
 echo "Installing Visual Studio Code"
-echo "[1/5] Fetching binary..."
+
+echo "[1/6] Fetching binary..."
 wget https://update.code.visualstudio.com/latest/linux-x64/stable -O code.tar.gz
-echo "\n[2/5] Extracting tarball..."
+
+echo "\n[2/6] Extracting tarball..."
 tar xpvf code.tar.gz
-echo "\n[3/5] Copying files..."
+
+echo "\n[3/6] Copying files..."
 cp -rv VSCode-linux-x64 /home/michael/.local/bin/
-echo "\n[4/5] Adding symlink..."
+
+echo "\n[4/6] Adding symlink..."
 sudo ln -s /home/michael/.local/bin/VSCode-linux-x64/code /usr/bin/code
-echo "\n[5/5] Cleaning up..."
+
+echo "\n[5/6] Creating desktop files..."
+echo "[Desktop Entry]
+Name=Visual Studio Code
+Comment=Code Editing. Refined.
+GenericName=Text Editor
+Exec=/home/michael/.local/bin/VSCode-linux-x64/code --no-sandbox --unity-launch %F
+Icon=/home/michael/.local/bin/VSCode-linux-x64/resources/app/resources/linux/code.png
+Type=Application
+StartupNotify=false
+StartupWMClass=code
+Categories=Utility;TextEditor;Development;IDE;
+MimeType=text/plain;inode/directory;
+Actions=new-empty-window;
+Keywords=vscode;
+
+[Desktop Action new-empty-window]
+Name=New Empty Window
+Exec=/home/michael/.local/bin/VSCode-linux-x64/code --no-sandbox --new-window %F
+Icon=/home/michael/.local/bin/VSCode-linux-x64/resources/app/resources/linux/code.png
+" > /home/michael/.local/share/applications/visual-studio-code.desktop
+
+echo "[Desktop Entry]
+Name=Visual Studio Code - URL Handler
+Comment=Code Editing. Redefined.
+GenericName=Text Editor
+Exec=/home/michael/.local/bin/VSCode-linux-x64/code --no-sandbox --open-url %U
+Icon=/home/michael/.local/bin/VSCode-linux-x64/resources/app/resources/linux/code.png
+Type=Application
+NoDisplay=true
+StartupNotify=true
+Categories=Utility;TextEditor;Development;IDE;
+MimeType=x-scheme-handler/vscode;
+Keywords=vscode;
+" > /home/michael/.local/share/applications/visual-studio-code-url-handler.desktop
+
+echo "\n[6/6] Cleaning up..."
 rm -rvf VSCode-linux-x64 code.tar.gz
+
 echo "Visual Studio Code successfully installed!"
