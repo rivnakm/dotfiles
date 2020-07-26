@@ -15,6 +15,7 @@ echo "\n[4/6] Adding symlink..."
 sudo ln -s /home/michael/.local/bin/VSCode-linux-x64/code /usr/bin/code
 
 echo "\n[5/6] Creating desktop files..."
+mkdir -p /home/michael/.local/share/applications
 echo "[Desktop Entry]
 Name=Visual Studio Code
 Comment=Code Editing. Refined.
