@@ -1,16 +1,15 @@
 [Desktop Entry]
-DefaultProfile=Dracula.profile
+DefaultProfile=Unix.profile
 
 [Favorite Profiles]
-Favorites=Dracula.profile
+Favorites=Unix.profile
 
 [KonsoleWindow]
 SaveGeometryOnExit=false
 ShowMenuBarByDefault=false
 
 [MainWindow]
-MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAAAvwAAAHWAAAABAAAAAQAAAAIAAAACPwAAAAA
+State=AAAA/wAAAAD9AAAAAAAAAvAAAAGsAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 
 [Notification Messages]
