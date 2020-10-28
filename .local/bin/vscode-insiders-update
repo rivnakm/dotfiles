@@ -10,19 +10,19 @@ tar xpvf code-insiders.tar.gz
 
 echo "\n[3/6] Copying files..."
 mv VSCode-linux-x64 VSCode-insiders-linux-x64
-cp -rv VSCode-insiders-linux-x64 /home/michael/.local/bin/
+sudo mv -v VSCode-insiders-linux-x64 /opt/visual-studio-code-insiders
 
 echo "\n[4/6] Adding symlink..."
-sudo ln -s /home/michael/.local/bin/VSCode-insiders-linux-x64/code-insiders /usr/bin/code-insiders
+sudo ln -s /opt/visual-studio-code-insiders/code-insiders /usr/bin/code-insiders
 
 echo "\n[5/6] Creating desktop files..."
-mkdir -p /home/michael/.local/share/applications
+sudo mkdir -pv /usr/share/applications
 echo "[Desktop Entry]
 Name=Visual Studio Code - Insiders
 Comment=Code Editing. Refined.
 GenericName=Text Editor
-Exec=/home/michael/.local/bin/VSCode-insiders-linux-x64/code-insiders --no-sandbox --unity-launch %F
-Icon=/home/michael/.local/bin/VSCode-insiders-linux-x64/resources/app/resources/linux/code.png
+Exec=/opt/visual-studio-code-insiders/VSCode-insiders-linux-x64/code-insiders --no-sandbox --unity-launch %F
+Icon=/opt/visual-studio-code-insiders/VSCode-insiders-linux-x64/resources/app/resources/linux/code.png
 Type=Application
 StartupNotify=false
 StartupWMClass=code
@@ -33,23 +33,26 @@ Keywords=vscode;
 
 [Desktop Action new-empty-window]
 Name=New Empty Window
-Exec=/home/michael/.local/bin/VSCode-insiders-linux-x64/code --no-sandbox --new-window %F
-Icon=/home/michael/.local/bin/VSCode-insiders-linux-x64/resources/app/resources/linux/code.png
-" > /home/michael/.local/share/applications/visual-studio-code-insiders.desktop
+Exec=/opt/visual-studio-code-insiders/VSCode-insiders-linux-x64/code --no-sandbox --new-window %F
+Icon=/opt/visual-studio-code-insiders/VSCode-insiders-linux-x64/resources/app/resources/linux/code.png
+" > /tmp/visual-studio-code-insiders.desktop
+sudo mv -v /tmp/visual-studio-code-insiders.desktop /usr/share/applications
+
 
 echo "[Desktop Entry]
 Name=Visual Studio Code - Insiders - URL Handler
 Comment=Code Editing. Redefined.
 GenericName=Text Editor
-Exec=/home/michael/.local/bin/VSCode-insiders-linux-x64/code-insiders --no-sandbox --open-url %U
-Icon=/home/michael/.local/bin/VSCode-insiders-linux-x64/resources/app/resources/linux/code.png
+Exec=/opt/visual-studio-code-insiders/VSCode-insiders-linux-x64/code-insiders --no-sandbox --open-url %U
+Icon=/opt/visual-studio-code-insiders/VSCode-insiders-linux-x64/resources/app/resources/linux/code.png
 Type=Application
 NoDisplay=true
 StartupNotify=true
 Categories=Utility;TextEditor;Development;IDE;
 MimeType=x-scheme-handler/vscode;
 Keywords=vscode;
-" > /home/michael/.local/share/applications/visual-studio-code-insiders-url-handler.desktop
+" > /tmp/visual-studio-code-insiders-url-handler.desktop
+sudo mv -v /tmp/visual-studio-code-insiders-url-handler.desktop /usr/share/applications
 
 echo "\n[6/6] Cleaning up..."
 rm -rvf VSCode-insiders-linux-x64 code-insiders.tar.gz

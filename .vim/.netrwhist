@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
-let g:netrw_dirhist_3='/home/michaelrivnak/.config/pulseaudio-ctl'
-let g:netrw_dirhist_2='/home/michaelrivnak/.config/plasma-workspace/env'
-let g:netrw_dirhist_1='/home/michaelrivnak/.config/plasma-workspace'

@@ -21,6 +21,28 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(
+  archlinux
+  brew
+  cargo
+  command-not-found
+  common-aliases
+  cp
+  debian
+  dnf
+  dotnet
+  extract
+  git
+  gitignore
+  pip
+  python
+  rust
+  sudo
+  suse
+  systemd
+  osx
+  ubuntu
+  virtualenv
+  yarn
 	zsh-autosuggestions
 )
 

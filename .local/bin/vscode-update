@@ -9,13 +9,14 @@ echo "\n[2/6] Extracting tarball..."
 tar xpvf code.tar.gz
 
 echo "\n[3/6] Copying files..."
-cp -rv VSCode-linux-x64 /home/michael/.local/bin/
+sudo mv -v VSCode-linux-x64 /opt/visual-studio-code-bin
 
 echo "\n[4/6] Adding symlink..."
-sudo ln -s /home/michael/.local/bin/VSCode-linux-x64/code /usr/bin/code
+sudo ln -s /opt/visual-studio-code-bin/code /usr/bin/code
 
 echo "\n[5/6] Creating desktop files..."
-mkdir -p /home/michael/.local/share/applications
+mkdir -pv /usr/share/applications
+
 echo "[Desktop Entry]
 Name=Visual Studio Code
 Comment=Code Editing. Refined.
@@ -34,7 +35,8 @@ Keywords=vscode;
 Name=New Empty Window
 Exec=/home/michael/.local/bin/VSCode-linux-x64/code --no-sandbox --new-window %F
 Icon=/home/michael/.local/bin/VSCode-linux-x64/resources/app/resources/linux/code.png
-" > /home/michael/.local/share/applications/visual-studio-code.desktop
+" > /tmp/visual-studio-code.desktop
+sudo mv -v /tmp/visual-studio-code-bin.desktop /usr/share/applications
 
 echo "[Desktop Entry]
 Name=Visual Studio Code - URL Handler
@@ -48,7 +50,8 @@ StartupNotify=true
 Categories=Utility;TextEditor;Development;IDE;
 MimeType=x-scheme-handler/vscode;
 Keywords=vscode;
-" > /home/michael/.local/share/applications/visual-studio-code-url-handler.desktop
+" > /tmp/visual-studio-code-url-handler.desktop
+sudo mv -v /tmp/visual-studio-code-bin-url-handler.desktop /usr/share/applications
 
 echo "\n[6/6] Cleaning up..."
 rm -rvf VSCode-linux-x64 code.tar.gz
