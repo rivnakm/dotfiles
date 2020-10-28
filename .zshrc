@@ -21,6 +21,7 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(
+  alias-finder
   archlinux
   brew
   cargo
