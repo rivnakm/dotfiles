@@ -4,6 +4,7 @@ Font=Hack Nerd Font Mono,10,-1,5,50,0,0,0,0,0
 
 [General]
 Name=Unix
+Command=/usr/bin/zsh
 Parent=FALLBACK/
 TerminalColumns=100
 TerminalMargin=8
