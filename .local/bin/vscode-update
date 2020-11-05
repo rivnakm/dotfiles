@@ -21,8 +21,8 @@ echo "[Desktop Entry]
 Name=Visual Studio Code
 Comment=Code Editing. Refined.
 GenericName=Text Editor
-Exec=/home/michael/.local/bin/VSCode-linux-x64/code --no-sandbox --unity-launch %F
-Icon=/home/michael/.local/bin/VSCode-linux-x64/resources/app/resources/linux/code.png
+Exec=/opt/visual-studio-code/code --no-sandbox --unity-launch %F
+Icon=/opt/visual-studio-code/resources/app/resources/linux/code.png
 Type=Application
 StartupNotify=false
 StartupWMClass=code
@@ -33,8 +33,8 @@ Keywords=vscode;
 
 [Desktop Action new-empty-window]
 Name=New Empty Window
-Exec=/home/michael/.local/bin/VSCode-linux-x64/code --no-sandbox --new-window %F
-Icon=/home/michael/.local/bin/VSCode-linux-x64/resources/app/resources/linux/code.png
+Exec=/opt/visual-studio-code/code --no-sandbox --new-window %F
+Icon=/opt/visual-studio-code/resources/app/resources/linux/code.png
 " > /tmp/visual-studio-code.desktop
 sudo mv -v /tmp/visual-studio-code.desktop /usr/share/applications
 
@@ -42,8 +42,8 @@ echo "[Desktop Entry]
 Name=Visual Studio Code - URL Handler
 Comment=Code Editing. Redefined.
 GenericName=Text Editor
-Exec=/home/michael/.local/bin/VSCode-linux-x64/code --no-sandbox --open-url %U
-Icon=/home/michael/.local/bin/VSCode-linux-x64/resources/app/resources/linux/code.png
+Exec=/opt/visual-studio-code/code --no-sandbox --open-url %U
+Icon=/opt/visual-studio-code/resources/app/resources/linux/code.png
 Type=Application
 NoDisplay=true
 StartupNotify=true
