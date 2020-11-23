@@ -21,29 +21,29 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(
-  alias-finder
-  archlinux
-  brew
-  cargo
-  command-not-found
-  common-aliases
-  cp
-  debian
-  dnf
-  dotnet
-  extract
-  git
-  gitignore
-  pip
-  python
-  rust
-  sudo
-  suse
-  systemd
-  osx
-  ubuntu
-  virtualenv
-  yarn
+	alias-finder
+	archlinux
+	brew
+	cargo
+	command-not-found
+	common-aliases
+	cp
+	debian
+	dnf
+	dotnet
+	extract
+	git
+	gitignore
+	pip
+	python
+	rust
+	sudo
+	suse
+	systemd
+	osx
+	ubuntu
+	virtualenv
+	yarn
 	zsh-autosuggestions
 )
 
@@ -57,12 +57,8 @@ export CMAKE_GENERATOR='Unix Makefiles'
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# Nvim
-# export EDITOR='nvim'
-alias vim='nvim'
 
 # Visual Studio Code
-# export EDITOR=code
 export EDITOR=code
 alias sudo-code='sudo code --user-data-dir="~/.vscode-root"'
 alias sudo-code-insiders='sudo code-insiders --user-data-dir="~/.vscode-root"'
