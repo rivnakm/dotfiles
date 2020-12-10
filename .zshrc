@@ -69,6 +69,13 @@ alias sudo-code-insiders='sudo code-insiders --user-data-dir="~/.vscode-root"'
 # Set personal aliases
 alias l="ls -lah"
 
+alias lock="xscreensave-command -lock"
+alias suspend="systemctl suspend"
+alias hibernate="systemctl hibernate"
+alias logout="bspc quit"
+alias reboot="systemctl reboot"
+alias shutdown="systemctl poweroff"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
