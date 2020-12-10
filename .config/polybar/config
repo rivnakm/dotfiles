@@ -28,10 +28,10 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 height = 26
-width = 99.5%
+; width = 99.5%
 
-offset-y = 6
-offset-x = 0.25%
+; offset-y = 6
+; offset-x = 0.25%
 
 font-0 = HackNerdFont:size=10;2
 
