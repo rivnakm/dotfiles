@@ -1,0 +1,6 @@
+configuration {
+    theme: "nord";
+    font: "Hack Nerd Font 12";
+    icon-theme: "Yaru-Grey";
+    show-icons: true;
+}

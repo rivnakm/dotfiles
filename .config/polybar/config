@@ -1,0 +1,224 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;==========================================================
+
+[colors]
+background = #2E3440
+background-alt = #3B4252
+background-alt2 = #4c566a
+foreground = #c4c8c5
+foreground-alt = #c4c8c5
+
+[bar/main]
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+height = 26
+
+font-0 = HackNerdFont:size=10;2
+
+modules-left = bspwm title
+modules-right = distro cpu memory date
+
+padding-left = 0
+padding-right = 2
+
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %name%
+label-focused-background = ${colors.background-alt}
+label-focused-padding = 2
+label-focused-underline = ${colors.primary}
+
+label-occupied = %name%
+label-occupied-padding = 2
+
+label-urgent = %name%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+label-empty = %name%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
+
+[module/title]
+type = internal/xwindow
+
+; Available tags:
+;   <label> (default)
+format = <label>
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+format-padding = 1
+
+; Available tokens:
+;   %title%
+; Default: %title%
+label = %title%
+label-maxlen = 50
+
+; Used instead of label when there is no window title
+; Available tokens:
+;   None
+label-empty = Empty
+label-empty-foreground = #707880
+
+[module/distro]
+type = custom/text
+content = " Arch Linux "
+
+[module/cpu]
+type = internal/cpu
+
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 0.5
+
+; Available tags:
+;   <label> (default)
+;   <bar-load>
+;   <ramp-load>
+;   <ramp-coreload>
+format = <label>
+format-padding = 1
+
+; Available tokens:
+;   %percentage% (default) - total cpu load averaged over all cores
+;   %percentage-sum% - Cumulative load on all cores
+;   %percentage-cores% - load percentage for each core
+;   %percentage-core[1-9]% - load percentage for specific core
+label = CPU %percentage%%
+
+; Spacing between individual per-core ramps
+ramp-coreload-spacing = 0
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+
+[module/memory]
+type = internal/memory
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 3
+
+; Available tags:
+;   <label> (default)
+;   <bar-used>
+;   <bar-free>
+;   <ramp-used>
+;   <ramp-free>
+;   <bar-swap-used>
+;   <bar-swap-free>
+;   <ramp-swap-used>
+;   <ramp-swap-free>
+format = <label>
+format-padding = 1
+
+; Available tokens:
+;   %percentage_used% (default)
+;   %percentage_free%
+;   %gb_used%
+;   %gb_free%
+;   %gb_total%
+;   %mb_used%
+;   %mb_free%
+;   %mb_total%
+;   %percentage_swap_used%
+;   %percentage_swap_free%
+;   %mb_swap_total%
+;   %mb_swap_free%
+;   %mb_swap_used%
+;   %gb_swap_total%
+;   %gb_swap_free%
+;   %gb_swap_used%
+
+label = RAM %percentage_used%%
+
+; Only applies if <bar-used> is used
+bar-used-indicator =
+bar-used-width = 50
+bar-used-foreground-0 = #55aa55
+bar-used-foreground-1 = #557755
+bar-used-foreground-2 = #f5a70a
+bar-used-foreground-3 = #ff5555
+bar-used-fill = ▐
+bar-used-empty = ▐
+bar-used-empty-foreground = #444444
+
+; Only applies if <ramp-used> is used
+ramp-used-0 = ▁
+ramp-used-1 = ▂
+ramp-used-2 = ▃
+ramp-used-3 = ▄
+ramp-used-4 = ▅
+ramp-used-5 = ▆
+ramp-used-6 = ▇
+ramp-used-7 = █
+
+; Only applies if <ramp-free> is used
+ramp-free-0 = ▁
+ramp-free-1 = ▂
+ramp-free-2 = ▃
+ramp-free-3 = ▄
+ramp-free-4 = ▅
+ramp-free-5 = ▆
+ramp-free-6 = ▇
+ramp-free-7 = █
+
+[module/date]
+type = internal/date
+
+padding = 4
+
+; Seconds to sleep between updates
+; Default: 1.0
+interval = 1.0
+
+; See "https://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+date = %Y-%m-%d%
+
+; Optional time format
+time = %H:%M
+
+; if `date-alt` or `time-alt` is defined, clicking
+; the module will toggle between formats
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S
+
+; Available tags:
+;   <label> (default)
+format = " <label>"
+format-padding = 1
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+
+; Available tokens:
+;   %date%
+;   %time%
+; Default: %date%
+label = %date% %time%
+label-font = 3
+label-foreground = ${colors.foreground}
