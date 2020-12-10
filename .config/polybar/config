@@ -28,6 +28,10 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 height = 26
+width = 99.5%
+
+offset-y = 6
+offset-x = 0.25%
 
 font-0 = HackNerdFont:size=10;2
 
@@ -35,7 +39,7 @@ modules-left = bspwm title
 modules-right = distro cpu memory date
 
 padding-left = 0
-padding-right = 2
+padding-right = 1
 
 [module/bspwm]
 type = internal/bspwm
@@ -210,7 +214,7 @@ time-alt = %H:%M:%S
 
 ; Available tags:
 ;   <label> (default)
-format = " <label>"
+format = "<label>"
 format-padding = 1
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
@@ -219,6 +223,6 @@ format-foreground = ${colors.foreground}
 ;   %date%
 ;   %time%
 ; Default: %date%
-label = %date% %time%
+label = " %date%  %time%"
 label-font = 3
 label-foreground = ${colors.foreground}
