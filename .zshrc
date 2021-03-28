@@ -15,7 +15,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/go/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -76,6 +76,8 @@ alias sudo-code-insiders='sudo code-insiders --user-data-dir="~/.vscode-root"'
 
 # Set personal aliases
 alias l="ls -lah"
+alias rf="rm -rf"
+alias nf="neofetch"
 
 alias lock="xscreensave-command -lock"
 alias suspend="systemctl suspend"
