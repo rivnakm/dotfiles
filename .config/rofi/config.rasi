@@ -1,4 +1,0 @@
-configuration {
-    theme: "nord";
-    font: "Hack Nerd Font 12";
-}
