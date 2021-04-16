@@ -1,3 +1,11 @@
+# WSL
+if [[ $PWD == "/mnt/c/Users/Michael" ]]
+then
+	cd $HOME
+fi
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+export LIBGL_ALWAYS_INDIRECT=true
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block, everything else may go below.
@@ -7,7 +15,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/go/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -68,6 +76,8 @@ alias sudo-code-insiders='sudo code-insiders --user-data-dir="~/.vscode-root"'
 
 # Set personal aliases
 alias l="ls -lah"
+alias rf="rm -rf"
+alias nf="neofetch"
 
 alias lock="xscreensave-command -lock"
 alias suspend="systemctl suspend"
