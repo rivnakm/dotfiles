@@ -120,7 +120,7 @@ then
 	COLOR=$RED
 elif grep -q -i Fedora /etc/os-release 
 then
-	COLOR=$CYAN  # Current versions of Fedora are now cyan, but blue used to be used
+	COLOR=$BLUE
 elif grep -q -i Gentoo /etc/os-release 
 then
 	COLOR=$MAGENTA
