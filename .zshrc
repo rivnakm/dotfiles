@@ -1,3 +1,21 @@
+# Color Definitions
+BLACK=0
+RED=1
+GREEN=2
+YELLOW=3
+BLUE=4
+MAGENTA=5
+CYAN=6
+WHITE=7
+BRIGHT_BLACK=8
+BRIGHT_RED=9
+BRIGHT_GREEN=10
+BRIGHT_YELLOW=11
+BRIGHT_BLUE=12
+BRIGHT_MAGENTA=13
+BRIGHT_CYAN=14
+BRIGHT_WHITE=15
+
 # WSL
 if [[ $PWD == "/mnt/c/Users/Michael" ]]
 then
@@ -38,13 +56,18 @@ plugins=(
 	cp
 	debian
 	dnf
+	docker
+	docker-compose
+	docker-machine
 	dotnet
 	extract
 	git
 	gitignore
+	golang
 	pip
 	python
 	rust
+	rustup
 	sudo
 	suse
 	systemd
@@ -53,6 +76,7 @@ plugins=(
 	virtualenv
 	yarn
 	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -65,38 +89,72 @@ export CMAKE_GENERATOR='Unix Makefiles'
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-
 # Visual Studio Code
 export EDITOR=code
 alias sudo-code='sudo code --user-data-dir="~/.vscode-root"'
-alias sudo-code-insiders='sudo code-insiders --user-data-dir="~/.vscode-root"'
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases
 alias l="ls -lah"
 alias rf="rm -rf"
 alias nf="neofetch"
+alias pf="pfetch"
 
-alias lock="xscreensave-command -lock"
-alias suspend="systemctl suspend"
-alias hibernate="systemctl hibernate"
-alias logout="bspc quit"
 alias reboot="systemctl reboot"
 alias shutdown="systemctl poweroff"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# find distro color
+if [[ grep -q -i Arch /etc/os-release ]]
+then
+	COLOR=$CYAN
+elif [[ grep -q -i Artix /etc/os-release ]]
+then
+	COLOR=$CYAN
+elif [[ grep -q -i CentOS /etc/os-release ]]
+then
+	COLOR=$BLUE
+elif [[ grep -q -i Debian /etc/os-release ]]
+then
+	COLOR=$RED
+elif [[ grep -q -i Fedora /etc/os-release ]]
+then
+	COLOR=$CYAN  # Current versions of Fedora are now cyan, but blue used to be used
+elif [[ grep -q -i Gentoo /etc/os-release ]]
+then
+	COLOR=$MAGENTA
+elif [[ grep -q -i Manjaro /etc/os-release ]]
+then
+	COLOR=$GREEN
+elif [[ grep -q -i NixOS /etc/os-release ]]
+then
+	COLOR=$BLUE
+elif [[ grep -q -i openSUSE /etc/os-release ]]
+then
+	COLOR=$GREEN
+elif [[ grep -q -i Pop /etc/os-release ]]
+then
+	COLOR=$CYAN 
+elif [[ grep -q -i Rocky /etc/os-release ]]
+then
+	COLOR=$GREEN
+elif [[ grep -q -i Ubuntu /etc/os-release ]]
+then
+	COLOR=$YELLOW
+elif [[ grep -q -i Void /etc/os-release ]]
+then
+	COLOR=$GREEN
+elif
+
 export PF_INFO='ascii title os kernel pkgs uptime shell editor memory palette'
 
 # pfetch text color
 export PF_COL2=8
 
-# pfetch title and ascii color
-export PF_COL1=6
-export PF_COL3=6
+# pfetch title and label color
+export PF_COL1=$COLOR
+export PF_COL3=$COLOR
 
 # Run pfetch
 pfetch
