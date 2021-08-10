@@ -5,6 +5,7 @@ cd $HOME
 # Download and install dotfiles
 git clone https://github.com/mrivnak/dotfiles
 cp dotfiles/.zshrc .
+cp dotfiles/.p10k.zsh .
 cp dotfiles/.vimrc .
 cp dotfiles/cat .
 
