@@ -106,46 +106,46 @@ alias shutdown="systemctl poweroff"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # find distro color
-if [[ grep -q -i Arch /etc/os-release ]]
+if grep -q -i Arch /etc/os-release 
 then
 	COLOR=$CYAN
-elif [[ grep -q -i Artix /etc/os-release ]]
+elif grep -q -i Artix /etc/os-release 
 then
 	COLOR=$CYAN
-elif [[ grep -q -i CentOS /etc/os-release ]]
+elif grep -q -i CentOS /etc/os-release 
 then
 	COLOR=$BLUE
-elif [[ grep -q -i Debian /etc/os-release ]]
+elif grep -q -i Debian /etc/os-release 
 then
 	COLOR=$RED
-elif [[ grep -q -i Fedora /etc/os-release ]]
+elif grep -q -i Fedora /etc/os-release 
 then
 	COLOR=$CYAN  # Current versions of Fedora are now cyan, but blue used to be used
-elif [[ grep -q -i Gentoo /etc/os-release ]]
+elif grep -q -i Gentoo /etc/os-release 
 then
 	COLOR=$MAGENTA
-elif [[ grep -q -i Manjaro /etc/os-release ]]
+elif grep -q -i Manjaro /etc/os-release 
 then
 	COLOR=$GREEN
-elif [[ grep -q -i NixOS /etc/os-release ]]
+elif grep -q -i NixOS /etc/os-release 
 then
 	COLOR=$BLUE
-elif [[ grep -q -i openSUSE /etc/os-release ]]
+elif grep -q -i openSUSE /etc/os-release 
 then
 	COLOR=$GREEN
-elif [[ grep -q -i Pop /etc/os-release ]]
+elif grep -q -i Pop /etc/os-release 
 then
 	COLOR=$CYAN 
-elif [[ grep -q -i Rocky /etc/os-release ]]
+elif grep -q -i Rocky /etc/os-release 
 then
 	COLOR=$GREEN
-elif [[ grep -q -i Ubuntu /etc/os-release ]]
+elif grep -q -i Ubuntu /etc/os-release 
 then
 	COLOR=$YELLOW
-elif [[ grep -q -i Void /etc/os-release ]]
+elif grep -q -i Void /etc/os-release 
 then
 	COLOR=$GREEN
-elif
+fi
 
 export PF_INFO='ascii title os kernel pkgs uptime shell editor memory palette'
 
