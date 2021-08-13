@@ -83,6 +83,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+export EDITOR=vim
+
 # CMake
 export CMAKE_GENERATOR='Unix Makefiles'
 
@@ -90,7 +92,6 @@ export CMAKE_GENERATOR='Unix Makefiles'
 export LANG=en_US.UTF-8
 
 # Visual Studio Code
-export EDITOR=code
 alias sudo-code='sudo code --user-data-dir="~/.vscode-root"'
 
 # Set personal aliases
