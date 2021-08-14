@@ -23,4 +23,17 @@ then
     sudo usermod -s $(which zsh) $USER
 fi
 
+# Install font
+INSTALL_FONTS="${INSTALL_FONTS:-'yes'}"
+
+if [[ $INSTALL_FONTS == 'yes' ]]
+then
+    mkdir -pv .fonts/Hack\ Nerd\ Font
+    pushd .fonts/Hack\ Nerd\ Font
+    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
+    unzip Hack.zip
+    rm Hack.zip
+    popd
+fi
+
 zsh
