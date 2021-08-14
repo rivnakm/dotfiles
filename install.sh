@@ -51,4 +51,13 @@ then
     done
 fi
 
+# Install git versions of neofetch and pfetch
+INSTALL_WALLPAPERS="${INSTALL_WALLPAPERS:='yes'}"
+
+if [[ $INSTALL_WALLPAPERS == 'yes' ]]
+then
+    mkdir -pv $HOME/Pictures
+    git clone https://github.com/mrivnak/os-wallpapers $HOME/Pictures/os-wallpapers
+fi
+
 zsh
