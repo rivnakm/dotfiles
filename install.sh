@@ -23,7 +23,7 @@ then
     sudo usermod -s $(which zsh) $USER
 fi
 
-# Install font
+# Install fonts
 INSTALL_FONTS="${INSTALL_FONTS:-'yes'}"
 
 if [[ $INSTALL_FONTS == 'yes' ]]
@@ -34,6 +34,21 @@ then
     unzip Hack.zip
     rm Hack.zip
     popd
+fi
+
+# Install git versions of neofetch and pfetch
+INSTALL_FETCH="${INSTALL_FETCH:-'yes'}"
+
+if [[ $INSTALL_FETCH == 'yes' ]]
+then
+    for ITEM in neofetch pfetch
+    do
+        git clone https://github.com/dylanaraps/$ITEM
+        pushd $ITEM
+        sudo make install
+        popd
+        rm -rf $ITEM
+    done
 fi
 
 zsh
