@@ -24,7 +24,7 @@ then
 fi
 
 # Install fonts
-INSTALL_FONTS="${INSTALL_FONTS:-'yes'}"
+INSTALL_FONTS="${INSTALL_FONTS:='yes'}"
 
 if [[ $INSTALL_FONTS == 'yes' ]]
 then
@@ -37,7 +37,7 @@ then
 fi
 
 # Install git versions of neofetch and pfetch
-INSTALL_FETCH="${INSTALL_FETCH:-'yes'}"
+INSTALL_FETCH="${INSTALL_FETCH:='yes'}"
 
 if [[ $INSTALL_FETCH == 'yes' ]]
 then
