@@ -107,43 +107,43 @@ alias shutdown="systemctl poweroff"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # find distro color
-if grep -q -i Arch /etc/os-release 
+if head -n 1 /etc/os-release | grep -q -i Arch 
 then
 	COLOR=$CYAN
-elif grep -q -i Artix /etc/os-release 
+elif head -n 1 /etc/os-release | grep -q -i Artix 
 then
 	COLOR=$CYAN
-elif grep -q -i CentOS /etc/os-release 
+elif head -n 1 /etc/os-release | grep -q -i CentOS 
 then
 	COLOR=$BLUE
-elif grep -q -i Debian /etc/os-release 
+elif head -n 1 /etc/os-release | grep -q -i Debian 
 then
 	COLOR=$RED
-elif grep -q -i Fedora /etc/os-release 
+elif head -n 1 /etc/os-release | grep -q -i Fedora 
 then
 	COLOR=$BLUE
-elif grep -q -i Gentoo /etc/os-release 
+elif head -n 1 /etc/os-release | grep -q -i Gentoo 
 then
 	COLOR=$MAGENTA
-elif grep -q -i Manjaro /etc/os-release 
+elif head -n 1 /etc/os-release | grep -q -i Manjaro 
 then
 	COLOR=$GREEN
-elif grep -q -i NixOS /etc/os-release 
+elif head -n 1 /etc/os-release | grep -q -i NixOS 
 then
 	COLOR=$BLUE
-elif grep -q -i openSUSE /etc/os-release 
+elif head -n 1 /etc/os-release | grep -q -i openSUSE 
 then
 	COLOR=$GREEN
-elif grep -q -i Pop /etc/os-release 
+elif head -n 1 /etc/os-release | grep -q -i Pop 
 then
 	COLOR=$CYAN 
-elif grep -q -i Rocky /etc/os-release 
+elif head -n 1 /etc/os-release | grep -q -i Rocky 
 then
 	COLOR=$GREEN
-elif grep -q -i Ubuntu /etc/os-release 
+elif head -n 1 /etc/os-release | grep -q -i Ubuntu 
 then
 	COLOR=$YELLOW
-elif grep -q -i Void /etc/os-release 
+elif head -n 1 /etc/os-release | grep -q -i Void 
 then
 	COLOR=$GREEN
 fi
