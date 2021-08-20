@@ -4,13 +4,10 @@ cd $HOME
 
 # Download and install dotfiles
 git clone https://github.com/mrivnak/dotfiles
-cp -v dotfiles/.zshrc .
-cp -v dotfiles/.p10k.zsh .
-cp -v dotfiles/.vimrc .
-cp -rv dotfiles/.vim .
-cp -v dotfiles/cat .
-
-# Install OneDark theme for Gnome Terminal
+cp dotfiles/.zshrc .
+cp dotfiles/.p10k.zsh .
+cp dotfiles/.vimrc .
+cp dotfiles/cat .
 
 # Install Oh My Zsh
 CHSH=no RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
