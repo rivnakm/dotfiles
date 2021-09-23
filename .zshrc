@@ -82,10 +82,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export EDITOR=lvim
-
-# npm
-export NPM_CONFIG_PREFIX=$HOME/.npm-global
+export EDITOR=vim
 
 # CMake
 export CMAKE_GENERATOR='Unix Makefiles'
@@ -101,8 +98,6 @@ alias l="ls -lah"
 alias rf="rm -rf"
 alias nf="neofetch"
 alias pf="pfetch"
-alias vim="lvim"
-alias nvim="lvim"
 
 alias reboot="systemctl reboot"
 alias shutdown="systemctl poweroff"
