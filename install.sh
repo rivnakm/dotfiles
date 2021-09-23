@@ -1,5 +1,24 @@
 #!/bin/bash
 
+get_package_manager() {
+    if [ $(head -n 1 /etc/os-release | grep -q -i Arch) ] || [ $(head -n 1 /etc/os-release | grep -q -i Artix) ] || [ $(head -n 1 /etc/os-release | grep -q -i Manjaro) ]
+    then
+        return "pacman"
+    elif [ $(head -n 1 /etc/os-release | grep -q -i CentOS) ] || [ $(head -n 1 /etc/os-release | grep -q -i Fedora) ] || [ $(head -n 1 /etc/os-release | grep -q -i Rocky) ]
+    then
+        return "dnf"
+    elif [ $(head -n 1 /etc/os-release | grep -q -i Debian) ] || [ $(head -n 1 /etc/os-release | grep -q -i Ubuntu) ] || [ $(head -n 1 /etc/os-release | grep -q -i Pop) ]
+    then
+        return "apt"
+    elif head -n 1 /etc/os-release | grep -q -i Gentoo 
+    then
+        return "portage"
+    elif head -n 1 /etc/os-release | grep -q -i openSUSE 
+    then
+        return "zypper"
+    fi
+}
+
 cd $HOME
 
 # Download and install dotfiles
@@ -59,5 +78,34 @@ then
     mkdir -pv $HOME/Pictures
     git clone https://github.com/mrivnak/os-wallpapers $HOME/Pictures/os-wallpapers
 fi
+
+# Install LunarVim Dependencies
+mkdir -pv $HOME/.config/lvim
+case get_package_manager in
+    "pacman")
+        sudo pacman -Syu --needed npm nodejs python python-pip cargo neovim
+        ;;
+    "dnf")
+        sudo dnf install npm nodejs python3 python3-pip rust-cargo neovim
+        ;;
+    "apt")
+        sudo apt update
+        sudo apt install npm nodejs python3 python3-pip cargo neovim
+        ;;
+    "portage")
+        sudo emerge --ask net-libs/nodejs dev-lang/python dev-python/pip dev-lang/rust app-editors/neovim
+        ;;
+    "zypper")
+        sudo zypper refresh
+        sudo zypper install npm nodejs python3 python3-pip cargo neovim
+        ;;
+esac
+
+# Resolve EACCES permissions errors
+mkdir -pv $HOME/.npm-global
+npm config set prefix '~/.npm-global'
+
+# Install LunarVim
+bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) --yes --overwrite
 
 zsh
