@@ -98,6 +98,7 @@ alias l="ls -lah"
 alias rf="rm -rf"
 alias nf="neofetch"
 alias pf="pfetch"
+alias sudo="sudo "  # Makes sudo use your custom aliases
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
