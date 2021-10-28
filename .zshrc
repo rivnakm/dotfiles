@@ -99,9 +99,6 @@ alias rf="rm -rf"
 alias nf="neofetch"
 alias pf="pfetch"
 
-alias reboot="systemctl reboot"
-alias shutdown="systemctl poweroff"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
