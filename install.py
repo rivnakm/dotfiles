@@ -179,12 +179,6 @@ def install_wallpapers():
 
 
 def chsh():
-    env_shell = os.environ["SHELL"]
-    which_zsh = subprocess.check_output(["which", "zsh"], text=True).replace("\n", "")
-
-    print(f"{env_shell=}")
-    print(f"{which_zsh=}")
-
     if os.environ["SHELL"] != subprocess.check_output(
         ["which", "zsh"], text=True
     ).replace("\n", ""):
