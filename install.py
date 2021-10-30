@@ -10,7 +10,7 @@ from shutil import copyfile, SameFileError
 
 
 def confirm(prompt, default=True):
-    tries = 1
+    tries = 2
     while tries > 0:
         val = input("{} {}".format(prompt, "[Y/n]" if default else "[y/N]"))
 
