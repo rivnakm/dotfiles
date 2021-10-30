@@ -11,5 +11,5 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrivnak/dotfiles/master/
 ### ...or with an interactive python script
 
 ```bash
-python3 "$(curl -fsSL https://raw.githubusercontent.com/mrivnak/dotfiles/master/install.py)"
+python3 -c "$(curl -fsSL https://raw.githubusercontent.com/mrivnak/dotfiles/master/install.py)"
 ```
