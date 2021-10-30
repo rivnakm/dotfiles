@@ -164,7 +164,12 @@ def install_wallpapers():
 
         pictures_path = Path.home() / "Pictures"
         walls_path = pictures_path / "os-wallpapers"
-        pictures_path.mkdir()
+        
+        try:
+            pictures_path.mkdir()
+        except FileExistsError:
+            # Ignore if directory already exists and
+            pass
 
         process = subprocess.run(
             [
