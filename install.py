@@ -72,7 +72,7 @@ def install_fonts():
             text=True,
         )
         process = subprocess.run(  # Extract zip file
-            ["unzip", "-d", f"{font_path}", f"{zip_path}"],
+            ["unzip", "-o", "-d", f"{font_path}", f"{zip_path}"],
             capture_output=True,
             text=True,
         )
