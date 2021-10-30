@@ -10,9 +10,20 @@ from shutil import copyfile, SameFileError
 
 
 def confirm(prompt, default=True):
-    val = input("{} {}".format(prompt, "[Y/n]" if default else "[y/N]"))
-    if default and (val == "" or val.lower() == "y"):
-        return True
+    tries = 1
+    while tries > 0:
+        val = input("{} {}".format(prompt, "[Y/n]" if default else "[y/N]"))
+
+        if default and (val == "" or val.lower() == "y"):
+            return True
+        elif not default and (val == "" or val.lower() == "n"):
+            print("Skipping...")
+            return False
+        else:
+            print("Unexpected input, try again...")
+            tries -= 1
+
+    return False
 
 
 def check_deps(deps):
@@ -164,7 +175,7 @@ def install_wallpapers():
 
         pictures_path = Path.home() / "Pictures"
         walls_path = pictures_path / "os-wallpapers"
-        
+
         try:
             pictures_path.mkdir()
         except FileExistsError:
