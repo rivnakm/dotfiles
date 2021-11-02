@@ -16,7 +16,7 @@ def confirm(prompt, default=True):
 
         if default and (val == "" or val.lower() == "y"):
             return True
-        elif not default and (val == "" or val.lower() == "n"):
+        elif (not default and val == "") or val.lower() == "n":
             print("Skipping...")
             return False
         else:
@@ -57,6 +57,7 @@ def install_dotfiles():
             copyfile(f"dotfiles/{file}", Path.home() / file)
         except SameFileError:
             # Ignore if the files are the same
+            print(f"Warning: files dotfiles/{file} and ~/{file} are the same, skipping...")
             pass
 
 
