@@ -20,17 +20,20 @@ cd $HOME
 # Download and install dotfiles
 if [[ $(ls dotfiles) ]]
 then
-    # rm -rfv dotfiles
-    echo ""
+    rm -rfv dotfiles
 fi 
 
-# git clone https://github.com/mrivnak/dotfiles
+git clone https://github.com/mrivnak/dotfiles
 cp -v dotfiles/.zshrc .
 cp -v dotfiles/.p10k.zsh .
 cp -v dotfiles/.vimrc .
 cp -v dotfiles/cat .
 
 # Install Oh My Zsh
+if [[ $(ls .oh-my-zsh) ]]
+then
+    rm -rfv .oh-my-zsh
+fi 
 CHSH=no RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install themes and plugins
