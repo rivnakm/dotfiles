@@ -8,6 +8,10 @@ import sys
 from pathlib import Path
 from shutil import copyfile, SameFileError
 
+def print_full(result: subprocess.CompletedProcess) -> None:
+    print(result.stdout)
+    print(result.stderr, file=sys.stderr)
+
 
 def confirm(prompt, default=True):
     tries = 2
@@ -51,6 +55,7 @@ def install_dotfiles():
         capture_output=True,
         text=True,
     )
+    print_full(process)
 
     for file in [".zshrc", ".p10k.zsh", ".vimrc", "cat"]:
         try:
@@ -83,11 +88,13 @@ def install_fonts():
             capture_output=True,
             text=True,
         )
+        print_full(process)
         process = subprocess.run(  # Extract zip file
             ["unzip", "-o", "-d", f"{font_path}", f"{zip_path}"],
             capture_output=True,
             text=True,
         )
+        print_full(process)
 
         zip_path.unlink()  # Delete zip file
 
@@ -109,6 +116,7 @@ def install_fetch():
                 capture_output=True,
                 text=True,
             )
+            print_full(process)
 
             process = subprocess.run(
                 ["sudo", "make", "install"],
@@ -116,6 +124,7 @@ def install_fetch():
                 text=True,
                 cwd=fetch_path,
             )
+            print_full(process)
 
 
 def install_omz():
@@ -136,6 +145,7 @@ def install_omz():
         text=True,
         env=omz_env,
     )
+    print_full(process)
 
 
 def install_omz_plugins():
@@ -156,6 +166,7 @@ def install_omz_plugins():
         capture_output=True,
         text=True,
     )
+    print_full(process)
 
     process = subprocess.run(
         [
@@ -168,6 +179,7 @@ def install_omz_plugins():
         capture_output=True,
         text=True,
     )
+    print_full(process)
 
 
 def install_wallpapers():
@@ -193,6 +205,7 @@ def install_wallpapers():
             capture_output=True,
             text=True,
         )
+        print_full(process)
 
 
 def chsh():
@@ -205,6 +218,7 @@ def chsh():
             capture_output=True,
             text=True,
         )
+        print_full(process)
 
 
 def main():
