@@ -1,13 +1,34 @@
 #!/bin/bash
+set -e
+
+confirm () {
+    while true
+    do
+        echo -n "$@ [y/n] "
+        read -e answer
+        if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+            then
+                return 1
+            else
+                return 0
+        fi
+    done
+}
 
 cd $HOME
 
 # Download and install dotfiles
-git clone https://github.com/mrivnak/dotfiles
-cp dotfiles/.zshrc .
-cp dotfiles/.p10k.zsh .
-cp dotfiles/.vimrc .
-cp dotfiles/cat .
+if [[ $(ls dotfiles) ]]
+then
+    # rm -rfv dotfiles
+    echo ""
+fi 
+
+# git clone https://github.com/mrivnak/dotfiles
+cp -v dotfiles/.zshrc .
+cp -v dotfiles/.p10k.zsh .
+cp -v dotfiles/.vimrc .
+cp -v dotfiles/cat .
 
 # Install Oh My Zsh
 CHSH=no RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -15,7 +36,7 @@ CHSH=no RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubuserconte
 # Install themes and plugins
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k
 git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-# git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 # Change default shell
 if [[ $SHELL != $(which zsh) ]]
@@ -24,9 +45,8 @@ then
 fi
 
 # Install fonts
-INSTALL_FONTS="${INSTALL_FONTS:=yes}"
-
-if [[ $INSTALL_FONTS == yes ]]
+confirm "Do you want to install fonts?"
+if [ $? -eq 1 ]
 then
     mkdir -pv .fonts/Hack\ Nerd\ Font
     pushd .fonts/Hack\ Nerd\ Font
@@ -37,9 +57,8 @@ then
 fi
 
 # Install git versions of neofetch and pfetch
-INSTALL_FETCH="${INSTALL_FETCH:=yes}"
-
-if [[ $INSTALL_FETCH == yes ]]
+confirm "Do you want to install neofetch and pfetch?"
+if [ $? -eq 1 ]
 then
     for ITEM in neofetch pfetch
     do
@@ -51,10 +70,9 @@ then
     done
 fi
 
-# Install git versions of neofetch and pfetch
-INSTALL_WALLPAPERS="${INSTALL_WALLPAPERS:=yes}"
-
-if [[ $INSTALL_WALLPAPERS == yes ]]
+# Install wallpapers
+confirm "Do you want to install wallpapers?"
+if [ $? -eq 1 ]
 then
     mkdir -pv $HOME/Pictures
     git clone https://github.com/mrivnak/os-wallpapers $HOME/Pictures/os-wallpapers
