@@ -14,7 +14,7 @@ confirm () {
 cd $HOME
 
 # Download and install dotfiles
-if [[ $(ls dotfiles) ]]
+if [ -d "$HOME/dotfiles" ]
 then
     rm -rfv dotfiles
 fi 
@@ -26,7 +26,7 @@ cp -v dotfiles/.vimrc .
 cp -v dotfiles/cat .
 
 # Install Oh My Zsh
-if [[ $(ls .oh-my-zsh) ]]
+if [ -d "$HOME/.oh-my-zsh" ]
 then
     rm -rfv .oh-my-zsh
 fi 
@@ -45,7 +45,6 @@ fi
 
 # Install fonts
 result=$(confirm "Do you want to install fonts?")
-echo $result
 if [[ $result == "true" ]]
 then
     mkdir -pv .fonts/Hack\ Nerd\ Font
@@ -58,7 +57,6 @@ fi
 
 # Install git versions of neofetch and pfetch
 result=$(confirm "Do you want to install neofetch and pfetch?")
-echo $result
 if [[ $result == "true" ]]
 then
     for ITEM in neofetch pfetch
@@ -74,7 +72,6 @@ fi
 
 # Install wallpapers
 result=$(confirm "Do you want to install wallpapers?")
-echo $result
 if [[ $result == "true" ]]
 then
     mkdir -pv $HOME/Pictures
