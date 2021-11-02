@@ -14,7 +14,7 @@ def confirm(prompt, default=True):
     while tries > 0:
         val = input("{} {}".format(prompt, "[Y/n]" if default else "[y/N]"))
 
-        if default and (val == "" or val.lower() == "y"):
+        if (default and val == "") or val.lower() == "y":
             return True
         elif (not default and val == "") or val.lower() == "n":
             print("Skipping...")
