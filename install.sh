@@ -2,17 +2,13 @@
 set -e
 
 confirm () {
-    while true
-    do
-        echo -n "$@ [y/n] "
-        read -e answer
-        if [[ "$answer" =~ ^([yY][eE][sS]|[yY])$ ]]
-        then
-            return 1
-        else
-            return 0
-        fi
-    done
+    read -r -p "$@ [y/n] " answer
+    if [[ $answer =~ ^([yY][eE][sS]|[yY])$ ]]
+    then
+        echo "true"
+    else
+        echo "false"
+    fi
 }
 
 cd $HOME
@@ -20,10 +16,11 @@ cd $HOME
 # Download and install dotfiles
 if [[ $(ls dotfiles) ]]
 then
-    rm -rfv dotfiles
+    # rm -rfv dotfiles
+    echo "rm dotfiles"
 fi 
 
-git clone https://github.com/mrivnak/dotfiles
+# git clone https://github.com/mrivnak/dotfiles
 cp -v dotfiles/.zshrc .
 cp -v dotfiles/.p10k.zsh .
 cp -v dotfiles/.vimrc .
@@ -32,14 +29,15 @@ cp -v dotfiles/cat .
 # Install Oh My Zsh
 if [[ $(ls .oh-my-zsh) ]]
 then
-    rm -rfv .oh-my-zsh
+    # rm -rfv .oh-my-zsh
+    echo ""
 fi 
-CHSH=no RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# CHSH=no RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install themes and plugins
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k
-git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+# git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k
+# git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+# git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 # Change default shell
 if [[ $SHELL != $(which zsh) ]]
@@ -48,8 +46,9 @@ then
 fi
 
 # Install fonts
-confirm "Do you want to install fonts?"
-if [ $? -eq 1 ]
+result=$(confirm "Do you want to install fonts?")
+echo $result
+if [[ $result == "true" ]]
 then
     mkdir -pv .fonts/Hack\ Nerd\ Font
     pushd .fonts/Hack\ Nerd\ Font
@@ -60,8 +59,9 @@ then
 fi
 
 # Install git versions of neofetch and pfetch
-confirm "Do you want to install neofetch and pfetch?"
-if [ $? -eq 1 ]
+result=$(confirm "Do you want to install neofetch and pfetch?")
+echo $result
+if [[ $result == "true" ]]
 then
     for ITEM in neofetch pfetch
     do
@@ -75,8 +75,9 @@ then
 fi
 
 # Install wallpapers
-confirm "Do you want to install wallpapers?"
-if [ $? -eq 1 ]
+result=$(confirm "Do you want to install wallpapers?")
+echo $result
+if [[ $result == "true" ]]
 then
     mkdir -pv $HOME/Pictures
     git clone https://github.com/mrivnak/os-wallpapers $HOME/Pictures/os-wallpapers
