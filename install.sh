@@ -6,11 +6,11 @@ confirm () {
     do
         echo -n "$@ [y/n] "
         read -e answer
-        if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
-            then
-                return 1
-            else
-                return 0
+        if [[ "$answer" =~ ^([yY][eE][sS]|[yY])$ ]]
+        then
+            return 1
+        else
+            return 0
         fi
     done
 }
@@ -65,6 +65,7 @@ if [ $? -eq 1 ]
 then
     for ITEM in neofetch pfetch
     do
+
         git clone https://github.com/dylanaraps/$ITEM
         pushd $ITEM
         sudo make install
