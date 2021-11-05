@@ -93,10 +93,16 @@ alias sudo-code='sudo code --user-data-dir="~/.vscode-root"'
 
 # Set personal aliases
 ## ls
-alias ls="lsd"
+if ! command -v logo-ls &> /dev/null
+then
+	alias ls="logo-ls"
+	alias lt="ls --tree"
+else
+	alias ls="ls --color=auto"
+fi
+
 alias l="ls -lah"
 alias la="ls -a"
-alias lt="ls --tree"
 
 alias rf="rm -rf"
 alias nf="neofetch"
