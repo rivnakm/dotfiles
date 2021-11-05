@@ -92,7 +92,12 @@ export LANG=en_US.UTF-8
 alias sudo-code='sudo code --user-data-dir="~/.vscode-root"'
 
 # Set personal aliases
+## ls
+alias ls="lsd"
 alias l="ls -lah"
+alias la="ls -a"
+alias lt="ls --tree"
+
 alias rf="rm -rf"
 alias nf="neofetch"
 alias pf="pfetch"
