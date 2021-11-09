@@ -47,13 +47,9 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(
 	alias-finder
 	archlinux
-	brew
 	cargo
-	command-not-found
 	common-aliases
 	cp
-	debian
-	dnf
 	docker
 	docker-compose
 	docker-machine
@@ -67,10 +63,7 @@ plugins=(
 	rust
 	rustup
 	sudo
-	suse
 	systemd
-	osx
-	ubuntu
 	virtualenv
 	yarn
 	zsh-autosuggestions
