@@ -2,8 +2,8 @@
 set -e
 
 confirm () {
-    read -r -p "$@ [y/n] " answer
-    if [[ $answer =~ ^([yY][eE][sS]|[yY])$ ]]
+    read -r -p "$@ [Y/n] " answer
+    if [[ $answer =~ ^([yY][eE][sS]|[yY]|"")$ ]]
     then
         echo "true"
     else
@@ -47,11 +47,10 @@ fi
 result=$(confirm "Do you want to install fonts?")
 if [[ $result == "true" ]]
 then
-    mkdir -pv .fonts/Hack\ Nerd\ Font
-    pushd .fonts/Hack\ Nerd\ Font
-    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
-    unzip Hack.zip
-    rm Hack.zip
+    mkdir -pv .local/share/fonts/
+    pushd /tmp
+    git clone --depth=1 https://github.com/ryanoasis/nerd-fonts
+    ./nerd-fonts/install.sh FiraCode
     popd
 fi
 
