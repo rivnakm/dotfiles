@@ -20,9 +20,10 @@ then
 fi 
 
 git clone https://github.com/mrivnak/dotfiles
+mkdir -pv .config/nvim
 cp -v dotfiles/.zshrc .
 cp -v dotfiles/.p10k.zsh .
-cp -v dotfiles/.vimrc .
+cp -v dotfiles/init.vim .config/nvim/
 cp -v dotfiles/cat .
 
 # Install Oh My Zsh
