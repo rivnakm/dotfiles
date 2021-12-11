@@ -28,7 +28,7 @@
 
     initExtra = ''
     [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-    PF_INFO='ascii title os kernel pkgs uptime shell editor memory palette' PF_COL2=8 PF_COL1=6 PF_COL3=4 pfetch
+    neofetch
     '';
 
     localVariables = {
@@ -109,6 +109,9 @@
       " Adjust movement keys to compensate
       noremap h ,
       noremap , ;
+
+    " Remember last position
+    autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
     '';
   };
 
@@ -121,6 +124,9 @@
       pull.rebase = false;
     };
   };
+
+  # Neofetch setup
+  home.file.".config/neofetch/config.conf".source = ./neofetch.conf;
 
   # Visual Studio Code Server
   services.vscode-server.enable = true;
