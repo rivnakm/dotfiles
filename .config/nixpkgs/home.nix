@@ -28,7 +28,7 @@
 
     initExtra = ''
     [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-    neofetch
+	neofetch
     '';
 
     localVariables = {
@@ -110,8 +110,8 @@
       noremap h ,
       noremap , ;
 
-    " Remember last position
-    autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+	  " Remember last position
+	  autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
     '';
   };
 
