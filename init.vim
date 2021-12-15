@@ -11,3 +11,6 @@ noremap j h
 " Adjust movement keys to compensate
 noremap h ,
 noremap , ;
+
+" Remember last position
+autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
