@@ -73,7 +73,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export EDITOR=vim
+export EDITOR=nvim
 
 # CMake
 export CMAKE_GENERATOR='Unix Makefiles'
@@ -99,7 +99,8 @@ alias la="ls -a"
 alias rf="rm -rf"
 alias nf="neofetch"
 alias pf="pfetch"
-alias sudo="sudo "  # Makes sudo use your custom aliases
+alias sudo="sudo " # Makes sudo use your custom aliases
+alias nvim="nvim -u $HOME/.config/nvim/init.vim" # Always use user init.vim, even when running with sudo
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
