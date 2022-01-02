@@ -47,7 +47,6 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(
 	alias-finder
 	archlinux
-	cargo
 	common-aliases
 	cp
 	docker
@@ -61,7 +60,6 @@ plugins=(
 	pip
 	python
 	rust
-	rustup
 	sudo
 	systemd
 	virtualenv
