@@ -1,4 +1,4 @@
 configuration {
     font: "Fira Code Nerd Font Mono 12";
 }
-@theme "nord"
+@theme "onedark"
