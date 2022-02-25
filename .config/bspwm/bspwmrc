@@ -9,7 +9,7 @@ $HOME/.config/polybar/launch.sh
 # start feh
 feh --bg-fill $HOME/Pictures/wallpaper.jpg
 
-picom --no-use-damage
+# picom --no-use-damage
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
