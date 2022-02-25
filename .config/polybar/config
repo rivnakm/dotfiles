@@ -17,21 +17,21 @@
 ;==========================================================
 
 [colors]
-background = #2E3440
-background-alt = #3B4252
-background-alt2 = #4c566a
-foreground = #c4c8c5
-foreground-alt = #c4c8c5
+background = #282c34
+background-alt = #3f4451
+background-alt2 = #4f5666
+foreground = #abb2bf
+foreground-alt = #d7dae0
 
 [bar/main]
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 height = 26
-; width = 99.5%
+width = 99.5%
 
-; offset-y = 6
-; offset-x = 0.25%
+offset-y = 6
+offset-x = 0.25%
 
 font-0 = HackNerdFont:size=10;2
 
@@ -80,7 +80,7 @@ label-maxlen = 50
 ; Available tokens:
 ;   None
 label-empty = Empty
-label-empty-foreground = #707880
+label-empty-foreground = #6b717d
 
 [module/distro]
 type = custom/text
@@ -163,13 +163,13 @@ label = RAM %percentage_used%%
 ; Only applies if <bar-used> is used
 bar-used-indicator =
 bar-used-width = 50
-bar-used-foreground-0 = #55aa55
-bar-used-foreground-1 = #557755
-bar-used-foreground-2 = #f5a70a
-bar-used-foreground-3 = #ff5555
+bar-used-foreground-0 = #a5e075
+bar-used-foreground-1 = #8cc265
+bar-used-foreground-2 = #d18f52
+bar-used-foreground-3 = #e05561
 bar-used-fill = ▐
 bar-used-empty = ▐
-bar-used-empty-foreground = #444444
+bar-used-empty-foreground = #3f4451
 
 ; Only applies if <ramp-used> is used
 ramp-used-0 = ▁
