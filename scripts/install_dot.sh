@@ -12,6 +12,7 @@ cp -v {dotfiles,$HOME}/.config/polybar/config
 cp -v {dotfiles,$HOME}/.config/polybar/launch.sh
 cp -v {dotfiles,$HOME}/.config/rofi/config.rasi
 cp -v {dotfiles,$HOME}/.config/rofi/onedark.rasi
+cp -v {dotfiles,$HOME}/.config/sxhkd/sxhkdrc
 
 mkdir -pv $HOME/.config/picom
 cp -v {dotfiles,$HOME}/.config/picom/picom.conf
