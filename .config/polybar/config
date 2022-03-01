@@ -33,7 +33,7 @@ width = 99.5%
 offset-y = 6
 offset-x = 0.25%
 
-font-0 = HackNerdFont:size=10;2
+font-0 = FiraCodeNerdFont:size=10;2
 
 modules-left = bspwm title
 modules-right = distro cpu memory date
