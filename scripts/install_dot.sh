@@ -3,6 +3,11 @@
 cp -v {dotfiles,$HOME}/.zshrc
 cp -v {dotfiles,$HOME}/.p10k.zsh
 
+mkdir -pv $HOME/.config
+cp -v {dotfiles,$HOME}/.config/konsolerc
+mkdir -pv $HOME/.local/share/konsolerc
+cp -v {dotfiles,$HOME}/.local/share/konsole/RDark.profile
+
 # mkdir -pv $HOME/.config/{bspwm,kitty,nvim,polybar,rofi,sxhkd}
 # cp -v {dotfiles,$HOME}/.config/bspwm/bspwmrc
 # cp -v {dotfiles,$HOME}/.config/kitty/kitty.conf
