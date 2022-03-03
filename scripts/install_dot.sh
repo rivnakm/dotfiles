@@ -1,26 +1,26 @@
 #/bin/bash
 
-cp -v {dotfiles,$HOME}/.zshrc
-cp -v {dotfiles,$HOME}/.p10k.zsh
+cp -v $HOME/{dotfiles/,}.zshrc
+cp -v $HOME/{dotfiles/,}.p10k.zsh
 
 mkdir -pv $HOME/.config
-cp -v {dotfiles,$HOME}/.config/konsolerc
+cp -v $HOME/{dotfiles/,}.config/konsolerc
 mkdir -pv $HOME/.local/share/konsolerc
-cp -v {dotfiles,$HOME}/.local/share/konsole/RDark.profile
+cp -v $HOME/{dotfiles/,}.local/share/konsole/RDark.profile
 
 # mkdir -pv $HOME/.config/{bspwm,kitty,nvim,polybar,rofi,sxhkd}
-# cp -v {dotfiles,$HOME}/.config/bspwm/bspwmrc
-# cp -v {dotfiles,$HOME}/.config/kitty/kitty.conf
-# cp -v {dotfiles,$HOME}/.config/kitty/onedark.conf
-# cp -v {dotfiles,$HOME}/.config/nvim/init.vim
-# cp -v {dotfiles,$HOME}/.config/polybar/config
-# cp -v {dotfiles,$HOME}/.config/polybar/launch.sh
-# cp -v {dotfiles,$HOME}/.config/rofi/config.rasi
-# cp -v {dotfiles,$HOME}/.config/rofi/onedark.rasi
-# cp -v {dotfiles,$HOME}/.config/sxhkd/sxhkdrc
+# cp -v $HOME/{dotfiles/,}.config/bspwm/bspwmrc
+# cp -v $HOME/{dotfiles/,}.config/kitty/kitty.conf
+# cp -v $HOME/{dotfiles/,}.config/kitty/onedark.conf
+# cp -v $HOME/{dotfiles/,}.config/nvim/init.vim
+# cp -v $HOME/{dotfiles/,}.config/polybar/config
+# cp -v $HOME/{dotfiles/,}.config/polybar/launch.sh
+# cp -v $HOME/{dotfiles/,}.config/rofi/config.rasi
+# cp -v $HOME/{dotfiles/,}.config/rofi/onedark.rasi
+# cp -v $HOME/{dotfiles/,}.config/sxhkd/sxhkdrc
 
 # mkdir -pv $HOME/.config/picom
-# cp -v {dotfiles,$HOME}/.config/picom/picom.conf
+# cp -v $HOME/{dotfiles/,}.config/picom/picom.conf
 
 # mkdir -pv $HOME/Pictures
-# cp -v {dotfiles,$HOME}/Pictures/wallpaper.jpg
+# cp -v $HOME/{dotfiles/,}Pictures/wallpaper.jpg

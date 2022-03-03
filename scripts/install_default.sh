@@ -1,5 +1,5 @@
 #!/bin/bash
 
-./install_dot.sh
-./install_fonts.sh
-./install_omz.sh
+$HOME/dotfiles/scripts/install_dot.sh
+$HOME/dotfiles/scripts/install_fonts.sh
+$HOME/dotfiles/scripts/install_omz.sh
