@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=Gnome Dark
+ColorScheme=RDark
 
 [Cursor Options]
 CursorShape=2
