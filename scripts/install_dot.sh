@@ -2,12 +2,14 @@
 
 cp -v $HOME/{dotfiles/,}.zshrc
 cp -v $HOME/{dotfiles/,}.p10k.zsh
-
 mkdir -pv $HOME/.config
-cp -v $HOME/{dotfiles/,}.config/konsolerc
-mkdir -pv $HOME/.local/share/konsolerc
-cp -v $HOME/{dotfiles/,}.local/share/konsole/RDark.profile
-cp -v $HOME/{dotfiles/,}.local/share/konsole/RDark.colorscheme
+cp -vr $HOME/{dotfiles/,}.config/nvim
+
+# mkdir -pv $HOME/.config
+# cp -v $HOME/{dotfiles/,}.config/konsolerc
+# mkdir -pv $HOME/.local/share/konsolerc
+# cp -v $HOME/{dotfiles/,}.local/share/konsole/RDark.profile
+# cp -v $HOME/{dotfiles/,}.local/share/konsole/RDark.colorscheme
 
 # mkdir -pv $HOME/.config/{bspwm,kitty,nvim,polybar,rofi,sxhkd}
 # cp -v $HOME/{dotfiles/,}.config/bspwm/bspwmrc

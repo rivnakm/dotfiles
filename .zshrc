@@ -79,9 +79,6 @@ export CMAKE_GENERATOR='Unix Makefiles'
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# Visual Studio Code
-alias sudo-code='sudo code --user-data-dir="~/.vscode-root"'
-
 # Set personal aliases
 ## ls
 if command -v logo-ls &> /dev/null
@@ -98,7 +95,6 @@ alias rf="rm -rf"
 alias nf="neofetch"
 alias pf="pfetch"
 alias sudo="sudo " # Makes sudo use your custom aliases
-alias nvim="nvim -u $HOME/.config/nvim/init.vim" # Always use user init.vim, even when running with sudo
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
