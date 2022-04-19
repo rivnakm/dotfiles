@@ -4,7 +4,7 @@ for fetch in neofetch pfetch
 do
     git clone https://github.com/dylanaraps/$fetch.git
     pushd $fetch
-    sudo make Install
+    sudo make install
     popd
     rm -rf $fetch
 done
