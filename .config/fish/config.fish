@@ -14,6 +14,7 @@ set -x LANG en_US.UTF-8
 
 alias ls "ls --color=auto"
 alias l "ls -lah"
+alias la "ls -a"
 alias rf "rm -rf"
 alias nf neofetch
 alias pf pfetch
