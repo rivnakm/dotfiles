@@ -7,7 +7,6 @@ end
 set PATH $PATH $HOME/.cargo/bin $HOME/go/bin
 
 set -g fish_greeting
-set sponge_delay 8
 
 set -x EDITOR nvim
 set -x VISUAL code

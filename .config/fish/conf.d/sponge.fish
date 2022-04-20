@@ -3,7 +3,7 @@ set --global sponge_version 1.0.2
 
 # Allow to repeat previous command by default
 if not set --query --universal sponge_delay
-  set --universal sponge_delay 2
+  set --universal sponge_delay 5
 end
 
 # Add default filters
