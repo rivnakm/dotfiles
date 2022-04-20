@@ -23,7 +23,7 @@ alias prm "paru -R"
 alias por "paru -Qtdq | paru -Rns -"
 
 set -x PF_INFO "ascii title os kernel shell editor pkgs memory"
-pfetch
+VISUAL=$EDITOR pfetch
 
 # activate starship prompt
 starship init fish | source
