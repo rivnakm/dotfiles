@@ -80,6 +80,7 @@ symbol = "nix "
 symbol = "ml "
 
 [package]
+disabled = true
 symbol = "pkg "
 
 [perl]
