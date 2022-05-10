@@ -22,6 +22,8 @@ alias pin "paru -S"
 alias prm "paru -R"
 alias por "paru -Qtdq | paru -Rns -"
 
+fish_vi_key_bindings insert
+
 set -x PF_INFO "ascii title os kernel shell editor pkgs memory"
 pfetch
 
