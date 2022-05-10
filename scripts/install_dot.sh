@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 
 mkdir -pv $HOME/.config/{fish,nvim}
 cp -vr dotfiles/.config/nvim/* $HOME/.config/nvim/
