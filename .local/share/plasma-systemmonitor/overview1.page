@@ -1,0 +1,223 @@
+[Face-94697050511440][Appearance]
+chartFace=org.kde.ksysguard.linechart
+title=Memory Usage
+
+[Face-94697050511440][SensorColors]
+memory/physical/usedPercent=61,174,233
+
+[Face-94697050511440][SensorLabels]
+memory/physical/usedPercent=Used Physical Memory
+
+[Face-94697050511440][Sensors]
+highPrioritySensorIds=["memory/physical/usedPercent"]
+
+[Face-94697050511440][org.kde.ksysguard.linechart][General]
+showLegend=false
+
+[Face-94697054486960][Appearance]
+chartFace=org.kde.ksysguard.piechart
+title=Memory Usage
+
+[Face-94697054486960][SensorColors]
+memory/physical/usedPercent=61,174,233
+memory/swap/usedPercent=233,61,174
+
+[Face-94697054486960][SensorLabels]
+memory/physical/usedPercent=Used Physical Memory
+
+[Face-94697054486960][Sensors]
+highPrioritySensorIds=["memory/physical/usedPercent"]
+totalSensors=["memory/physical/usedPercent"]
+
+[Face-94697079471552][Appearance]
+chartFace=org.kde.ksysguard.piechart
+showTitle=true
+title=CPU Usage
+
+[Face-94697079471552][SensorColors]
+cpu/all/usage=61,174,233
+
+[Face-94697079471552][SensorLabels]
+cpu/all/usage=CPU Usage
+
+[Face-94697079471552][Sensors]
+highPrioritySensorIds=["cpu/all/usage"]
+totalSensors=["cpu/all/usage"]
+
+[Face-94697079471552][org.kde.ksysguard.piechart][General]
+showLegend=false
+
+[Face-94697096526928][Appearance]
+chartFace=org.kde.ksysguard.linechart
+title=CPU Usage
+
+[Face-94697096526928][SensorColors]
+cpu/cpu0/usage=61,174,233
+cpu/cpu1/usage=61,88,233
+cpu/cpu10/usage=61,233,120
+cpu/cpu11/system=61,233,206
+cpu/cpu2/usage=120,61,233
+cpu/cpu3/usage=206,61,233
+cpu/cpu4/system=233,61,174
+cpu/cpu5/usage=233,61,88
+cpu/cpu6/usage=233,120,61
+cpu/cpu7/usage=233,206,61
+cpu/cpu8/usage=174,233,61
+cpu/cpu9/usage=88,233,61
+
+[Face-94697096526928][SensorLabels]
+cpu/cpu0/usage=Core 1
+cpu/cpu1/usage=Core 2
+cpu/cpu10/usage=Core 11
+cpu/cpu11/system=Core 12
+cpu/cpu2/usage=Core 3
+cpu/cpu3/usage=Core 4
+cpu/cpu4/system=Core 5
+cpu/cpu5/usage=Core 6
+cpu/cpu6/usage=Core 7
+cpu/cpu7/usage=Core 8
+cpu/cpu8/usage=Core 9
+cpu/cpu9/usage=Core 10
+
+[Face-94697096526928][Sensors]
+highPrioritySensorIds=["cpu/cpu0/usage","cpu/cpu1/usage","cpu/cpu2/usage","cpu/cpu3/usage","cpu/cpu4/system","cpu/cpu5/usage","cpu/cpu6/usage","cpu/cpu7/usage","cpu/cpu8/usage","cpu/cpu9/usage","cpu/cpu10/usage","cpu/cpu11/system"]
+
+[Face-94697096526928][org.kde.ksysguard.linechart][General]
+showLegend=false
+
+[Face-94697170558640][Appearance]
+chartFace=org.kde.ksysguard.textonly
+title=System Information
+
+[Face-94697170558640][SensorColors]
+os/kernel/prettyName=88,233,61
+os/kernel/version=123,61,233
+os/plasma/plasmaVersion=233,120,61
+os/plasma/qtVersion=66,61,233
+os/system/hostname=61,174,233
+os/system/logo=61,233,120
+os/system/name=206,61,233
+
+[Face-94697170558640][SensorLabels]
+os/system/name=Operating System
+
+[Face-94697170558640][Sensors]
+highPrioritySensorIds=["os/system/hostname","os/system/name","os/plasma/plasmaVersion","os/kernel/prettyName"]
+totalSensors=[]
+
+[Face-94697171494496][Appearance]
+chartFace=org.kde.ksysguard.linechart
+title=Network
+
+[Face-94697171494496][SensorColors]
+network/all/download=61,174,233
+network/all/upload=233,61,174
+
+[Face-94697171494496][Sensors]
+highPrioritySensorIds=["network/all/download","network/all/upload"]
+
+[Face-94697175519728][Appearance]
+chartFace=org.kde.ksysguard.applicationstable
+title=Applications
+
+[Face-94697189682288][Appearance]
+chartFace=org.kde.ksysguard.piechart
+
+[Face-94697226428736][Appearance]
+chartFace=org.kde.ksysguard.linechart
+title=Disk Read
+
+[Face-94697226428736][SensorColors]
+disk/18e72503-e894-403e-b975-1b8835f91119/free=61,233,228
+disk/18e72503-e894-403e-b975-1b8835f91119/freePercent=61,233,127
+disk/18e72503-e894-403e-b975-1b8835f91119/read=61,174,233
+disk/18e72503-e894-403e-b975-1b8835f91119/total=217,233,61
+disk/18e72503-e894-403e-b975-1b8835f91119/used=61,162,233
+disk/18e72503-e894-403e-b975-1b8835f91119/usedPercent=233,61,187
+disk/18e72503-e894-403e-b975-1b8835f91119/write=197,233,61
+disk/3a4a101c-46a2-440c-9283-291cd802ff84/read=233,61,174
+
+[Face-94697226428736][SensorLabels]
+disk/18e72503-e894-403e-b975-1b8835f91119/read=NVMe SSD
+disk/3a4a101c-46a2-440c-9283-291cd802ff84/read=SATA HDD
+
+[Face-94697226428736][Sensors]
+highPrioritySensorIds=["disk/18e72503-e894-403e-b975-1b8835f91119/read","disk/3a4a101c-46a2-440c-9283-291cd802ff84/read"]
+
+[Face-94697244453664][Appearance]
+chartFace=org.kde.ksysguard.linechart
+title=Disk Write
+
+[Face-94697244453664][SensorColors]
+disk/18e72503-e894-403e-b975-1b8835f91119/write=61,174,233
+disk/3a4a101c-46a2-440c-9283-291cd802ff84/write=233,61,174
+
+[Face-94697244453664][SensorLabels]
+disk/18e72503-e894-403e-b975-1b8835f91119/write=NVMe SSD
+disk/3a4a101c-46a2-440c-9283-291cd802ff84/write=SATA HDD
+
+[Face-94697244453664][Sensors]
+highPrioritySensorIds=["disk/18e72503-e894-403e-b975-1b8835f91119/write","disk/3a4a101c-46a2-440c-9283-291cd802ff84/write"]
+
+[page]
+actionsFace=
+
+[page][row-0][column-0][section-0]
+face=Face-94697096526928
+
+[page][row-0][column-1]
+name=column-1
+noMargins=
+showBackground=true
+
+[page][row-0][column-1][section-0]
+face=Face-94697050511440
+isSeparator=false
+name=section-0
+
+[page][row-1]
+Title=
+heightMode=balanced
+isTitle=false
+name=row-1
+
+[page][row-1][column-0]
+name=column-0
+noMargins=
+showBackground=true
+
+[page][row-1][column-0][section-0]
+face=Face-94697171494496
+isSeparator=false
+name=section-0
+
+[page][row-1][column-1]
+name=column-1
+noMargins=
+showBackground=true
+
+[page][row-1][column-1][section-0]
+face=Face-94697226428736
+isSeparator=false
+name=section-0
+
+[page][row-1][column-1][section-1]
+face=Face-94697244453664
+isSeparator=false
+name=section-1
+
+[page][row-2]
+Title=
+heightMode=balanced
+isTitle=false
+name=row-2
+
+[page][row-2][column-0]
+name=column-0
+noMargins=
+showBackground=true
+
+[page][row-2][column-0][section-0]
+face=Face-94697175519728
+isSeparator=false
+name=section-0
