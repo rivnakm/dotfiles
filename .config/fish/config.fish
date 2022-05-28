@@ -4,7 +4,7 @@ if test "$PWD" = "/mnt/c/Users/Michael"
 end
 
 # Add cargo and go to path
-set PATH $PATH $HOME/.cargo/bin $HOME/go/bin
+set PATH $PATH $HOME/.local/bin $HOME/.cargo/bin $HOME/go/bin
 
 set -g fish_greeting
 
@@ -21,6 +21,8 @@ alias par paru
 alias pin "paru -S"
 alias prm "paru -R"
 alias por "paru -Qtdq | paru -Rns -"
+alias nv neovim
+alias snv "sudo -e"
 
 fish_vi_key_bindings insert
 
