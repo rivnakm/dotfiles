@@ -6,9 +6,6 @@ vicmd_symbol = "[<](bold green)"
 [aws]
 symbol = "  "
 
-[buf]
-symbol = " "
-
 [conda]
 symbol = " "
 
@@ -60,6 +57,9 @@ symbol = " "
 [package]
 disabled = true
 symbol = " "
+
+[python]
+symbol = " "
 
 [rust]
 symbol = " "
