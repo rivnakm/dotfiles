@@ -1,0 +1,11 @@
+theme = "github_dark"
+
+[editor]
+line-number = "relative"
+true-color = true
+shell = "fish"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"

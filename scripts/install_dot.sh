@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-mkdir -pv $HOME/.config/{fish,nvim}
+mkdir -pv $HOME/.config/{fish,helix/themes}
 cp -vr dotfiles/.config/fish/* $HOME/.config/fish/
-cp -v dotfiles/.config/starship.toml $HOME/.config
+cp -vr dotfiles/.config/helix/* $HOME/.config/helix/
+cp -v dotfiles/.config/starship.toml $HOME/.config/
 
-git clone https://github.com/mrivnak/nvim-config $HOME/.config/nvim
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+wget https://raw.githubusercontent.com/mrivnak/github-helix-theme/main/github_dark.toml -O $HOME/.config/helix/themes/github_dark.toml

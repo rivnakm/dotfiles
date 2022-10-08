@@ -22,7 +22,9 @@ alias pin "paru -S"
 alias prm "paru -R"
 alias por "paru -Qtdq | paru -Rns -"
 alias nv neovim
-alias snv "sudo -e"
+alias snv "EDITOR=nvim sudo -e"
+alias hx helix
+alias shx "EDITOR=helix sudo -e"
 
 fish_vi_key_bindings insert
 
