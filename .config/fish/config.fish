@@ -21,7 +21,7 @@ alias par paru
 alias pin "paru -S"
 alias prm "paru -R"
 alias por "paru -Qtdq | paru -Rns -"
-alias shx "EDITOR=helix sudo -e"
+alias shx "EDITOR=hx sudo -e"
 
 fish_vi_key_bindings insert
 
