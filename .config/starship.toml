@@ -3,6 +3,14 @@ success_symbol = "[>](bold green)"
 error_symbol = "[>](bold red)"
 vicmd_symbol = "[<](bold green)"
 
+[hostname]
+disabled = false
+ssh_symbol = " "
+
+[username]
+disabled = false
+style_user = "bold blue"
+
 [aws]
 symbol = "  "
 
