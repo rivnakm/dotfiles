@@ -11,11 +11,8 @@ ssh_symbol = " "
 disabled = false
 style_user = "bold blue"
 
-[aws]
-symbol = "  "
-
-[conda]
-symbol = " "
+[cmake]
+symbol = "喝 "
 
 [dart]
 symbol = " "
@@ -28,9 +25,6 @@ symbol = " "
 
 [elixir]
 symbol = " "
-
-[elm]
-symbol = " "
 
 [git_branch]
 symbol = " "
@@ -69,5 +63,11 @@ symbol = " "
 [python]
 symbol = " "
 
+[ruby]
+symbol = " "
+
 [rust]
 symbol = " "
+
+[zig]
+symbol = " "
