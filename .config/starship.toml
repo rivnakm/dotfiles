@@ -23,6 +23,9 @@ read_only = " "
 [docker_context]
 symbol = " "
 
+[dotnet]
+format = "via [$symbol($version )]($style)"
+
 [elixir]
 symbol = " "
 
