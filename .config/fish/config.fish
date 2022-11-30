@@ -8,7 +8,7 @@ set PATH $PATH $HOME/.local/bin $HOME/.cargo/bin $HOME/go/bin
 
 set -g fish_greeting
 
-set -x EDITOR hx
+set -x EDITOR nvim
 set -x LANG en_US.UTF-8
 
 alias ls "ls --color=auto"
@@ -21,7 +21,8 @@ alias par paru
 alias pin "paru -S"
 alias prm "paru -R"
 alias por "paru -Qtdq | paru -Rns -"
-alias shx "EDITOR=hx sudo -e"
+alias nv nvim
+alias snv "sudo -e"
 
 fish_vi_key_bindings insert
 
