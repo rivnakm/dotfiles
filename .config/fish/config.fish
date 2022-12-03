@@ -22,7 +22,12 @@ alias pin "paru -S"
 alias prm "paru -R"
 alias por "paru -Qtdq | paru -Rns -"
 alias nv nvim
-alias snv "sudo -e"
+alias snv "EDITOR=nvim sudo -e"
+alias gs "git status"
+alias gpu "git push"
+alias gpl "git pull"
+alias ga "git add"
+alias gc "git commit -m"
 
 fish_vi_key_bindings insert
 
@@ -31,3 +36,4 @@ pfetch
 
 # activate starship prompt
 starship init fish | source
+
