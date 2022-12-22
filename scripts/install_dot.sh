@@ -1,22 +1,27 @@
 #!/usr/bin/env bash
 
-mkdir -pv $HOME/.config/fish
-cp -vr dotfiles/.config/fish/* $HOME/.config/fish/
+# Get location of dotfiles dynamically
+SCRIPT_PATH="${BASH_SOURCE}"
+while [ -L "${SCRIPT_PATH}" ]; do
+  SCRIPT_DIR="$(cd -P "$(dirname "${SCRIPT_PATH}")" >/dev/null 2>&1 && pwd)"
+  SCRIPT_PATH="$(readlink "${SCRIPT_PATH}")"
+  [[ ${SCRIPT_PATH} != /* ]] && SCRIPT_PATH="${SCRIPT_DIR}/${SCRIPT_PATH}"
+done
+SCRIPT_PATH="$(readlink -f "${SCRIPT_PATH}")"
+SCRIPT_DIR="$(cd -P "$(dirname -- "${SCRIPT_PATH}")" >/dev/null 2>&1 && pwd)"
+DOTFILES_DIR="$(dirname "${SCRIPT_DIR}")"
 
-# mkdir -pv $HOME/.config/helix
-# cp -vr dotfiles/.config/helix/* $HOME/.config/helix/
+# Install files
+mkdir -pv $HOME/.config/fish
+cp -vr $DOTFILES_DIR/.config/fish/* $HOME/.config/fish/
 
 mkdir -pv $HOME/.config/bottom
-cp -vr dotfiles/.config/bottom/* $HOME/.config/bottom/
+cp -vr $DOTFILES_DIR/.config/bottom/* $HOME/.config/bottom/
 
 mkdir -pv $HOME/.config/tmux
-cp -vr dotfiles/.config/tmux/* $HOME/.config/tmux
+cp -vr $DOTFILES_DIR/.config/tmux/* $HOME/.config/tmux
 
-cp -v dotfiles/.config/starship.toml $HOME/.config/
+cp -v $DOTFILES_DIR/.config/starship.toml $HOME/.config/
 
-# wget https://raw.githubusercontent.com/mrivnak/github-helix-theme/main/github_dark.toml -O $HOME/.config/helix/themes/github_dark.toml
-
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-nvim -c PlugInstall
+git clone https://github.com/mrivnak/neovim-config ~/.config/nvim
 
