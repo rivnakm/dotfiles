@@ -12,4 +12,6 @@ if (Test-Path -Path $HOME\AppData\Local\nvim) {
 } else {
 	git clone https://github.com/mrivnak/neovim-config $HOME\AppData\Local\nvim
 }
+
+New-Item -Type Directory -Force $(Split-Path $PROFILE -Parent) | Out-Null
 Copy-Item -Force $DotfilesPath\Microsoft.PowerShell_profile.ps1 $PROFILE
