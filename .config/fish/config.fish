@@ -31,6 +31,11 @@ alias gc "git commit -m"
 
 fish_vi_key_bindings insert
 
+# interactive stuff
+if not status --is-interactive
+	exit
+end
+
 set -x PF_INFO "ascii title os kernel shell editor pkgs memory"
 pfetch
 
