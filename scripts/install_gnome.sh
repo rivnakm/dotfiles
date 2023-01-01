@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-dconf reset -f /org/gnome/terminal/legacy/profiles:/ && dconf load /org/gnome/terminal/legacy/profiles:/ < $HOME/dotfiles/gnome-terminal-profiles.dconf 
+curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v0.2.0/install.py | python3 -

@@ -36,6 +36,8 @@ if not status --is-interactive
 	exit
 end
 
+fish_config theme save "Catppuccin Mocha"
+
 set -x PF_INFO "ascii title os kernel shell editor pkgs memory"
 pfetch
 
