@@ -7,12 +7,14 @@ DOTFILES_DIR="$(dirname $(dirname $SCRIPT_PATH))"
 # Install files
 # Fish
 # Fisher
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
+fish -c "curl -sL https://git.io/fisher | source && \
+fisher install jorgebucaran/fisher
 # Fish plugins
 fisher install jorgebucaran/autopair.fish
 fisher install jorgebucaran/replay.fish
 fisher install catppuccin/fish
+"
 
 mkdir -pv $HOME/.config/fish
 cp -vr $DOTFILES_DIR/.config/fish/* $HOME/.config/fish/
