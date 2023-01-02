@@ -8,7 +8,9 @@ Copy-Item -Force $DotfilesPath\.config\starship.toml $HOME\.config\starship.toml
 
 # Neovim
 if (Test-Path -Path $HOME\AppData\Local\nvim) {
-	Write-Output "neovim config folder exists, skipping..."
+	Push-Location $HOME\AppData\Local\nvim
+	git pull
+	Pop-Location
 } else {
 	git clone https://github.com/mrivnak/neovim-config $HOME\AppData\Local\nvim
 }
