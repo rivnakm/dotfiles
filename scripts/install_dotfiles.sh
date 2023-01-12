@@ -14,7 +14,7 @@ fisher install jorgebucaran/fisher
 fisher install jorgebucaran/autopair.fish
 fisher install jorgebucaran/replay.fish
 fisher install catppuccin/fish
-fish_config theme save "Catppuccin Mocha"
+fish_config theme save 'Catppuccin Mocha'
 "
 
 mkdir -pv $HOME/.config/fish
