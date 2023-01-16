@@ -10,6 +10,7 @@ set -g fish_greeting
 
 set -x EDITOR nvim
 set -x LANG en_US.UTF-8
+set -x TZ America/New_York
 
 alias ls "ls --color=auto"
 alias l "ls -lah"
