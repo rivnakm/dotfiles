@@ -1,8 +1,8 @@
 [Appearance]
-ColorScheme=Catppucin-Mocha
+ColorScheme=Catppuccin-Mocha
 Font=CascadiaMono Nerd Font Mono,10,-1,5,53,0,0,0,0,0,Retina
 
 [General]
-Name=Catppucin Mocha
+Name=Catppuccin Mocha
 Parent=FALLBACK/
 TerminalRows=32
