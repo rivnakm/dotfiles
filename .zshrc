@@ -66,6 +66,16 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    alias-finder
+    colored-man-pages
+    command-not-found
+    fzf
+    extract
+    rsync
+    rust
+    starship
+    sudo
+    systemd
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
@@ -101,5 +111,3 @@ alias gc="git commit -m"
 
 export PF_INFO="ascii title os kernel shell editor pkgs memory palette"
 pfetch
-
-eval "$(starship init zsh)"
