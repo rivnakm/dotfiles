@@ -5,6 +5,4 @@ mkdir -pv $HOME/.local/share/{konsole,plasma-systemmonitor}
 cp -v dotfiles/.config/{konsolerc,systemmonitorrc} $HOME/.config/
 cp -vr dotfiles/.local/share/konsole/* $HOME/.local/share/konsole/
 cp -vr dotfiles/.local/share/plasma-systemmonitor/* $HOME/.local/share/plasma-systemmonitor/
-
-git clone https://github.com/catppuccin/kde /tmp/catppuccin-kde && cd /tmp/catppuccin-kde && ./install.sh
-rm -rf /tmp/catppuccin-kde
+wget -O $HOME/.local/share/konsole/github_dark_default.colorscheme https://raw.githubusercontent.com/projekt0n/github-theme-contrib/main/konsole/github_dark_default.colorscheme

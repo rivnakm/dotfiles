@@ -3,23 +3,13 @@
 # Get location of dotfiles dynamically
 SCRIPT_PATH=$BASH_SOURCE
 DOTFILES_DIR="$(dirname $(dirname $SCRIPT_PATH))"
+ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 
 # Install files
-# Fish
-# Fisher
+cp -vr $DOTFILES_DIR/.zshrc $HOME/
 
-fish -c "curl -sL https://git.io/fisher | source && \
-fisher install jorgebucaran/fisher
-# Fish plugins
-fisher install jorgebucaran/autopair.fish
-fisher install jorgebucaran/replay.fish
-fisher install catppuccin/fish
-fish_config theme save Catppuccin\ Mocha
-"
-
-mkdir -pv $HOME/.config/fish
-cp -vr $DOTFILES_DIR/.config/fish/* $HOME/.config/fish/
-
+# Bottom
+mkdir -pv $HOME/.config/bottom
 # Bottom
 mkdir -pv $HOME/.config/bottom
 cp -vr $DOTFILES_DIR/.config/bottom/* $HOME/.config/bottom/
@@ -37,4 +27,8 @@ if [ -d $HOME/.config/nvim ]; then
 else
     git clone https://github.com/mrivnak/neovim-config $HOME/.config/nvim
 fi
+
+# Zsh plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
