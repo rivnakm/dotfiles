@@ -101,6 +101,9 @@ alias par=paru
 alias pin="paru -S"
 alias prm="paru -R"
 alias por="paru -Qtdq | paru -Rns -"
+alias dnfi="sudo dnf install"
+alias dnfr="sudo dnf remove"
+alias dnfu="sudo dnf upgrade"
 alias nv=nvim
 alias snv="EDITOR=nvim sudo -e"
 alias gs="git status"
