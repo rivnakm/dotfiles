@@ -91,6 +91,10 @@ export LANG=en_US.UTF-8
 export EDITOR=nvim
 export TZ=America/New_York
 
+# Use clang as default C/C++ compiler
+export CC=clang
+export CXX=clang++
+
 alias ls="ls --color=auto"
 alias l="ls -lah"
 alias la="ls -a"
