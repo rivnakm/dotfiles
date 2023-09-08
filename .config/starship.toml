@@ -12,7 +12,7 @@ disabled = false
 style_user = "bold blue"
 
 [cmake]
-symbol = "喝 "
+symbol = "喝"
 
 [dart]
 symbol = " "
