@@ -69,6 +69,7 @@ plugins=(
     alias-finder
     colored-man-pages
     command-not-found
+    direnv
     fzf
     extract
     rsync
@@ -94,6 +95,7 @@ export TZ=America/New_York
 # Use clang as default C/C++ compiler
 export CC=clang
 export CXX=clang++
+export CMAKE_GENERATOR=Ninja
 
 alias ls="ls --color=auto"
 alias l="ls -lah"

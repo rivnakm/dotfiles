@@ -1,11 +1,9 @@
 [Appearance]
-ColorScheme=catppuccin_mocha
+ColorScheme=WhiteOnBlack
 Font=CascadiaMono Nerd Font Mono,10,-1,5,50,0,0,0,0,0
 
 [General]
-Command=/usr/bin/zsh
-LocalTabTitleFormat=%w
-Name=Catppuccin Mocha
+Name=Default
 Parent=FALLBACK/
 RemoteTabTitleFormat=%w (%h)
 TerminalColumns=130
