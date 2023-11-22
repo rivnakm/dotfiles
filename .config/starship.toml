@@ -3,77 +3,59 @@ success_symbol = "[>](bold green)"
 error_symbol = "[>](bold red)"
 vicmd_symbol = "[<](bold green)"
 
-[hostname]
-disabled = false
-ssh_symbol = " "
-
-[username]
-disabled = false
-style_user = "bold blue"
+[git_status]
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
 
 [cmake]
-symbol = "喝"
+symbol = "cmake "
 
 [dart]
-symbol = " "
-
-[directory]
-read_only = " "
-
-[docker_context]
-symbol = " "
+symbol = "dart "
 
 [dotnet]
-format = "via [$symbol($version )]($style)"
+symbol = ".NET "
 
-[elixir]
-symbol = " "
+[directory]
+read_only = " ro"
+
+[docker_context]
+symbol = "docker "
 
 [git_branch]
-symbol = " "
+symbol = "git "
 
 [golang]
-symbol = " "
-
-[haskell]
-symbol = " "
+symbol = "go "
 
 [hg_branch]
-symbol = " "
+symbol = "hg "
 
 [java]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[lua]
-symbol = " "
-
-[memory_usage]
-symbol = " "
-
-[nim]
-symbol = " "
-
-[nix_shell]
-symbol = " "
+symbol = "java "
 
 [nodejs]
-symbol = " "
+symbol = "node "
+
+[nix_shell]
+symbol = "nix "
+
+[ocaml]
+symbol = "ml "
 
 [package]
 disabled = true
-symbol = " "
+symbol = "pkg "
 
 [python]
-symbol = " "
-
-[ruby]
-symbol = " "
+symbol = "py "
 
 [rust]
-symbol = " "
+symbol = "rust "
 
-[zig]
-symbol = " "
+[sudo]
+symbol = "sudo "
+
