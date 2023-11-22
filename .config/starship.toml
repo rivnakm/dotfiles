@@ -10,6 +10,14 @@ diverged = "<>"
 renamed = "r"
 deleted = "x"
 
+[hostname]
+disabled = false
+ssh_symbol = "ssh:"
+
+[username]
+disabled = false
+style_user = "bold blue"
+
 [cmake]
 symbol = "cmake "
 
