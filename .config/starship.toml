@@ -23,7 +23,7 @@ style_user = "bold blue"
 disabled = true
 
 [custom.cc]
-command = 'echo "${CC} v$($CC -dumpversion)"'
+command = 'if [ -z "${CC}" ]; then echo "$(readlink /usr/bin/cc) v$(cc -dumpversion)" ; else echo "${CC} v$($CC -dumpversion)"; fi'
 detect_extensions = ["c", "cpp", "h", "hpp"]
 detect_files = ["CMakeLists.txt"]
 style = "bold 149"
