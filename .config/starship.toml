@@ -19,6 +19,9 @@ style = "red"
 disabled = false
 style_user = "bold blue"
 
+[c]
+symbol = "c "
+
 [cmake]
 symbol = "cmake "
 
@@ -53,7 +56,7 @@ symbol = "node "
 symbol = "nix "
 
 [ocaml]
-symbol = "ml "
+symbol = "ocaml "
 
 [package]
 disabled = true
