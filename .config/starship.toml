@@ -13,7 +13,7 @@ deleted = "x"
 [hostname]
 disabled = false
 ssh_symbol = "ssh:"
-style = "red"
+style = "purple"
 
 [username]
 disabled = false
