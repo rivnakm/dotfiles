@@ -20,7 +20,14 @@ disabled = false
 style_user = "bold blue"
 
 [c]
-symbol = "c "
+disabled = true
+
+[custom.cc]
+command = 'echo "${CC} v$($CC -dumpversion)"'
+detect_extensions = ["c", "cpp", "h", "hpp"]
+detect_files = ["CMakeLists.txt"]
+style = "bold 149"
+format = "via [$output]($style) "
 
 [cmake]
 symbol = "cmake "
