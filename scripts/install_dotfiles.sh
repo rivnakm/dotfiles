@@ -18,6 +18,10 @@ cp -vr $DOTFILES_DIR/.config/bottom/* $HOME/.config/bottom/
 mkdir -pv $HOME/.config/tmux
 cp -vr $DOTFILES_DIR/.config/tmux/* $HOME/.config/tmux
 
+# Micro
+mkdir -pv $HOME/.config/micro
+cp -vr $DOTFILES_DIR/.config/micro/* $HOME/.config/micro
+
 # Starship
 cp -v $DOTFILES_DIR/.config/starship.toml $HOME/.config/
 
