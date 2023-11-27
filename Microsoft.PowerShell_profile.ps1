@@ -7,7 +7,10 @@ Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 # Set-PSReadLineKeyHandler -Key RightArrow -Function AcceptSuggestion
 
 Set-Alias -Name sudo -Value gsudo
+
 Set-Alias -Name mc -Value micro
+$Env:COLORTERM = "truecolor"
+$Env:MICRO_TRUECOLOR = 1
 
 function Git-Status { git status }
 Set-Alias -Name gs -Value Git-Status
