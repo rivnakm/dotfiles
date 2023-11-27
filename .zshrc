@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-export EDITOR=nvim
+export EDITOR=micro
 export TZ=America/New_York
 
 # Use clang as default C/C++ compiler
@@ -112,6 +112,8 @@ alias dnfr="sudo dnf remove"
 alias dnfu="sudo dnf upgrade"
 alias nv=nvim
 alias snv="EDITOR=nvim sudo -e"
+alias mc=micro
+alias smc="EDITOR=micro sudo -e"
 alias gs="git status"
 alias gpu="git push"
 alias gpl="git pull"

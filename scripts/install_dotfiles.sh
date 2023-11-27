@@ -21,13 +21,6 @@ cp -vr $DOTFILES_DIR/.config/tmux/* $HOME/.config/tmux
 # Starship
 cp -v $DOTFILES_DIR/.config/starship.toml $HOME/.config/
 
-# Neovim
-if [ -d $HOME/.config/nvim ]; then
-    pushd $HOME/.config/nvim; git pull; popd
-else
-    git clone https://github.com/mrivnak/neovim-config $HOME/.config/nvim
-fi
-
 # Oh My Zsh
 RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
