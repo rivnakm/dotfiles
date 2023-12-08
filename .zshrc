@@ -119,6 +119,7 @@ alias gpu="git push"
 alias gpl="git pull"
 alias ga="git add"
 alias gc="git commit -m"
+alias nj=ninja
 
 export PF_INFO="ascii title os kernel shell editor pkgs memory palette"
 pfetch
