@@ -22,6 +22,13 @@ cp -vr $DOTFILES_DIR/.config/tmux/* $HOME/.config/tmux
 mkdir -pv $HOME/.config/micro
 cp -vr $DOTFILES_DIR/.config/micro/* $HOME/.config/micro
 
+# Neovim
+if [ -d $HOME/.config/nvim ]; then
+    pushd $HOME/.config/nvim; git pull; popd
+else
+    git clone https://github.com/mrivnak/neovim-config $HOME/.config/nvim
+fi
+
 # Starship
 cp -v $DOTFILES_DIR/.config/starship.toml $HOME/.config/
 
