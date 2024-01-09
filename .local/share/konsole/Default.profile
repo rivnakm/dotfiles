@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=WhiteOnBlack
+ColorScheme=Breeze
 Font=CascadiaMono Nerd Font Mono,10,-1,5,50,0,0,0,0,0
 
 [General]
