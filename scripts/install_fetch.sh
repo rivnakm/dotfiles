@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
 # pfetch-rs
+echo "Installing pfetch-rs"
 cargo install pfetch --locked
 
 # fastfetch
+echo "Installing fastfetch"
 git clone https://github.com/fastfetch-cli/fastfetch
 cd fastfetch
 mkdir -p build

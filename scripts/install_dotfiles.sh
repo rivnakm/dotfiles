@@ -5,6 +5,8 @@ SCRIPT_PATH=$BASH_SOURCE
 DOTFILES_DIR="$(dirname $(dirname $SCRIPT_PATH))"
 ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 
+echo "Installing dotfiles"
+
 # Install files
 cp -vr $DOTFILES_DIR/.zshrc $HOME/
 
@@ -22,20 +24,24 @@ cp -vr $DOTFILES_DIR/.config/tmux/* $HOME/.config/tmux
 mkdir -pv $HOME/.config/micro
 cp -vr $DOTFILES_DIR/.config/micro/* $HOME/.config/micro
 
-# Neovim
-if [ -d $HOME/.config/nvim ]; then
-    pushd $HOME/.config/nvim; git pull; popd
-else
-    git clone https://github.com/mrivnak/neovim-config $HOME/.config/nvim
-fi
-
 # Starship
 cp -v $DOTFILES_DIR/.config/starship.toml $HOME/.config/
 
+# Neovim
+if [ -d $HOME/.config/nvim ]; then
+    echo "Updating existing Neovim config"
+    pushd $HOME/.config/nvim; git pull; popd
+else
+    echo "Cloning Neovim config"
+    git clone https://github.com/mrivnak/neovim-config $HOME/.config/nvim
+fi
+
 # Oh My Zsh
+echo "Installing Oh My Zsh"
 RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Zsh plugins
+echo "Installing Zsh plugins"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
