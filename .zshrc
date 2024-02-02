@@ -125,32 +125,42 @@ alias nj=ninja
 # I use arch and gentoo primarily so most of these checks never happen
 function upg {
     if grep -qi "Arch" /etc/os-release; then
+        echo "Updating system with Pacman"
         paru -Syu
 
     elif grep -qi "Gentoo" /etc/os-release; then
+        echo "Updating system with Portage"
         sudo emerge --sync
         sudo emerge -vuDU @world
         sudo emerge --depclean
 
     elif grep -qi "Debian" /etc/os-release || grep -qi "Ubuntu" /etc/os-release; then
+        echo "Updating system with Apt"
         sudo apt update
         sudo apt upgrade
 
     elif grep -qi "Void" /etc/os-release; then
+        echo "Updating system with XBPS"
         sudo xbps-install -Su
 
     elif grep -qi "Alpine" /etc/os-release; then
+        echo "Updating system with APK"
         sudo apk --update-cache upgrade
 
     elif grep -qi "NixOS" /etc/os-release; then
+        echo "Updating system with Nix"
         sudo nix-channel --update
         sudo nixos-rebuild switch
 
     elif grep -qi "Kinoite" /etc/os-release || grep -qi "Silverblue" /etc/os-release; then
+        echo "Updating system with rpm-ostree"
         sudo rpm-ostree upgrade
 
     elif grep -qi "MicroOS" /etc/os-release; then
+        echo "Updating system with transactional-update"
         sudo transactional-update pkg dist-upgrade
+
+        echo "Updating toolbox containers"
         for toolbox in $(toolbox list | grep -v "CONTAINER ID" | tr -s ' ' | cut -d ' ' -f 11); do
             toolbox run --container $toolbox sudo zypper dup
         done
@@ -162,19 +172,24 @@ function upg {
         grep -qi "Rocky" /etc/os-release; then
 
         if command -v dnf &> /dev/null; then
+            echo "Updating system with DNF"
             sudo dnf upgrade
         else
+            echo "Updating system with YUM"
             sudo yum upgrade
         fi
 
     elif grep -qi "SUSE" /etc/os-release; then
+        echo "Updating system with Zypper"
         sudo zypper dup
 
     elif grep -qi "FreeBSD" /etc/os-release; then
+        echo "Updating system with FreeBSD Update and Pkg"
         sudo freebsd-update fetch install
         sudo pkg upgrade
 
     elif grep -qi "OpenBSD" /etc/os-release; then
+        echo "Updating system with pkg_add"
         sudo pkg_add -u
 
     elif grep -qi "lfs" /etc/os-release; then
@@ -185,18 +200,22 @@ function upg {
     fi
 
     if command -v flatpak &> /dev/null; then
+        echo "Updating flatpaks"
         flatpak update
     fi
 
     if command -v snap &> /dev/null; then
+        echo "Updating snaps"
         sudo snap refresh
     fi
 
     if command -v rustup &> /dev/null; then
+        echo "Updating Rust"
         rustup update
     fi
 
     if command -v nix-channel &> /dev/null; then
+        echo "Updating Nix"
         nix-channel --update
     fi
 }
