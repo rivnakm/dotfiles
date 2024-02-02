@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cmds=("git" "curl" "zsh" "cargo" "cmake" "make")
+cmds=("git" "curl" "zsh" "cargo" "cmake" "make" "cc")
 
 echo "Checking script requirements"
 for cmd in "${cmds[@]}"; do
