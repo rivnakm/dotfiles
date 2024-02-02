@@ -85,12 +85,12 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
+# Environment variables
 export LANG=en_US.UTF-8
 export EDITOR=nvim
 export TZ=America/New_York
+export PF_INFO="ascii title os kernel shell editor pkgs memory palette"
+export TOOLBOX_SHELL=$(which zsh)
 
 # Use clang as default C/C++ compiler
 export CC=clang
@@ -101,7 +101,7 @@ alias ls="ls --color=auto"
 alias l="ls -lah"
 alias la="ls -a"
 alias rf="rm -rf"
-alias nf=neofetch
+alias ff=fastfetch
 alias pf=pfetch
 alias par=paru
 alias pin="paru -S"
@@ -121,5 +121,84 @@ alias ga="git add"
 alias gc="git commit -m"
 alias nj=ninja
 
-export PF_INFO="ascii title os kernel shell editor pkgs memory palette"
+# This is a bit silly but it's fun
+# I use arch and gentoo primarily so most of these checks never happen
+function upg {
+    if grep -qi "Arch" /etc/os-release; then
+        paru -Syu
+
+    elif grep -qi "Gentoo" /etc/os-release; then
+        sudo emerge --sync
+        sudo emerge -vuDU @world
+        sudo emerge --depclean
+
+    elif grep -qi "Debian" /etc/os-release || grep -qi "Ubuntu" /etc/os-release; then
+        sudo apt update
+        sudo apt upgrade
+
+    elif grep -qi "Void" /etc/os-release; then
+        sudo xbps-install -Su
+
+    elif grep -qi "Alpine" /etc/os-release; then
+        sudo apk --update-cache upgrade
+
+    elif grep -qi "NixOS" /etc/os-release; then
+        sudo nix-channel --update
+        sudo nixos-rebuild switch
+
+    elif grep -qi "Kinoite" /etc/os-release || grep -qi "Silverblue" /etc/os-release; then
+        sudo rpm-ostree upgrade
+
+    elif grep -qi "MicroOS" /etc/os-release; then
+        sudo transactional-update pkg dist-upgrade
+        for toolbox in $(toolbox list | grep -v "CONTAINER ID" | tr -s ' ' | cut -d ' ' -f 11); do
+            toolbox run --container $toolbox sudo zypper dup
+        done
+
+    elif grep -qi "Fedora" /etc/os-release || \
+        grep -qi "Alma" /etc/os-release || \
+        grep -qi "Red" /etc/os-release || \
+        grep -qi "Oracle" /etc/os-release || \
+        grep -qi "Rocky" /etc/os-release; then
+
+        if command -v dnf &> /dev/null; then
+            sudo dnf upgrade
+        else
+            sudo yum upgrade
+        fi
+
+    elif grep -qi "SUSE" /etc/os-release; then
+        sudo zypper dup
+
+    elif grep -qi "FreeBSD" /etc/os-release; then
+        sudo freebsd-update fetch install
+        sudo pkg upgrade
+
+    elif grep -qi "OpenBSD" /etc/os-release; then
+        sudo pkg_add -u
+
+    elif grep -qi "lfs" /etc/os-release; then
+        echo "lol"
+
+    else
+        echo "System upgrade is not supported on this distribution."
+    fi
+
+    if command -v flatpak &> /dev/null; then
+        flatpak update
+    fi
+
+    if command -v snap &> /dev/null; then
+        sudo snap refresh
+    fi
+
+    if command -v rustup &> /dev/null; then
+        rustup update
+    fi
+
+    if command -v nix-channel &> /dev/null; then
+        nix-channel --update
+    fi
+}
+
 pfetch
