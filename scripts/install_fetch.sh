@@ -12,6 +12,6 @@ mkdir -p build
 cd build
 cmake ..
 cmake --build . --target fastfetch
-sudo cmake --install . --component fastfetch --prefix /usr/local
+sudo cp fastfetch /usr/local/bin
 cd ../..
 rm -rf fastfetch
