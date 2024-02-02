@@ -124,43 +124,52 @@ alias nj=ninja
 # This is a bit silly but it's fun
 # I use arch and gentoo primarily so most of these checks never happen
 function upg {
+        # ANSI escape code for blue text
+    BLUE='\033[0;34m'
+
+    # Reset text color
+    RESET='\033[0m'
+    
     if grep -qi "Arch" /etc/os-release; then
-        echo "Updating system with Pacman"
+        echo -e "\n${BLUE}Updating system with Pacman${RESET}"
         paru -Syu
+        sudo pacman -Qdtq | sudo pacman -Rns -
 
     elif grep -qi "Gentoo" /etc/os-release; then
-        echo "Updating system with Portage"
+        echo -e "\n${BLUE}Updating system with Portage${RESET}"
         sudo emerge --sync
         sudo emerge -vuDU @world
         sudo emerge --depclean
 
     elif grep -qi "Debian" /etc/os-release || grep -qi "Ubuntu" /etc/os-release; then
-        echo "Updating system with Apt"
+        echo -e "\n${BLUE}Updating system with Apt${RESET}"
         sudo apt update
         sudo apt upgrade
+        sudo apt autoremove
 
     elif grep -qi "Void" /etc/os-release; then
-        echo "Updating system with XBPS"
+        echo -e "\n${BLUE}Updating system with XBPS${RESET}"
         sudo xbps-install -Su
+        sudo xbps-remove -o
 
     elif grep -qi "Alpine" /etc/os-release; then
-        echo "Updating system with APK"
+        echo -e "\n${BLUE}Updating system with APK${RESET}"
         sudo apk --update-cache upgrade
 
     elif grep -qi "NixOS" /etc/os-release; then
-        echo "Updating system with Nix"
+        echo -e "\n${BLUE}Updating system with Nix${RESET}"
         sudo nix-channel --update
         sudo nixos-rebuild switch
 
     elif grep -qi "Kinoite" /etc/os-release || grep -qi "Silverblue" /etc/os-release; then
-        echo "Updating system with rpm-ostree"
+        echo -e "\n${BLUE}Updating system with rpm-ostree${RESET}"
         sudo rpm-ostree upgrade
 
     elif grep -qi "MicroOS" /etc/os-release; then
-        echo "Updating system with transactional-update"
+        echo -e "\n${BLUE}Updating system with transactional-update${RESET}"
         sudo transactional-update pkg dist-upgrade
 
-        echo "Updating toolbox containers"
+        echo -e "\n${BLUE}Updating toolbox containers${RESET}"
         for toolbox in $(toolbox list | grep -v "CONTAINER ID" | tr -s ' ' | cut -d ' ' -f 11); do
             toolbox run --container $toolbox sudo zypper dup
         done
@@ -172,50 +181,51 @@ function upg {
         grep -qi "Rocky" /etc/os-release; then
 
         if command -v dnf &> /dev/null; then
-            echo "Updating system with DNF"
+            echo -e "\n${BLUE}Updating system with DNF${RESET}"
             sudo dnf upgrade
         else
-            echo "Updating system with YUM"
+            echo -e "\n${BLUE}Updating system with YUM${RESET}"
             sudo yum upgrade
         fi
 
     elif grep -qi "SUSE" /etc/os-release; then
-        echo "Updating system with Zypper"
+        echo -e "\n${BLUE}Updating system with Zypper${RESET}"
         sudo zypper dup
 
     elif grep -qi "FreeBSD" /etc/os-release; then
-        echo "Updating system with FreeBSD Update and Pkg"
+        echo -e "\n${BLUE}Updating system with FreeBSD Update and Pkg${RESET}"
         sudo freebsd-update fetch install
         sudo pkg upgrade
 
     elif grep -qi "OpenBSD" /etc/os-release; then
-        echo "Updating system with pkg_add"
+        echo -e "\n${BLUE}Updating system with pkg_add${RESET}"
         sudo pkg_add -u
 
     elif grep -qi "lfs" /etc/os-release; then
         echo "lol"
 
     else
-        echo "System upgrade is not supported on this distribution."
+        RED='\033[0;31m'
+        echo -e "\n${RED}System upgrade is not supported on this distribution.${RESET}"
     fi
 
     if command -v flatpak &> /dev/null; then
-        echo "Updating flatpaks"
+        echo -e "\n${BLUE}Updating flatpaks${RESET}"
         flatpak update
     fi
 
     if command -v snap &> /dev/null; then
-        echo "Updating snaps"
+        echo -e "\n${BLUE}Updating snaps${RESET}"
         sudo snap refresh
     fi
 
     if command -v rustup &> /dev/null; then
-        echo "Updating Rust"
+        echo -e "\n${BLUE}Updating Rust${RESET}"
         rustup update
     fi
 
     if command -v nix-channel &> /dev/null; then
-        echo "Updating Nix"
+        echo -e "\n${BLUE}Updating Nix${RESET}"
         nix-channel --update
     fi
 }
