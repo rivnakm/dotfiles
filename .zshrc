@@ -3,7 +3,7 @@ if [ "$PWD" = "/mnt/c/Users/Michael" ]; then
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/go/bin
+export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$HOME/go/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
