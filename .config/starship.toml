@@ -81,3 +81,5 @@ symbol = "rust "
 [sudo]
 symbol = "sudo "
 
+[zig]
+symbol = "zig "
