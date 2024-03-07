@@ -254,6 +254,7 @@ def install_vscode_rpm():
 
 
 def install_zig():
+    return # I should install zig manually for now
     print("Installing Zig...")
     get_version = subprocess.run(
         """git ls-remote --tags --sort="v:refname" https://github.com/ziglang/zig | grep -v '{}' | cut -f 3 -d '/' | tail -n 1""",
