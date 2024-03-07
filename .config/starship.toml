@@ -1,3 +1,11 @@
+format = """
+$username\
+$hostname\
+$directory\
+$container\
+$all\
+"""
+
 [character]
 success_symbol = "[>](bold green)"
 error_symbol = "[>](bold red)"
@@ -18,6 +26,15 @@ style = "purple"
 [username]
 disabled = false
 style_user = "bold blue"
+
+[docker_context]
+symbol = "docker "
+style = "blue"
+
+[container]
+format = 'in [$name]($style) '
+symbol = ""
+style = "bold blue"
 
 [c]
 disabled = true
@@ -41,8 +58,7 @@ symbol = ".NET "
 [directory]
 read_only = " ro"
 
-[docker_context]
-symbol = "docker "
+
 
 [git_branch]
 symbol = "git "
