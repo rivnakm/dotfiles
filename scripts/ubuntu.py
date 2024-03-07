@@ -104,7 +104,6 @@ def install_ubuntu_server():
         "clang",
         "cmake",
         "curl",
-        "flatpak",
         "fzf",
         "lld",
         "ninja-build",
