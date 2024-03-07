@@ -50,31 +50,31 @@ def install_fedora():
     print("Installing Rust...")
     install_rust()
 
-    # print("Installing flatpaks...")
-    # subprocess.run(
-    #     [
-    #         "flatpak",
-    #         "remote-add",
-    #         "--if-not-exists",
-    #         "flathub",
-    #         "https://flathub.org/repo/flathub.flatpakrepo",
-    #     ],
-    #     check=True,
-    # )
-    # flatpaks = [
-    #     "com.axosoft.GitKraken",
-    #     "com.discordapp.Discord",
-    #     "com.microsoft.Edge",
-    #     "com.prusa3d.PrusaSlicer",
-    #     "com.spotify.Client",
-    #     "org.blender.Blender",
-    #     "org.godotengine.Godot",
-    #     "org.prismlauncher.PrismLauncher",
-    #     "tv.plex.PlexDesktop",
-    # ]
+    print("Installing flatpaks...")
+    subprocess.run(
+        [
+            "flatpak",
+            "remote-add",
+            "--if-not-exists",
+            "flathub",
+            "https://flathub.org/repo/flathub.flatpakrepo",
+        ],
+        check=True,
+    )
+    flatpaks = [
+        "com.axosoft.GitKraken",
+        "com.discordapp.Discord",
+        "com.microsoft.Edge",
+        "com.prusa3d.PrusaSlicer",
+        "com.spotify.Client",
+        "org.blender.Blender",
+        "org.godotengine.Godot",
+        "org.prismlauncher.PrismLauncher",
+        "tv.plex.PlexDesktop",
+    ]
 
-    # for flatpak in flatpaks:
-    #     subprocess.run(["flatpak", "install", "flathub", flatpak, "-y"], check=True)
+    for flatpak in flatpaks:
+        subprocess.run(["flatpak", "install", "flathub", flatpak, "-y"], check=True)
 
     install_dots()
     install_kde()

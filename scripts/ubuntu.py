@@ -45,20 +45,20 @@ def install_ubuntu():
     print("Installing Rust...")
     install_rust()
 
-    # print("Installing flatpaks...")
-    # subprocess.run(
-    #     [
-    #         "flatpak",
-    #         "remote-add",
-    #         "--if-not-exists",
-    #         "flathub",
-    #         "https://flathub.org/repo/flathub.flatpakrepo",
-    #     ],
-    #     check=True,
-    # )
+    print("Installing flatpaks...")
+    subprocess.run(
+        [
+            "flatpak",
+            "remote-add",
+            "--if-not-exists",
+            "flathub",
+            "https://flathub.org/repo/flathub.flatpakrepo",
+        ],
+        check=True,
+    )
     flatpaks = [
-        # "com.microsoft.Edge",
-        # "org.prismlauncher.PrismLauncher",
+        "com.microsoft.Edge",
+        "org.prismlauncher.PrismLauncher",
     ]
 
     for flatpak in flatpaks:
@@ -74,8 +74,8 @@ def install_ubuntu():
         ["prusa-slicer"],
         ["spotify"],
     ]
-    # for snap in snaps:
-    #     subprocess.run(["sudo", "snap", "install"] + snap, check=True)
+    for snap in snaps:
+        subprocess.run(["sudo", "snap", "install"] + snap, check=True)
 
     install_dots()
     install_kde()
