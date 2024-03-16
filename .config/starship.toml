@@ -58,8 +58,6 @@ symbol = ".NET "
 [directory]
 read_only = " ro"
 
-
-
 [git_branch]
 symbol = "git "
 
@@ -71,6 +69,9 @@ symbol = "hg "
 
 [java]
 symbol = "java "
+
+[lua]
+symbol = "lua "
 
 [nodejs]
 symbol = "node "
