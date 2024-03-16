@@ -1,10 +1,10 @@
 [Appearance]
 ColorScheme=Breeze
-Font=CascadiaMono Nerd Font Mono,10,-1,5,50,0,0,0,0,0
+Font=CaskaydiaMono Nerd Font Mono,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [General]
 Name=Default
 Parent=FALLBACK/
 RemoteTabTitleFormat=%w (%h)
 TerminalColumns=130
-TerminalRows=36
+TerminalRows=42

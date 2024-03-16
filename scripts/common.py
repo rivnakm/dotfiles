@@ -99,15 +99,27 @@ def install_kde():
 
 def install_fonts():
     print("Installing fonts...")
-    if path.exists(f"{path.expanduser('~')}/.local/share/fonts/CascadiaMono-Nerd-Font"):
-        return
 
-    os.makedirs(f"{path.expanduser('~')}/.local/share/fonts", exist_ok=True)
     subprocess.run(
-        ["git", "clone", "https://github.com/mrivnak/CascadiaMono-Nerd-Font.git"],
-        cwd=f"{path.expanduser('~')}/.local/share/fonts",
+        [
+            "curl",
+            "-L",
+            "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/CascadiaMono.zip",
+            "--output",
+            "cascadia.zip",
+        ],
+        cwd="/tmp",
         check=True,
     )
+    os.makedirs("/tmp/cascadia", exist_ok=True)
+    subprocess.run(["unzip", "/tmp/cascadia.zip", "-d", "/tmp/cascadia"], check=True)
+    subprocess.run("sudo mkdir -p /usr/share/fonts/caskaydia", shell=True, check=True)
+    subprocess.run(
+        "sudo cp /tmp/cascadia/*.ttf /usr/share/fonts/caskaydia/",
+        shell=True,
+        check=True,
+    )
+
     subprocess.run(["fc-cache", "-f", "-v"], check=True)
 
 
@@ -254,7 +266,7 @@ def install_vscode_rpm():
 
 
 def install_zig():
-    return # I should install zig manually for now
+    return  # I should install zig manually for now
     print("Installing Zig...")
     get_version = subprocess.run(
         """git ls-remote --tags --sort="v:refname" https://github.com/ziglang/zig | grep -v '{}' | cut -f 3 -d '/' | tail -n 1""",
@@ -304,15 +316,11 @@ def install_zig():
     )
     shutil.rmtree("/tmp/zls")
 
+
 def install_fzf():
     print("Installing fzf...")
     subprocess.run(
-        [
-            "git",
-            "clone",
-            "--depth",
-            "1",
-            "https://github.com/junegunn/fzf.git"],
+        ["git", "clone", "--depth", "1", "https://github.com/junegunn/fzf.git"],
         cwd="/tmp",
         check=True,
     )

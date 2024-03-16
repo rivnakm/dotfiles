@@ -3,7 +3,7 @@ if [ "$PWD" = "/mnt/c/Users/Michael" ]; then
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$HOME/go/bin:$PATH
+export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/go/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -75,7 +75,6 @@ plugins=(
     rsync
     rust
     starship
-    sudo
     systemd
     zsh-autosuggestions
     zsh-syntax-highlighting
@@ -112,6 +111,8 @@ alias dnfr="sudo dnf remove"
 alias dnfu="sudo dnf upgrade"
 alias nv=nvim
 alias snv="EDITOR=nvim sudo -e"
+alias mc=micro
+alias smc="EDITOR=micro sudo -e"
 alias gs="git status"
 alias gpu="git push"
 alias gpl="git pull"
@@ -131,7 +132,6 @@ function upg {
     if grep -qi "Arch" /etc/os-release; then
         echo -e "\n${BLUE}Updating system with Pacman${RESET}"
         paru -Syu
-        sudo pacman -Qdtq | sudo pacman -Rns -
 
     elif grep -qi "Gentoo" /etc/os-release; then
         echo -e "\n${BLUE}Updating system with Portage${RESET}"
@@ -143,12 +143,10 @@ function upg {
         echo -e "\n${BLUE}Updating system with Apt${RESET}"
         sudo apt update
         sudo apt upgrade
-        sudo apt autoremove
 
     elif grep -qi "Void" /etc/os-release; then
         echo -e "\n${BLUE}Updating system with XBPS${RESET}"
         sudo xbps-install -Su
-        sudo xbps-remove -o
 
     elif grep -qi "Alpine" /etc/os-release; then
         echo -e "\n${BLUE}Updating system with APK${RESET}"
