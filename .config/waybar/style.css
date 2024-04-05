@@ -2,8 +2,8 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: caskaydiamono nerd font mono, sans-serif;
     font-size: 13px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 window#waybar {
@@ -42,6 +42,12 @@ button {
 #tray {
     padding: 0 7px;
     color: #ffffff;
+}
+
+#custom-arch {
+    padding-left: 7px;
+    color: #89dceb;
+    font-size: 20px;
 }
 
 #window,

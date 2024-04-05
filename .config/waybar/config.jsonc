@@ -1,8 +1,11 @@
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["tray", "cpu", "memory", "network", "bluetooth", "wireplumber", "clock"],
+    "custom/arch": {
+        "format": "󰣇"
+    },
     "hyprland/window": {
         "max-length": 100,
         "rewrite": {
