@@ -111,8 +111,6 @@ alias dnfr="sudo dnf remove"
 alias dnfu="sudo dnf upgrade"
 alias nv=nvim
 alias snv="EDITOR=nvim sudo -e"
-alias mc=micro
-alias smc="EDITOR=micro sudo -e"
 alias gs="git status"
 alias gpu="git push"
 alias gpl="git pull"
