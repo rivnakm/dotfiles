@@ -1,0 +1,75 @@
+{
+    "layer": "top",
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["tray", "cpu", "memory", "network", "bluetooth", "wireplumber", "power-profiles-daemon", "battery", "clock"],
+    "custom/arch": {
+        "format": "󰣇"
+    },
+    "hyprland/window": {
+        "max-length": 85,
+        "rewrite": {
+            "class<Microsoft-edge>": "Microsoft Edge",
+        }
+    },
+    "tray": {
+        "icon-size": 13,
+    },
+    "cpu": {
+        "format": "󰻠 {:.0f}%",
+        "interval": 10,
+        "tooltip": false
+    },
+    "memory": {
+        "format": "󰘚 {percentage}%",
+        "interval": 10,
+        "tooltip": false
+    },
+    "network": {
+        "format-ethernet": "󰈀 {ifname}",
+        "format-wifi": "󰖩 {ifname}",
+        "format-disconnected": "󰅛 disconnected",
+        "interval": 10,
+        "tooltip": false,
+        "on-click": "kitty nmtui"
+    },
+    "bluetooth": {
+        "format": "󰂯",
+        "format-connected": "󰂱 {device_alias}",
+        "format-off": "󰂲",
+        "interval": 10,
+        "tooltip": false,
+        "on-click": "/home/michael/.local/bin/tofi-bluetooth.py"
+    },
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": ["󰕿", "󰖀", "󰕾"],
+        "on-click": "/home/michael/.local/bin/tofi-wireplumber.py"
+    },
+    "power-profiles-daemon": {
+        "format": "{icon} {profile}",
+        "tooltip": false,
+        "format-icons": {
+            "default": "",
+            "performance": "󰈸",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+    "battery": {
+        "bat": "BAT0",
+        "interval": 30,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
+    },
+    "clock": {
+        "format": "󰃰 {:%A, %B %d %I:%M %p}"
+    }
+}

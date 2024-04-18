@@ -1,0 +1,133 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: caskaydiamono nerd font mono, sans-serif;
+    font-size: 13px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+window#waybar {
+    background-color: #141417;
+    border-bottom: 2px solid #272734;
+    color: #CDD6F4;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces button {
+    padding: 0 7px;
+    background-color: transparent;
+    color: #585B70;
+}
+
+#workspaces button.active {
+    color: #CDD6F4;
+}
+
+#clock,
+#bluetooth,
+#cpu,
+#memory,
+#disk,
+#network,
+#wireplumber,
+#battery,
+#power-profiles-daemon,
+#tray {
+    padding: 0 7px;
+    color: #ffffff;
+}
+
+#custom-arch {
+    padding-left: 7px;
+    color: #89dceb;
+    font-size: 20px;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    color: #89dceb;
+}
+
+#cpu {
+    color: #f38ba8;
+}
+
+#memory {
+    color: #a6e3a1;
+}
+
+#network {
+    color: #f9e2af;
+}
+
+#network.disconnected {
+    color: #585b70;
+}
+
+#bluetooth {
+    color: #89b4fa;
+}
+
+#bluetooth.disconnected {
+    color: #585b70;
+}
+
+#wireplumber {
+    color: #f5c2e7;
+}
+
+#wireplumber.muted {
+    color: #585b70;
+}
+
+#battery {
+    color: #f9e2af;
+}
+
+#power-profiles-daemon {
+    color: #b4befe;
+}
+
+#power-profiles-daemon.power-saver {
+    color: #a6e3a1;
+}
+
+#power-profiles-daemon.performance {
+    color: #f38ba8;
+}
+
+#tray {
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
