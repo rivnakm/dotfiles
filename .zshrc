@@ -4,6 +4,15 @@ fi
 
 export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/go/bin
 
+# Command history
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt SHARE_HISTORY
+
+# Case insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
 # Load antigen
 source $HOME/.local/share/antigen/antigen.zsh
 
@@ -13,9 +22,6 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
 antigen bundle akash329d/zsh-alias-finder
 antigen bundle ptavares/zsh-direnv@main
-antigen bundle aubreypwd/zsh-plugin-fd
-antigen bundle wfxr/forgit
-antigen bundle mrjohannchang/fz.sh
 antigen bundle MenkeTechnologies/zsh-cargo-completion
 antigen bundle MenkeTechnologies/zsh-dotnet-completion
 antigen bundle sudosubin/zsh-github-cli
