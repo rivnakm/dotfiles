@@ -4,6 +4,13 @@ fi
 
 export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/go/bin
 
+# Disable vim mode (use emacs mode)
+bindkey -e
+
+# Enable home/end keys
+bindkey "\e[H" beginning-of-line
+bindkey "\e[F" end-of-line
+
 # Command history
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
