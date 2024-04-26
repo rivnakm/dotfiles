@@ -1,10 +1,10 @@
 {
     "layer": "top",
-    "modules-left": ["custom/arch", "hyprland/workspaces"],
+    "modules-left": ["custom/gentoo", "hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["tray", "cpu", "memory", "network", "bluetooth", "wireplumber", "clock"],
-    "custom/arch": {
-        "format": "󰣇"
+    "custom/gentoo": {
+        "format": "󰣨"
     },
     "hyprland/window": {
         "max-length": 100,
@@ -16,7 +16,7 @@
         "icon-size": 13,
     },
     "cpu": {
-        "format": "󰻠 {:.0f}%",
+        "format": "󰻠 {usage}%",
         "interval": 10,
         "tooltip": false
     },
