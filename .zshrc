@@ -82,5 +82,5 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-export PF_INFO="ascii title os kernel shell editor pkgs memory palette"
+export PF_INFO="ascii title os kernel shell de editor pkgs memory palette"
 pfetch
