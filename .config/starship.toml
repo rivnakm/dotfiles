@@ -3,6 +3,7 @@ $username\
 $hostname\
 $directory\
 $container\
+$nix_shell\
 $all\
 """
 
@@ -40,7 +41,7 @@ style = "bold blue"
 disabled = true
 
 [custom.cc]
-command = 'if [ -z "${CC}" ]; then echo "$(readlink /usr/bin/cc) v$(cc -dumpversion)" ; else echo "${CC} v$($CC -dumpversion)"; fi'
+command = 'if [ -z "${CC}" ]; then echo "$(basename $(readlink /usr/bin/cc)) v$(cc -dumpfullversion || cc -dumpversion)" ; else echo "${CC} v$($CC -dumpfullversion || $CC -dumpversion)"; fi'
 detect_extensions = ["c", "cpp", "h", "hpp"]
 detect_files = ["CMakeLists.txt"]
 style = "bold 81"
@@ -75,9 +76,6 @@ symbol = "lua "
 
 [nodejs]
 symbol = "node "
-
-[nix_shell]
-symbol = "nix "
 
 [ocaml]
 symbol = "ocaml "
