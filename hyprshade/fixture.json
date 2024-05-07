@@ -1,0 +1,14 @@
+{
+  "type": "files",
+  "files": [
+    {
+      "src": "hyprshade.toml",
+      "dest": "~/.config/hypr/hyprshade.toml"
+    },
+    {
+      "src": "blue-light-filter.glsl.mustache",
+      "dest": "~/.config/hypr/shaders/blue-light-filter.glsl.mustache",
+      "raw": true
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "files",
+  "files": [
+    {
+      "src": "hyprlock.conf",
+      "dest": "~/.config/hypr/hyprlock.conf"
+    }
+  ]
+}

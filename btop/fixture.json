@@ -1,0 +1,13 @@
+{
+  "type": "files",
+  "files": [
+    {
+      "src": "btop.conf",
+      "dest": "~/.config/btop/btop.conf"
+    },
+    {
+      "src": "catppuccin_mocha.theme",
+      "dest": "~/.config/btop/themes/catppuccino_mocha.theme"
+    }
+  ]
+}

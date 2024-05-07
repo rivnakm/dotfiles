@@ -1,0 +1,7 @@
+[font]
+normal = { family = "Cascadia Mono NF", style = "Regular" }
+italic = { family = "Cascadia Mono NF", style = "Italic" }
+size = 16
+
+[font.features]
+"Cascadia Mono NF" = [ "+salt", "+zero" ]

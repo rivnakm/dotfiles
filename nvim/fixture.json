@@ -1,0 +1,9 @@
+{
+    "type": "repository",
+    "repository": "https://github.com/mrivnak/neovim-config",
+    "reference": {
+        "type": "branch",
+        "value": "main"
+    },
+    "path": "~/.config/nvim"
+}

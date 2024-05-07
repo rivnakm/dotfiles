@@ -1,0 +1,9 @@
+{
+  "type": "files",
+  "files": [
+    {
+      "src": "hypridle.conf",
+      "dest": "~/.config/hypr/hypridle.conf"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "files",
+  "files": [
+    {
+      "src": "hyprland.conf",
+      "dest": "~/.config/hypr/hyprland.conf"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "files",
+  "files": [
+    {
+      "src": "config",
+      "dest": "~/.config/tofi/config"
+    }
+  ]
+}

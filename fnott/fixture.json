@@ -1,0 +1,9 @@
+{
+  "type": "files",
+  "files": [
+    {
+      "src": "fnott.ini",
+      "dest": "~/.config/fnott/fnott.ini"
+    }
+  ]
+}

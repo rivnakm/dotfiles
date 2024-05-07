@@ -1,0 +1,13 @@
+{
+  "type": "files",
+  "files": [
+    {
+      "src": "zshrc",
+      "dest": "~/.zshrc"
+    },
+    {
+      "src": "zprofile",
+      "dest": "~/.zprofile"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "files",
+  "files": [
+    {
+      "src": "config.toml",
+      "dest": "~/.config/neovide/config.toml"
+    }
+  ]
+}

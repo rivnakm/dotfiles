@@ -1,0 +1,13 @@
+{
+  "type": "files",
+  "files": [
+    {
+      "src": "config.jsonc",
+      "dest": "~/.config/waybar/config.jsonc"
+    },
+    {
+      "src": "style.css",
+      "dest": "~/.config/waybar/style.css"
+    }
+  ]
+}

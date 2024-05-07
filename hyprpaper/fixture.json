@@ -1,0 +1,9 @@
+{
+  "type": "files",
+  "files": [
+    {
+      "src": "hyprpaper.conf",
+      "dest": "~/.config/hypr/hyprpaper.conf"
+    }
+  ]
+}

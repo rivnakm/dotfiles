@@ -1,0 +1,10 @@
+export PATH=$HOME/.cargo/bin:$PATH:$HOME/.local/bin:$HOME/go/bin
+export LANG=en_US.UTF-8
+export TZ=America/New_York
+export EDITOR=nvim
+export TOOLBOX_SHELL=$(which zsh)
+
+# Use clang as default C/C++ compiler
+export CC=clang
+export CXX=clang++
+export CMAKE_GENERATOR=Ninja
