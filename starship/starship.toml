@@ -54,6 +54,7 @@ symbol = "dart "
 
 [dotnet]
 symbol = ".NET "
+format = "via [$symbol($version )]($style)"
 
 [directory]
 read_only = " ro"
