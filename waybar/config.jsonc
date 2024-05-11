@@ -1,19 +1,43 @@
 {
     "layer": "top",
-    "modules-left": ["custom/gentoo", "hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["tray", "cpu", "memory", "network", "bluetooth", "wireplumber", "clock"],
+    "modules-left": [
+        "custom/gentoo",
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "tray",
+        "custom/weather",
+        "cpu",
+        "memory",
+        "network",
+        "bluetooth",
+        "wireplumber",
+        "power-profiles-daemon",
+{% if hostname == "gentoo-zephyrus" -%}
+        "battery",
+{% endif -%}
+        "clock"
+    ],
     "custom/gentoo": {
         "format": "󰣨"
     },
     "hyprland/window": {
-        "max-length": 100,
         "rewrite": {
-            "class<Microsoft-edge>": "Microsoft Edge",
+            "class<Microsoft-edge>": "Microsoft Edge"
         }
     },
     "tray": {
         "icon-size": 13,
+        "spacing": 12
+    },
+    "custom/weather": {
+        "return-type": "json",
+        "format": "󰔏 {}",
+        "interval": 1800,
+        "tooltip": false,
+        "exec": "uweather --zip 06824 --country US --format waybar --api-key {{ OWM_API_KEY }}"
     },
     "cpu": {
         "format": "󰻠 {usage}%",
@@ -34,19 +58,53 @@
         "on-click": "kitty nmtui"
     },
     "bluetooth": {
-        "format": "󰂯",
+        "format": "󰂯 none",
         "format-connected": "󰂱 {device_alias}",
-        "format-off": "󰂲",
+        "format-off": "󰂲 off",
         "interval": 10,
         "tooltip": false,
         "on-click": "/home/michael/.local/bin/tofi-bluetooth.py"
     },
     "wireplumber": {
         "format": "{icon} {volume}%",
-        "format-muted": "󰝟",
-        "format-icons": ["󰕿", "󰖀", "󰕾"],
+        "format-muted": "󰝟 mute",
+        "format-icons": [
+            "󰕿",
+            "󰖀",
+            "󰕾"
+        ],
         "on-click": "/home/michael/.local/bin/tofi-wireplumber.py"
     },
+    "power-profiles-daemon": {
+        "format": "{icon} {profile}",
+        "tooltip": false,
+        "format-icons": {
+            "default": "",
+            "performance": "󰈸",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+{% if hostname == "gentoo-zephyrus" -%}
+    "battery": {
+        "bat": "BAT0",
+        "interval": 30,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "max-length": 25
+    },
+{% endif -%}
     "clock": {
         "format": "󰃰 {:%A, %B %d %I:%M %p}"
     }

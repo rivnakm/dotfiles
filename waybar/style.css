@@ -2,29 +2,25 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: Cascadia Mono NF, sans-serif;
     font-size: 13px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    border-radius: 7px;
+    color: #CDD6F4;
 }
 
 window#waybar {
-    background-color: #141417;
-    border-bottom: 2px solid #272734;
-    color: #CDD6F4;
-    transition-property: background-color;
-    transition-duration: .5s;
-}
-
-button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
-    border: none;
+    background: rgba(20, 20, 22, 0.3);
+    border: 2px solid #141417;
     border-radius: 0;
 }
 
+window#waybar.empty #window {
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+
 #workspaces button {
-    padding: 0 7px;
+    padding: 0 5px;
     background-color: transparent;
+    border: none;
     color: #585B70;
 }
 
@@ -39,46 +35,64 @@ button {
 #disk,
 #network,
 #wireplumber,
+#custom-weather,
+#power-profiles-daemon,
+{% if hostname == "gentoo-zephyrus" -%}
+#battery,
+{% endif -%}
 #tray {
-    padding: 0 7px;
     color: #ffffff;
 }
 
 #custom-gentoo {
-    padding-left: 7px;
     color: #b4befe;
     font-size: 20px;
 }
 
+#workspaces,
 #window,
-#workspaces {
-    margin: 0 4px;
+#custom-gentoo {
+    margin: 4px 0 4px 8px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: #141417;
+    border: 2px solid #272734;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+#clock,
+#bluetooth,
+#cpu,
+#memory,
+#disk,
+#network,
+#wireplumber,
+#custom-weather,
+#power-profiles-daemon,
+{% if hostname == "gentoo-zephyrus" -%}
+#battery,
+{% endif -%}
+#tray {
+    margin: 4px 8px 4px 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: #141417;
+    border: 2px solid #272734;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
-
-#clock {
-    color: #89dceb;
+#custom-weather {
+    color: #89b4fa;
 }
 
 #cpu {
-    color: #f38ba8;
+    color: #b4befe;
 }
 
 #memory {
-    color: #a6e3a1;
+    color: #94e2d5;
 }
 
 #network {
-    color: #f9e2af;
+    color: #cba6f7;
 }
 
 #network.disconnected {
@@ -89,16 +103,32 @@ button {
     color: #89b4fa;
 }
 
-#bluetooth.disconnected {
+#bluetooth.off {
     color: #585b70;
 }
 
 #wireplumber {
-    color: #f5c2e7;
+    color: #b4befe;
 }
 
 #wireplumber.muted {
     color: #585b70;
+}
+
+#power-profiles-daemon {
+    color: #cba6f7;
+}
+
+#power-profiles-daemon.power-saver {
+    color: #a6e3a1;
+}
+
+#power-profiles-daemon.performance {
+    color: #f38ba8;
+}
+
+#clock {
+    color: #f5e0dc;
 }
 
 #tray {
