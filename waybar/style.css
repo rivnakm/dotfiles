@@ -1,5 +1,4 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: Cascadia Mono NF, sans-serif;
     font-size: 13px;
     border-radius: 7px;
@@ -131,6 +130,20 @@ window#waybar.empty #window {
     color: #f5e0dc;
 }
 
+{% if hostname == "gentoo-zephyrus" -%}
+#battery {
+    color: #94e2d5;
+}
+
+#battery.warning {
+    color: #f9e2af;
+}
+
+#battery.critical {
+    color: #f38ba8;
+}
+{% endif -%}
+
 #tray {
 }
 
@@ -140,6 +153,6 @@ window#waybar.empty #window {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: #f38ba8;
 }
 
