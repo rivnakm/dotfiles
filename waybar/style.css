@@ -3,13 +3,13 @@
     font-family: Cascadia Mono NF, sans-serif;
     font-size: 13px;
     border-radius: 7px;
-    color: #CDD6F4;
 }
 
 window#waybar {
     background: rgba(20, 20, 22, 0.3);
     border: 2px solid #141417;
     border-radius: 0;
+    color: #CDD6F4;
 }
 
 window#waybar.empty #window {
@@ -41,7 +41,7 @@ window#waybar.empty #window {
 #battery,
 {% endif -%}
 #tray {
-    color: #ffffff;
+    color: #CDD6F4;
 }
 
 #custom-gentoo {
