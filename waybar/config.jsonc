@@ -1,5 +1,6 @@
 {
     "layer": "top",
+    "fixed-center": false,
     "modules-left": [
         "custom/gentoo",
         "hyprland/workspaces",
@@ -9,6 +10,7 @@
     "modules-right": [
         "tray",
         "custom/weather",
+        "custom/syncthing",
         "cpu",
         "memory",
         "network",
@@ -33,11 +35,21 @@
         "spacing": 12
     },
     "custom/weather": {
-        "return-type": "json",
         "format": "󰔏 {}",
         "interval": 1800,
         "tooltip": false,
-        "exec": "uweather --zip 06824 --country US --format waybar --api-key {{ OWM_API_KEY }}"
+        "exec": "waybar-weather.py"
+    },
+    "custom/syncthing": {
+        "format": "{icon} {}",
+        "format-icons": {
+            "default": "󰓦",
+            "error": "󰓧"
+        },
+        "return-type": "json",
+        "interval": 30,
+        "tooltip": false,
+        "exec": "waybar-syncthing.py"
     },
     "cpu": {
         "format": "󰻠 {usage}%",
