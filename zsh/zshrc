@@ -47,7 +47,7 @@ bindkey '^y' autosuggest-accept
 eval "$(starship init zsh)"
 
 # User configuration
-
+# Aliases
 alias ls="ls --color=auto"
 alias l="ls -lah"
 alias la="ls -a"
@@ -70,3 +70,4 @@ alias ....="cd ../../.."
 
 export PF_INFO="ascii title os kernel shell de editor pkgs memory palette"
 pfetch
+

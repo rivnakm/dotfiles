@@ -8,3 +8,7 @@ export TOOLBOX_SHELL=$(which zsh)
 export CC=clang
 export CXX=clang++
 export CMAKE_GENERATOR=Ninja
+
+# opam configuration
+[[ ! -r /home/michael/.opam/opam-init/init.zsh ]] || source /home/michael/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
