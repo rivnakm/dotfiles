@@ -34,6 +34,7 @@ window#waybar.empty #window {
 #disk,
 #network,
 #wireplumber,
+#mpris,
 #custom-weather,
 #custom-syncthing,
 #power-profiles-daemon,
@@ -49,8 +50,15 @@ window#waybar.empty #window {
     font-size: 20px;
 }
 
+#window {
+    margin: 4px 8px 4px 8px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: #141417;
+    border: 2px solid #272734;
+}
+
 #workspaces,
-#window,
 #custom-gentoo {
     margin: 4px 0 4px 8px;
     padding-left: 6px;
@@ -66,6 +74,7 @@ window#waybar.empty #window {
 #disk,
 #network,
 #wireplumber,
+#mpris,
 #custom-weather,
 #custom-syncthing,
 #power-profiles-daemon,
@@ -78,6 +87,10 @@ window#waybar.empty #window {
     padding-right: 6px;
     background-color: #141417;
     border: 2px solid #272734;
+}
+
+#mpris {
+    color: #94e2d5;
 }
 
 #custom-weather {
