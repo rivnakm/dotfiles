@@ -1,0 +1,2 @@
+sys-devel/clang extra static-analyzer
+sys-libs/libcxx clang

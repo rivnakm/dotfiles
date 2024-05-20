@@ -1,0 +1,5 @@
+dev-lang/rust clippy profiler rust-analyzer rustfmt rust-src system-bootstrap system-llvm wasm
+
+# Targets
+dev-lang/rust abi_x86_32 abi_x86_64
+dev-lang/rust llvm_targets_X86 llvm_targets_WebAssembly

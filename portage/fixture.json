@@ -1,5 +1,114 @@
 {
   "type": "files",
   "root": true,
-  "files": []
+  "files": [
+    {
+      "src": "make.conf",
+      "dest": "/etc/portage/make.conf"
+    },
+    {
+      "src": "package.accept_keywords/live",
+      "dest": "/etc/portage/package.accept_keywords/live"
+    },
+    {
+      "src": "package.accept_keywords/unstable",
+      "dest": "/etc/portage/package.accept_keywords/unstable"
+    },
+    {
+      "src": "package.accept_keywords/steam",
+      "dest": "/etc/portage/package.accept_keywords/steam"
+    },
+    {
+      "src": "package.env/nodistcc",
+      "dest": "/etc/portage/package.env/nodistcc"
+    },
+    {
+      "src": "package.env/nolto",
+      "dest": "/etc/portage/package.env/nolto"
+    },
+    {
+      "src": "package.env/test",
+      "dest": "/etc/portage/package.env/test"
+    },
+    {
+      "src": "env/nodistcc.conf",
+      "dest": "/etc/portage/env/nodistcc.conf"
+    },
+    {
+      "src": "env/nolto.conf",
+      "dest": "/etc/portage/env/nolto.conf"
+    },
+    {
+      "src": "env/test.conf",
+      "dest": "/etc/portage/env/test.conf"
+    },
+    {
+      "src": "package.use/amdgpu",
+      "dest": "/etc/portage/package.use/amdgpu"
+    },
+    {
+      "src": "package.use/cascadia-mono",
+      "dest": "/etc/portage/package.use/cascadia-mono"
+    },
+    {
+      "src": "package.use/clang",
+      "dest": "/etc/portage/package.use/clang"
+    },
+    {
+      "src": "package.use/dracut",
+      "dest": "/etc/portage/package.use/dracut"
+    },
+    {
+      "src": "package.use/libvirt",
+      "dest": "/etc/portage/package.use/libvirt"
+    },
+    {
+      "src": "package.use/lutris",
+      "dest": "/etc/portage/package.use/lutris"
+    },
+    {
+      "src": "package.use/nftables",
+      "dest": "/etc/portage/package.use/nftables"
+    },
+    {
+      "src": "package.use/plasma",
+      "dest": "/etc/portage/package.use/plasma"
+    },
+    {
+      "src": "package.use/qemu",
+      "dest": "/etc/portage/package.use/qemu"
+    },
+    {
+      "src": "package.use/rust",
+      "dest": "/etc/portage/package.use/rust"
+    },
+    {
+      "src": "package.use/steam",
+      "dest": "/etc/portage/package.use/steam"
+    },
+    {
+      "src": "package.use/systemd-boot",
+      "dest": "/etc/portage/package.use/systemd-boot"
+    },
+    {
+      "src": "package.use/waybar",
+      "dest": "/etc/portage/package.use/waybar"
+    },
+    {
+      "src": "package.use/wine",
+      "dest": "/etc/portage/package.use/wine"
+    },
+    {
+      "src": "package.use/zz-autounmask",
+      "dest": "/etc/portage/package.use/zz-autounmask"
+    },
+    {
+      "src": "repos.conf/gentoo.conf",
+      "dest": "/etc/portage/repos.conf/gentoo.conf"
+    },
+    {
+      "src": "repos.conf/eselect-repo.conf",
+      "dest": "/etc/portage/repos.conf/eselect-repo.conf"
+    }
+  ]
 }

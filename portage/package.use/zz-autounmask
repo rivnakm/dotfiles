@@ -1,0 +1,6 @@
+dev-db/sqlite abi_x86_32
+sys-libs/readline abi_x86_32
+media-video/ffmpeg opus
+net-libs/gnutls pkcs11 tools
+app-crypt/p11-kit cxx idn nls openssl pkcs11 seccomp tls-heartbeat tools zlib
+app-crypt/p11-kit abi_x86_32

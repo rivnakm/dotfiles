@@ -1,0 +1,3 @@
+dev-dotnet/dotnet-sdk nodistcc.conf
+
+dev-lang/zig nodistcc.conf
