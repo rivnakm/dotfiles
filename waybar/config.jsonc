@@ -38,6 +38,11 @@
     "mpris": {
         "interval": 1,
         "format": "{player_icon} {dynamic} {status_icon}",
+        "dynamic-order": [
+            "title",
+            "artist"
+        ],
+        "title-len": 32,
         "status-icons": {
             "playing": "",
             "paused": "",
