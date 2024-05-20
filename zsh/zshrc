@@ -13,7 +13,6 @@ bindkey "\e[F" end-of-line
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-setopt SHARE_HISTORY
 
 # Case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
@@ -67,6 +66,17 @@ alias gpl="git pull"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+
+# Kernel make function
+{% if hostname == "gentoo-desktop" -%}
+COMMON_FLAGS="-march=znver4 -mshstk --param=l1-cache-line-size=64 --param=l1-cache-size=32 --param=l2-cache-size=1024 -O2 -pipe"
+{% elif hostname == "gentoo-zephyrus" -%}
+COMMON_FLAGS="-march=znver3 -mshstk --param=l1-cache-line-size=64 --param=l1-cache-size=32 --param=l2-cache-size=1024 -O2 -pipe"
+{% endif -%}
+
+function kmake() {
+    sudo CFLAGS="$COMMON_FLAGS" CXXFLAGS="$COMMON_FLAGS" CC=clang CXX=clang++ LLVM=1 make -j$(nproc) $@
+}
 
 export PF_INFO="ascii title os kernel shell de editor pkgs memory palette"
 pfetch
