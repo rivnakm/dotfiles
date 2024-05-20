@@ -38,6 +38,8 @@ net-fs/samba ~amd64
 
 media-fonts/cascadia-mono ~amd64
 
+media-sound/musescore ~amd64
+
 media-video/obs-studio ~amd64
 
 sys-devel/clang ~amd64
