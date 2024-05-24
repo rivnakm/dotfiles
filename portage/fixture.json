@@ -47,6 +47,10 @@
       "dest": "/etc/portage/package.use/amdgpu"
     },
     {
+      "src": "package.use/asus",
+      "dest": "/etc/portage/package.use/asus"
+    },
+    {
       "src": "package.use/cascadia-mono",
       "dest": "/etc/portage/package.use/cascadia-mono"
     },
@@ -69,6 +73,10 @@
     {
       "src": "package.use/nftables",
       "dest": "/etc/portage/package.use/nftables"
+    },
+    {
+      "src": "package.use/nvidia",
+      "dest": "/etc/portage/package.use/nvidia"
     },
     {
       "src": "package.use/plasma",

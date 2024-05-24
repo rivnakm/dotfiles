@@ -1,10 +1,14 @@
 app-editors/neovide ~amd64
 
+app-laptop/asusctl ~amd64
+
 app-misc/cpufetch ~amd64
 app-misc/onefetch ~amd64
 app-misc/pfetch-rs ~amd64
 app-misc/spaceconf ~amd64
 app-misc/zellij ~amd64
+
+app-office/obsidian ~amd64
 
 app-shells/direnv ~amd64
 
@@ -13,13 +17,18 @@ app-text/tldr ~amd64
 dev-lang/rust ~amd64
 virtual/rust ~amd64
 
+dev-lang/ocaml ~amd64
+
 dev-libs/cxxopts ~amd64
 dev-libs/tree-sitter ~amd64
+
+dev-ml/opam ~amd64
 
 dev-python/podman-compose ~amd64
 dev-python/poetry ~amd64
 dev-python/yaspin ~amd64
 
+dev-util/cargo-ebuild ~amd64
 dev-util/cargo-tarpaulin ~amd64
 dev-util/conan ~amd64
 dev-util/github-cli ~amd64
@@ -67,6 +76,8 @@ virtual/dist-kernel ~amd64
 sys-kernel/gentoo-kernel ~amd64
 sys-kernel/gentoo-sources ~amd64
 sys-kernel/zen-sources ~amd64
+sys-kernel/rog-sources ~amd64
+sys-kernel/zen_rog-sources ~amd64
 
 # Hyprland
 gui-wm/hyprland ~amd64
