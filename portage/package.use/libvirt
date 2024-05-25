@@ -1,1 +1,1 @@
-app-emulation/libvirt qemu virtualbox
+app-emulation/libvirt pcap virt-network numa fuse macvtap vepa qemu virtualbox policykit

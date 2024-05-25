@@ -4,3 +4,6 @@ media-video/ffmpeg opus
 net-libs/gnutls pkcs11 tools
 app-crypt/p11-kit cxx idn nls openssl pkcs11 seccomp tls-heartbeat tools zlib
 app-crypt/p11-kit abi_x86_32
+>=media-libs/freetype-2.13.2 harfbuzz
+>=media-libs/freetype-2.13.2 brotli
+>=app-arch/brotli-1.1.0 abi_x86_32

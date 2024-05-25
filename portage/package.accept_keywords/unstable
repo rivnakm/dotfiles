@@ -22,6 +22,8 @@ dev-lang/ocaml ~amd64
 dev-libs/cxxopts ~amd64
 dev-libs/tree-sitter ~amd64
 
+dev-games/godot ~amd64
+
 dev-ml/opam ~amd64
 
 dev-python/podman-compose ~amd64
@@ -130,5 +132,9 @@ dev-python/shellingham ~amd64
 # for gui-apps/waybar
 media-video/wireplumber ~amd64
 media-video/pipewire ~amd64
+
+# for dev-games/godot
+dev-games/recastnavigation ~amd64
+net-libs/wslay ~amd64
 
 dev-python/sphinx ~amd64
