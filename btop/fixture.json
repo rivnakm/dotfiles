@@ -7,7 +7,7 @@
     },
     {
       "src": "catppuccin_mocha.theme",
-      "dest": "~/.config/btop/themes/catppuccino_mocha.theme"
+      "dest": "~/.config/btop/themes/catppuccin_mocha.theme"
     }
   ]
 }
