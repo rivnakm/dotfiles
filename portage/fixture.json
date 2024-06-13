@@ -20,7 +20,8 @@
       "src": {
         "gentoo-desktop": "package.accept_keywords/unstable-desktop",
         "gentoo-zephyrus": "package.accept_keywords/unstable-desktop",
-        "gentoo-server": "package.accept_keywords/unstable-server"
+        "gentoo-server": "package.accept_keywords/unstable-server",
+        "gentoo-qemu": "package.accept_keywords/unstable-desktop"
       },
       "dest": "/etc/portage/package.accept_keywords/unstable",
       "optional": true
