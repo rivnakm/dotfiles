@@ -114,11 +114,11 @@ window#waybar.empty #window {
 }
 
 #memory {
-    color: #94e2d5;
+    color: #cba6f7;
 }
 
 #network {
-    color: #cba6f7;
+    color: #94e2d5;
 }
 
 #network.disconnected {

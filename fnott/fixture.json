@@ -1,5 +1,10 @@
 {
   "type": "files",
+  "exclude_for": [
+    "gentoo-server",
+    "gentoo-rock5",
+    "*-server"
+  ],
   "files": [
     {
       "src": "fnott.ini",

@@ -10,8 +10,6 @@ app-misc/zellij ~amd64
 
 app-office/obsidian ~amd64
 
-app-shells/direnv ~amd64
-
 app-text/tldr ~amd64
 
 dev-lang/rust ~amd64
@@ -136,4 +134,3 @@ media-video/pipewire ~amd64
 dev-games/recastnavigation ~amd64
 net-libs/wslay ~amd64
 
-dev-python/sphinx ~amd64

@@ -1,3 +1,5 @@
-app-emulation/qemu spice usbredir static-user
+app-emulation/qemu spice usbredir static-user -pin-upstream-blobs
 app-emulation/qemu QEMU_SOFTMMU_TARGETS: aarch64 arm i386 riscv64 sparc64 x86_64
 app-emulation/qemu QEMU_USER_TARGETS: aarch64 arm riscv64 sparc64
+
+>=net-misc/spice-gtk-0.42-r4 usbredir

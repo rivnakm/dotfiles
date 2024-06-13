@@ -1,0 +1,66 @@
+*/*::alpha ~amd64
+
+app-editors/neovide ~amd64
+
+app-emulation/qemu ~amd64
+
+app-misc/cpufetch ~amd64
+app-misc/onefetch ~amd64
+app-misc/zellij ~amd64
+
+app-text/tldr ~amd64
+
+dev-lang/rust ~amd64
+virtual/rust ~amd64
+
+dev-lang/ocaml ~amd64
+
+dev-libs/cxxopts ~amd64
+dev-libs/tree-sitter ~amd64
+
+dev-ml/opam ~amd64
+
+dev-python/podman-compose ~amd64
+dev-python/poetry ~amd64
+
+dev-util/cargo-ebuild ~amd64
+dev-util/cargo-tarpaulin ~amd64
+dev-util/conan ~amd64
+dev-util/github-cli ~amd64
+
+net-fs/samba ~amd64
+
+sys-devel/clang ~amd64
+sys-devel/clang-common ~amd64
+sys-devel/clang-runtime ~amd64
+sys-devel/clang-toolchain-symlinks ~amd64
+sys-devel/lld ~amd64
+sys-devel/lld-toolchain-symlinks ~amd64
+sys-devel/llvm ~amd64
+sys-devel/llvmgold ~amd64
+sys-devel/llvm-toolchain-symlinks ~amd64
+
+sys-libs/compiler-rt ~amd64
+sys-libs/compiler-rt-sanitizers ~amd64
+
+x11-terms/kitty-terminfo ~amd64
+
+# for dev-lang/zig
+app-eselect/eselect-zig ~amd64
+
+# for sys-devel/clang and friends
+sys-libs/libomp ~amd64
+
+# for net-fs/samba
+sys-libs/ldb ~amd64
+sys-libs/talloc ~amd64
+sys-libs/tdb ~amd64
+sys-libs/tevent ~amd64
+
+# for dev-util/conan
+dev-python/pluginbase ~amd64
+
+# for dev-python/poetry
+dev-python/poetry-plugin-export ~amd64
+dev-python/shellingham ~amd64
+

@@ -1,5 +1,7 @@
-dev-lang/rust clippy profiler rust-analyzer rustfmt rust-src system-bootstrap system-llvm wasm
+dev-lang/rust clippy profiler rust-analyzer rustfmt rust-src system-llvm
 
 # Targets
+{% if arch == "x86_64" -%}
 dev-lang/rust ABI_X86: 32 64
-dev-lang/rust LLVM_TARGETS: X86 WebAssembly
+{%- endif %}
+dev-lang/rust LLVM_TARGETS: AArch64 ARM X86

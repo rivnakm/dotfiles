@@ -1,13 +1,18 @@
 {
   "type": "files",
+  "exclude_for": [
+    "gentoo-server",
+    "gentoo-rock5",
+    "*-server"
+  ],
   "files": [
     {
       "src": "hyprshade.toml",
       "dest": "~/.config/hypr/hyprshade.toml"
     },
     {
-      "src": "blue-light-filter.glsl.mustache",
-      "dest": "~/.config/hypr/shaders/blue-light-filter.glsl.mustache",
+      "src": "blue-light-filter.glsl",
+      "dest": "~/.config/hypr/shaders/blue-light-filter.glsl",
       "raw": true
     }
   ]

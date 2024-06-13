@@ -7,3 +7,4 @@ kde-apps/kdenetwork-meta bittorrent -dropbox samba webengine
 kde-apps/kdepim-meta -bogofilter -clamav -spamassassin
 kde-apps/kdeutils-meta 7zip gpg -lrz -rar -webengine
 
+kde-plasma/plasma-firewall -ufw firewalld

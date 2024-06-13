@@ -9,11 +9,11 @@
     "modules-center": [],
     "modules-right": [
         "tray",
-        "mpris",
+        // "mpris",
         "custom/weather",
         "cpu",
         "memory",
-        "network",
+        // "network",
         "bluetooth",
         "wireplumber",
         "power-profiles-daemon",
@@ -76,19 +76,19 @@
     },
     "cpu": {
         "format": "󰻠 {usage}%",
-        "interval": 10,
+        "interval": 2,
         "tooltip": false
     },
     "memory": {
         "format": "󰘚 {percentage}%",
-        "interval": 10,
+        "interval": 2,
         "tooltip": false
     },
     "network": {
-        "format-ethernet": "󰈀 {ifname}",
-        "format-wifi": "󰖩 {ifname}",
+        "format-ethernet": "󰈀 {bandwidthDownBits}  {bandwidthUpBits} ",
+        "format-wifi": "󰖩 {bandwidthDownBits}  {bandwidthUpBits} ",
         "format-disconnected": "󰅛 disconnected",
-        "interval": 10,
+        "interval": 2,
         "tooltip": false,
         "on-click": "kitty nmtui"
     },

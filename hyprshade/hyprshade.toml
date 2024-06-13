@@ -3,7 +3,7 @@ name = "vibrance"
 default = true
 
 [[shades]]
-name = "blue-light-filter"
+name = ".config/hypr/shaders/blue-light-filter.glsl"
 start_time = 20:00:00
 end_time = 06:00:00
 
