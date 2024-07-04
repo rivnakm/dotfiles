@@ -11,6 +11,7 @@ app-misc/zellij ~amd64
 app-text/tldr ~amd64
 
 dev-lang/rust ~amd64
+dev-lang/rust-bin ~amd64
 virtual/rust ~amd64
 
 dev-lang/ocaml ~amd64
@@ -42,8 +43,6 @@ sys-devel/llvm-toolchain-symlinks ~amd64
 
 sys-libs/compiler-rt ~amd64
 sys-libs/compiler-rt-sanitizers ~amd64
-
-x11-terms/kitty-terminfo ~amd64
 
 # for dev-lang/zig
 app-eselect/eselect-zig ~amd64

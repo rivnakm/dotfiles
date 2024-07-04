@@ -147,15 +147,6 @@
     },
     {
       "src": {
-        "gentoo-desktop": "package.use/waybar",
-        "gentoo-zephyrus": "package.use/waybar",
-        "gentoo-qemu": "package.use/waybar"
-      },
-      "dest": "/etc/portage/package.use/waybar",
-      "optional": true
-    },
-    {
-      "src": {
         "gentoo-desktop": "package.use/wine",
         "gentoo-zephyrus": "package.use/wine"
       },
@@ -165,10 +156,6 @@
     {
       "src": "repos.conf/gentoo.conf",
       "dest": "/etc/portage/repos.conf/gentoo.conf"
-    },
-    {
-      "src": "repos.conf/eselect-repo.conf",
-      "dest": "/etc/portage/repos.conf/eselect-repo.conf"
     }
   ]
 }

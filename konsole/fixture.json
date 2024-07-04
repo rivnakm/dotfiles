@@ -1,0 +1,22 @@
+{
+  "type": "files",
+  "exclude_for": [
+    "gentoo-server",
+    "gentoo-rock5",
+    "*-server"
+  ],
+  "files": [
+    {
+      "src": "catppuccin-mocha.colorscheme",
+      "dest": "~/.local/share/konsole/catppuccino-mocha.colorscheme"
+    },
+    {
+      "src": "Default.profile",
+      "dest": "~/.local/share/konsole/Default.profile"
+    },
+    {
+      "src": "konsolerc",
+      "dest": "~/.config/konsolerc"
+    }
+  ]
+}
