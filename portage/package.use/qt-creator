@@ -1,0 +1,2 @@
+dev-qt/qt-creator clang designer webengine
+# dev-qt/qt-creator -llvm_slot_17 llvm_slot_18

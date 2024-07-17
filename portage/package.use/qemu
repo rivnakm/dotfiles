@@ -1,4 +1,4 @@
-app-emulation/qemu spice usbredir static-user -pin-upstream-blobs
+app-emulation/qemu fuse lzo multipath sdl-image spice ssh usbredir vde virgl virtfszstd static-user -pin-upstream-blobs
 app-emulation/qemu QEMU_SOFTMMU_TARGETS: aarch64 arm i386 riscv64 sparc64 x86_64
 app-emulation/qemu QEMU_USER_TARGETS: aarch64 arm riscv64 sparc64
 

@@ -8,6 +8,7 @@
     {
       "src": {
         "gentoo-qemu": "make.qemu.conf",
+        "gentoo-vbox": "make.vbox.conf",
         "default": "make.conf"
       },
       "dest": "/etc/portage/make.conf"
@@ -21,7 +22,8 @@
         "gentoo-desktop": "package.accept_keywords/unstable-desktop",
         "gentoo-zephyrus": "package.accept_keywords/unstable-desktop",
         "gentoo-server": "package.accept_keywords/unstable-server",
-        "gentoo-qemu": "package.accept_keywords/unstable-desktop"
+        "gentoo-qemu": "package.accept_keywords/unstable-desktop",
+        "gentoo-vbox": "package.accept_keywords/unstable-desktop"
       },
       "dest": "/etc/portage/package.accept_keywords/unstable",
       "optional": true
@@ -32,6 +34,15 @@
         "gentoo-zephyrus": "package.accept_keywords/steam"
       },
       "dest": "/etc/portage/package.accept_keywords/steam",
+      "optional": true
+    },
+    {
+      "src": {
+        "gentoo-server": "binrepos.conf/gentoobinhost.conf",
+        "gentoo-qemu": "binrepos.conf/gentoobinhost.conf",
+        "gentoo-vbox": "binrepos.conf/gentoobinhost.conf"
+      },
+      "dest": "/etc/portage/binrepos.conf/gentoobinhost.conf",
       "optional": true
     },
     {
@@ -77,7 +88,8 @@
       "src": {
         "gentoo-desktop": "package.use/cascadia-mono",
         "gentoo-zephyrus": "package.use/cascadia-mono",
-        "gentoo-qemu": "package.use/cascadia-mono"
+        "gentoo-qemu": "package.use/cascadia-mono",
+        "gentoo-vbox": "package.use/cascadia-mono"
       },
       "dest": "/etc/portage/package.use/cascadia-mono",
       "optional": true
@@ -91,6 +103,16 @@
       "dest": "/etc/portage/package.use/dracut"
     },
     {
+      "src": {
+        "gentoo-desktop": "package.use/krita",
+        "gentoo-zephyrus": "package.use/krita",
+        "gentoo-qemu": "package.use/krita",
+        "gentoo-vbox": "package.use/krita"
+      },
+      "dest": "/etc/portage/package.use/krita",
+      "optional": true
+    },
+    {
       "src": "package.use/libvirt",
       "dest": "/etc/portage/package.use/libvirt"
     },
@@ -100,6 +122,16 @@
         "gentoo-zephyrus": "package.use/lutris"
       },
       "dest": "/etc/portage/package.use/lutris",
+      "optional": true
+    },
+    {
+      "src": {
+        "gentoo-desktop": "package.use/microsoft-edge",
+        "gentoo-zephyrus": "package.use/microsoft-edge",
+        "gentoo-qemu": "package.use/microsoft-edge",
+        "gentoo-vbox": "package.use/microsoft-edge"
+      },
+      "dest": "/etc/portage/package.use/microsoft-edge",
       "optional": true
     },
     {
@@ -115,16 +147,46 @@
     },
     {
       "src": {
+        "gentoo-desktop": "package.use/obs"
+      },
+      "dest": "/etc/portage/package.use/obs",
+      "optional": true
+    },
+    {
+      "src": {
         "gentoo-desktop": "package.use/plasma",
         "gentoo-zephyrus": "package.use/plasma",
-        "gentoo-qemu": "package.use/plasma"
+        "gentoo-qemu": "package.use/plasma",
+        "gentoo-vbox": "package.use/plasma"
       },
       "dest": "/etc/portage/package.use/plasma",
       "optional": true
     },
     {
+      "src": "package.use/podman",
+      "dest": "/etc/portage/package.use/podman"
+    },
+    {
+      "src": {
+        "gentoo-desktop": "package.use/prismlauncher",
+        "gentoo-zephyrus": "package.use/prismlauncher"
+      },
+      "dest": "/etc/portage/package.use/prismlauncher",
+      "optional": true
+    },
+    {
       "src": "package.use/qemu",
       "dest": "/etc/portage/package.use/qemu"
+    },
+    {
+      "src": {
+        "gentoo-desktop": "package.use/qt-creator",
+        "gentoo-zephyrus": "package.use/qt-creator",
+        "gentoo-qemu": "package.use/qt-creator",
+        "gentoo-vbox": "package.use/qt-creator"
+      },
+      "dest": "/etc/portage/package.use/qt-creator",
+      "optional": true
     },
     {
       "src": "package.use/rust",

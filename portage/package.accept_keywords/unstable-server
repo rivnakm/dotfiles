@@ -1,5 +1,8 @@
 */*::alpha ~amd64
 
+app-admin/cockpit ~amd64
+app-admin/cockpit-podman ~amd64
+
 app-editors/neovide ~amd64
 
 app-emulation/qemu ~amd64
@@ -19,7 +22,14 @@ dev-lang/ocaml ~amd64
 dev-libs/cxxopts ~amd64
 dev-libs/tree-sitter ~amd64
 
+dev-ml/dune ~amd64
 dev-ml/opam ~amd64
+dev-ml/opam-client ~amd64
+dev-ml/opam-core ~amd64
+dev-ml/opam-format ~amd64
+dev-ml/opam-repository ~amd64
+dev-ml/opam-solver ~amd64
+dev-ml/opam-state ~amd64
 
 dev-python/podman-compose ~amd64
 dev-python/poetry ~amd64
@@ -63,3 +73,5 @@ dev-python/pluginbase ~amd64
 dev-python/poetry-plugin-export ~amd64
 dev-python/shellingham ~amd64
 
+# for app-admin/cockpit
+app-crypt/sscg ~amd64

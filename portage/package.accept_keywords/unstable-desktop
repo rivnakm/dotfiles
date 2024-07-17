@@ -16,6 +16,11 @@ dev-lang/rust ~amd64
 dev-lang/rust-bin ~amd64
 virtual/rust ~amd64
 
+dev-java/openjdk ~amd64
+dev-java/openjdk-bin ~amd64
+virtual/jdk ~amd64
+virtual/jre ~amd64
+
 dev-lang/ocaml ~amd64
 
 dev-libs/cxxopts ~amd64
@@ -23,7 +28,14 @@ dev-libs/tree-sitter ~amd64
 
 dev-games/godot ~amd64
 
+dev-ml/dune ~amd64
 dev-ml/opam ~amd64
+dev-ml/opam-client ~amd64
+dev-ml/opam-core ~amd64
+dev-ml/opam-format ~amd64
+dev-ml/opam-repository ~amd64
+dev-ml/opam-solver ~amd64
+dev-ml/opam-state ~amd64
 
 dev-python/podman-compose ~amd64
 dev-python/poetry ~amd64
@@ -90,6 +102,8 @@ dev-libs/ktextaddons:6 ~amd64
 dev-libs/kweathercore:6 ~amd64
 dev-libs/qcoro[dbus] ~amd64
 gui-apps/xwaylandvideobridge ~amd64
+media-libs/kcolorpicker ~amd64
+media-libs/kimageannotator ~amd64
 media-libs/kquickimageeditor:6 ~amd64
 media-libs/mpvqt ~amd64
 media-libs/pulseaudio-qt ~amd64
@@ -130,3 +144,5 @@ dev-python/shellingham ~amd64
 dev-games/recastnavigation ~amd64
 net-libs/wslay ~amd64
 
+# for media-video/obs-studio[websocket]
+dev-libs/qr-code-generator ~amd64
