@@ -8,7 +8,7 @@
   "files": [
     {
       "src": "catppuccin-mocha.colorscheme",
-      "dest": "~/.local/share/konsole/catppuccino-mocha.colorscheme"
+      "dest": "~/.local/share/konsole/catppuccin-mocha.colorscheme"
     },
     {
       "src": "Default.profile",
