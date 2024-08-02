@@ -1,55 +1,13 @@
-*/*::alpha ~amd64
-
 app-editors/neovide ~amd64
-
-app-emulation/qemu ~amd64
-
-app-misc/cpufetch ~amd64
-app-misc/onefetch ~amd64
-app-misc/zellij ~amd64
 
 app-office/obsidian ~amd64
 
-app-text/tldr ~amd64
-
-dev-lang/rust ~amd64
-dev-lang/rust-bin ~amd64
-virtual/rust ~amd64
-
-dev-java/openjdk ~amd64
-dev-java/openjdk-bin ~amd64
-virtual/jdk ~amd64
-virtual/jre ~amd64
-
-dev-lang/ocaml ~amd64
-
-dev-libs/cxxopts ~amd64
-dev-libs/tree-sitter ~amd64
-
 dev-games/godot ~amd64
 
-dev-ml/dune ~amd64
-dev-ml/opam ~amd64
-dev-ml/opam-client ~amd64
-dev-ml/opam-core ~amd64
-dev-ml/opam-format ~amd64
-dev-ml/opam-repository ~amd64
-dev-ml/opam-solver ~amd64
-dev-ml/opam-state ~amd64
-
-dev-python/podman-compose ~amd64
-dev-python/poetry ~amd64
-
-dev-util/cargo-ebuild ~amd64
-dev-util/cargo-tarpaulin ~amd64
-dev-util/conan ~amd64
-dev-util/github-cli ~amd64
 dev-util/rocm-smi ~amd64
 
 games-util/lutris ~amd64
 games-util/steam-launcher ~amd64
-
-net-fs/samba ~amd64
 
 media-fonts/cascadia-mono ~amd64
 
@@ -57,21 +15,7 @@ media-sound/musescore ~amd64
 
 media-video/obs-studio ~amd64
 
-sys-devel/clang ~amd64
-sys-devel/clang-common ~amd64
-sys-devel/clang-runtime ~amd64
-sys-devel/clang-toolchain-symlinks ~amd64
-sys-devel/lld ~amd64
-sys-devel/lld-toolchain-symlinks ~amd64
-sys-devel/llvm ~amd64
-sys-devel/llvmgold ~amd64
-sys-devel/llvm-toolchain-symlinks ~amd64
-
-sys-libs/compiler-rt ~amd64
-sys-libs/compiler-rt-sanitizers ~amd64
-sys-libs/glibc ~amd64
-sys-libs/libcxx ~amd64
-sys-libs/libcxxabi ~amd64
+www-client/firefox ~amd64
 
 # Kernels
 virtual/dist-kernel ~amd64
@@ -116,29 +60,10 @@ net-p2p/ktorrent ~amd64
 sys-block/partitionmanager ~amd64
 sys-libs/kpmcore ~amd64
 
-# for dev-lang/zig
-app-eselect/eselect-zig ~amd64
-
-# for sys-devel/clang and friends
-sys-libs/libomp ~amd64
-
-# for net-fs/samba
-sys-libs/ldb ~amd64
-sys-libs/talloc ~amd64
-sys-libs/tdb ~amd64
-sys-libs/tevent ~amd64
-
 # for games-util/lutris
 dev-python/pypresence ~amd64
 dev-python/moddb ~amd64
 dev-python/pyrate-limiter ~amd64
-
-# for dev-util/conan
-dev-python/pluginbase ~amd64
-
-# for dev-python/poetry
-dev-python/poetry-plugin-export ~amd64
-dev-python/shellingham ~amd64
 
 # for dev-games/godot
 dev-games/recastnavigation ~amd64
@@ -146,3 +71,6 @@ net-libs/wslay ~amd64
 
 # for media-video/obs-studio[websocket]
 dev-libs/qr-code-generator ~amd64
+
+# for www-client/firefox
+dev-libs/nss ~amd64

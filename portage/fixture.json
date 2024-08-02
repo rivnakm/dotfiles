@@ -19,6 +19,13 @@
     },
     {
       "src": {
+        "x86_64": "package.accept_keywords/unstable-amd64"
+      },
+      "dest": "/etc/portage/package.accept_keywords/unstable-all",
+      "optional": true
+    },
+    {
+      "src": {
         "gentoo-desktop": "package.accept_keywords/unstable-desktop",
         "gentoo-zephyrus": "package.accept_keywords/unstable-desktop",
         "gentoo-server": "package.accept_keywords/unstable-server",
@@ -99,6 +106,10 @@
       "dest": "/etc/portage/package.use/clang"
     },
     {
+      "src": "package.use/dev-misc",
+      "dest": "/etc/portage/package.use/dev-misc"
+    },
+    {
       "src": "package.use/dracut",
       "dest": "/etc/portage/package.use/dracut"
     },
@@ -122,16 +133,6 @@
         "gentoo-zephyrus": "package.use/lutris"
       },
       "dest": "/etc/portage/package.use/lutris",
-      "optional": true
-    },
-    {
-      "src": {
-        "gentoo-desktop": "package.use/microsoft-edge",
-        "gentoo-zephyrus": "package.use/microsoft-edge",
-        "gentoo-qemu": "package.use/microsoft-edge",
-        "gentoo-vbox": "package.use/microsoft-edge"
-      },
-      "dest": "/etc/portage/package.use/microsoft-edge",
       "optional": true
     },
     {
@@ -177,16 +178,6 @@
     {
       "src": "package.use/qemu",
       "dest": "/etc/portage/package.use/qemu"
-    },
-    {
-      "src": {
-        "gentoo-desktop": "package.use/qt-creator",
-        "gentoo-zephyrus": "package.use/qt-creator",
-        "gentoo-qemu": "package.use/qt-creator",
-        "gentoo-vbox": "package.use/qt-creator"
-      },
-      "dest": "/etc/portage/package.use/qt-creator",
-      "optional": true
     },
     {
       "src": "package.use/rust",
