@@ -17,8 +17,17 @@ SAVEHIST=10000
 # Case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
+# Bootstrap antigen
+if [ ! -d $HOME/.local/share/antigen ]; then
+    git clone https://github.com/zsh-users/antigen.git $HOME/.local/share/antigen
+fi
+
 # Load antigen
 source $HOME/.local/share/antigen/antigen.zsh
+
+# Update antigen
+antigen selfupdate
+antigen update
 
 # Load zsh plugins
 antigen bundle zsh-users/zsh-autosuggestions
