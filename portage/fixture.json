@@ -115,6 +115,14 @@
     },
     {
       "src": {
+        "gentoo-desktop": "package.use/firefox",
+        "gentoo-zephyrus": "package.use/firefox"
+      },
+      "dest": "/etc/portage/package.use/firefox",
+      "optional": true
+    },
+    {
+      "src": {
         "gentoo-desktop": "package.use/krita",
         "gentoo-zephyrus": "package.use/krita",
         "gentoo-qemu": "package.use/krita",
@@ -138,13 +146,6 @@
     {
       "src": "package.use/nftables",
       "dest": "/etc/portage/package.use/nftables"
-    },
-    {
-      "src": {
-        "gentoo-zephyrus": "package.use/nvidia"
-      },
-      "dest": "/etc/portage/package.use/nvidia",
-      "optional": true
     },
     {
       "src": {

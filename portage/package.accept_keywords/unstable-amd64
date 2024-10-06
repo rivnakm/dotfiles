@@ -1,5 +1,9 @@
 */*::alpha ~amd64
 
+app-containers/devcontainer ~amd64
+
+app-editors/neovim ~amd64
+
 app-emulation/libvirt ~amd64
 app-emulation/qemu ~amd64
 app-emulation/virt-manager ~amd64
@@ -11,6 +15,9 @@ app-misc/zellij ~amd64
 app-text/tldr ~amd64
 
 dev-cpp/argparse ~amd64
+
+dev-dotnet/dotnet-sdk-bin ~amd64
+dev-dotnet/dotnet-runtime-nugets ~amd64
 
 dev-lang/rust ~amd64
 dev-lang/rust-bin ~amd64
@@ -43,6 +50,7 @@ dev-util/cargo-ebuild ~amd64
 dev-util/cargo-tarpaulin ~amd64
 dev-util/conan ~amd64
 dev-util/github-cli ~amd64
+dev-util/tree-sitter-cli ~amd64
 
 net-fs/samba ~amd64
 
@@ -81,3 +89,5 @@ dev-python/pluginbase ~amd64
 dev-python/poetry-plugin-export ~amd64
 dev-python/shellingham ~amd64
 
+# for app-emulation/qemu
+sys-firmware/seabios-bin ~amd64

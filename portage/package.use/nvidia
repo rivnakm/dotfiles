@@ -1,3 +1,0 @@
-{% if hostname == "gentoo-zephyrus" -%}
-x11-drivers/nvidia-drivers abi_x86_32
-{% endif -%}

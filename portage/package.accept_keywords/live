@@ -1,5 +1,2 @@
 dev-lang/zig **
 dev-zig/zls **
-app-editors/neovim **
-dev-libs/tree-sitter **
-dev-util/tree-sitter-cli **

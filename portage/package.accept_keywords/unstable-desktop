@@ -2,6 +2,8 @@ app-editors/neovide ~amd64
 
 app-office/obsidian ~amd64
 
+app-text/marknote ~amd64
+
 dev-games/godot ~amd64
 
 dev-util/rocm-smi ~amd64
@@ -12,6 +14,7 @@ games-util/steam-launcher ~amd64
 media-fonts/cascadia-mono ~amd64
 
 media-sound/musescore ~amd64
+media-sound/picard ~amd64
 
 media-video/obs-studio ~amd64
 
@@ -46,6 +49,8 @@ dev-libs/ktextaddons:6 ~amd64
 dev-libs/kweathercore:6 ~amd64
 dev-libs/qcoro[dbus] ~amd64
 gui-apps/xwaylandvideobridge ~amd64
+media-gfx/kgraphviewer ~amd64
+media-gfx/kio-ps-thumbnailer ~amd64
 media-libs/kcolorpicker ~amd64
 media-libs/kimageannotator ~amd64
 media-libs/kquickimageeditor:6 ~amd64
@@ -55,6 +60,7 @@ net-im/neochat ~amd64
 net-im/tokodon ~amd64
 net-libs/libktorrent ~amd64
 net-misc/kio-zeroconf ~amd64
+net-misc/kio-zeroconf-common ~amd64
 net-news/alligator ~amd64
 net-p2p/ktorrent ~amd64
 sys-block/partitionmanager ~amd64
