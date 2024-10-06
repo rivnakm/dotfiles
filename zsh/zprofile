@@ -9,6 +9,10 @@ export CC=clang
 export CXX=clang++
 export CMAKE_GENERATOR=Ninja
 
+# vcpkg configuration
+export VCPKG_ROOT=$HOME/.local/share/vcpkg
+export PATH=$PATH:$VCPKG_ROOT
+
 # opam configuration
 [[ ! -r /home/michael/.opam/opam-init/init.zsh ]] || source /home/michael/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
