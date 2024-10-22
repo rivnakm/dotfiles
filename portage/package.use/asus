@@ -1,3 +1,0 @@
-{% if hostname == "gentoo-zephyrus" -%}
-app-laptop/asusctl control-center
-{% endif -%}

@@ -47,6 +47,7 @@ dev-libs/kdiagram:6 ~amd64
 dev-libs/kirigami-addons:6 ~amd64
 dev-libs/ktextaddons:6 ~amd64
 dev-libs/kweathercore:6 ~amd64
+dev-libs/plasma-wayland-protocols ~amd64
 dev-libs/qcoro[dbus] ~amd64
 gui-apps/xwaylandvideobridge ~amd64
 media-gfx/kgraphviewer ~amd64

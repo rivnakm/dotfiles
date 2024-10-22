@@ -9,10 +9,8 @@ CursorShape=1
 
 [General]
 DimWhenInactive=false
-LocalTabTitleFormat=%d : %w
 Name=Default
 Parent=FALLBACK/
-RemoteTabTitleFormat=(%h) %d : %w
 ShowTerminalSizeHint=false
 TerminalColumns=130
 TerminalRows=42

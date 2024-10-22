@@ -27,7 +27,7 @@
     {
       "src": {
         "gentoo-desktop": "package.accept_keywords/unstable-desktop",
-        "gentoo-zephyrus": "package.accept_keywords/unstable-desktop",
+        "gentoo-framework": "package.accept_keywords/unstable-desktop",
         "gentoo-server": "package.accept_keywords/unstable-server",
         "gentoo-qemu": "package.accept_keywords/unstable-desktop",
         "gentoo-vbox": "package.accept_keywords/unstable-desktop"
@@ -38,7 +38,7 @@
     {
       "src": {
         "gentoo-desktop": "package.accept_keywords/steam",
-        "gentoo-zephyrus": "package.accept_keywords/steam"
+        "gentoo-framework": "package.accept_keywords/steam"
       },
       "dest": "/etc/portage/package.accept_keywords/steam",
       "optional": true
@@ -79,22 +79,15 @@
     {
       "src": {
         "gentoo-desktop": "package.use/amdgpu",
-        "gentoo-zephyrus": "package.use/amdgpu"
+        "gentoo-framework": "package.use/amdgpu"
       },
       "dest": "/etc/portage/package.use/amdgpu",
       "optional": true
     },
     {
       "src": {
-        "gentoo-zephyrus": "package.use/asus"
-      },
-      "dest": "/etc/portage/package.use/asus",
-      "optional": true
-    },
-    {
-      "src": {
         "gentoo-desktop": "package.use/cascadia-mono",
-        "gentoo-zephyrus": "package.use/cascadia-mono",
+        "gentoo-framework": "package.use/cascadia-mono",
         "gentoo-qemu": "package.use/cascadia-mono",
         "gentoo-vbox": "package.use/cascadia-mono"
       },
@@ -110,13 +103,17 @@
       "dest": "/etc/portage/package.use/dev-misc"
     },
     {
+      "src": "package.use/doc",
+      "dest": "/etc/portage/package.use/doc"
+    },
+    {
       "src": "package.use/dracut",
       "dest": "/etc/portage/package.use/dracut"
     },
     {
       "src": {
         "gentoo-desktop": "package.use/firefox",
-        "gentoo-zephyrus": "package.use/firefox"
+        "gentoo-framework": "package.use/firefox"
       },
       "dest": "/etc/portage/package.use/firefox",
       "optional": true
@@ -124,7 +121,7 @@
     {
       "src": {
         "gentoo-desktop": "package.use/krita",
-        "gentoo-zephyrus": "package.use/krita",
+        "gentoo-framework": "package.use/krita",
         "gentoo-qemu": "package.use/krita",
         "gentoo-vbox": "package.use/krita"
       },
@@ -138,7 +135,7 @@
     {
       "src": {
         "gentoo-desktop": "package.use/lutris",
-        "gentoo-zephyrus": "package.use/lutris"
+        "gentoo-framework": "package.use/lutris"
       },
       "dest": "/etc/portage/package.use/lutris",
       "optional": true
@@ -157,7 +154,7 @@
     {
       "src": {
         "gentoo-desktop": "package.use/plasma",
-        "gentoo-zephyrus": "package.use/plasma",
+        "gentoo-framework": "package.use/plasma",
         "gentoo-qemu": "package.use/plasma",
         "gentoo-vbox": "package.use/plasma"
       },
@@ -171,7 +168,7 @@
     {
       "src": {
         "gentoo-desktop": "package.use/prismlauncher",
-        "gentoo-zephyrus": "package.use/prismlauncher"
+        "gentoo-framework": "package.use/prismlauncher"
       },
       "dest": "/etc/portage/package.use/prismlauncher",
       "optional": true
@@ -187,7 +184,7 @@
     {
       "src": {
         "gentoo-desktop": "package.use/steam",
-        "gentoo-zephyrus": "package.use/steam"
+        "gentoo-framework": "package.use/steam"
       },
       "dest": "/etc/portage/package.use/steam",
       "optional": true
@@ -202,7 +199,7 @@
     {
       "src": {
         "gentoo-desktop": "package.use/wine",
-        "gentoo-zephyrus": "package.use/wine"
+        "gentoo-framework": "package.use/wine"
       },
       "dest": "/etc/portage/package.use/wine",
       "optional": true

@@ -45,12 +45,14 @@ dev-ml/opam ~amd64
 dev-python/libvirt-python ~amd64
 dev-python/podman-compose ~amd64
 dev-python/poetry ~amd64
+dev-python/poetry-core ~amd64
 
 dev-util/cargo-ebuild ~amd64
 dev-util/cargo-tarpaulin ~amd64
 dev-util/conan ~amd64
 dev-util/github-cli ~amd64
 dev-util/tree-sitter-cli ~amd64
+dev-util/typescript-language-server ~amd64
 
 net-fs/samba ~amd64
 

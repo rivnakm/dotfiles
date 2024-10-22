@@ -1,2 +1,4 @@
 sys-devel/clang extra static-analyzer
 sys-libs/libcxx clang
+
+sys-devel/clang LLVM_TARGETS: AArch64 AMDGPU ARM RISCV X86 WebAssembly

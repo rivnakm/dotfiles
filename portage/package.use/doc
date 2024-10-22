@@ -1,0 +1,8 @@
+dev-build/cmake doc
+
+dev-lang/rust doc
+dev-lang/zig doc
+
+sys-devel/clang doc
+
+sys-libs/glibc doc
