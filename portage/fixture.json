@@ -1,7 +1,7 @@
 {
   "type": "files",
   "root": true,
-  "include-for": [
+  "include_for": [
     "gentoo-*"
   ],
   "files": [
