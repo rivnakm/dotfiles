@@ -2,7 +2,7 @@
 BorderWhenActive=false
 ColorScheme=catppuccin-mocha
 DimmValue=0
-Font=Cascadia Mono NF,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+Font=CaskaydiaMono Nerd Font Mono,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [Cursor Options]
 CursorShape=1

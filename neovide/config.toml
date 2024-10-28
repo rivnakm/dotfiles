@@ -1,9 +1,9 @@
 fork = true
 
 [font]
-normal = { family = "Cascadia Mono NF", style = "Regular" }
-italic = { family = "Cascadia Mono NF", style = "Italic" }
+normal = { family = "CaskaydiaMono Nerd Font Mono", style = "Regular" }
+italic = { family = "CaskaydiaMono Nerd Font Mono", style = "Italic" }
 size = 12
 
 [font.features]
-"Cascadia Mono NF" = [ "+salt", "+zero" ]
+"CaskaydiaMono Nerd Font Mono" = [ "+salt", "+zero" ]

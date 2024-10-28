@@ -11,5 +11,8 @@ RememberWindowSize=false
 MenuBar=Disabled
 ToolBarsMovable=Disabled
 
+[Notification Messages]
+CloseAllEmptyTabs=true
+
 [UiSettings]
 ColorScheme=

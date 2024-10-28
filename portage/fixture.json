@@ -85,16 +85,6 @@
       "optional": true
     },
     {
-      "src": {
-        "gentoo-desktop": "package.use/cascadia-mono",
-        "gentoo-framework": "package.use/cascadia-mono",
-        "gentoo-qemu": "package.use/cascadia-mono",
-        "gentoo-vbox": "package.use/cascadia-mono"
-      },
-      "dest": "/etc/portage/package.use/cascadia-mono",
-      "optional": true
-    },
-    {
       "src": "package.use/clang",
       "dest": "/etc/portage/package.use/clang"
     },
@@ -116,6 +106,16 @@
         "gentoo-framework": "package.use/firefox"
       },
       "dest": "/etc/portage/package.use/firefox",
+      "optional": true
+    },
+    {
+      "src": {
+        "gentoo-desktop": "package.use/fonts",
+        "gentoo-framework": "package.use/fonts",
+        "gentoo-qemu": "package.use/fonts",
+        "gentoo-vbox": "package.use/fonts"
+      },
+      "dest": "/etc/portage/package.use/fonts",
       "optional": true
     },
     {

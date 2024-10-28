@@ -12,6 +12,7 @@ games-util/lutris ~amd64
 games-util/steam-launcher ~amd64
 
 media-fonts/cascadia-mono ~amd64
+media-fonts/nerdfonts ~amd64
 
 media-sound/musescore ~amd64
 media-sound/picard ~amd64
