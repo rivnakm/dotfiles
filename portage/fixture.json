@@ -178,6 +178,10 @@
       "dest": "/etc/portage/package.use/qemu"
     },
     {
+      "src": "package.use/qt",
+      "dest": "/etc/portage/package.use/qt"
+    },
+    {
       "src": "package.use/rust",
       "dest": "/etc/portage/package.use/rust"
     },
