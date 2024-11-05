@@ -1,7 +1,0 @@
-app-admin/cockpit ~amd64
-app-admin/cockpit-podman ~amd64
-
-media-tv/plex-media-server ~amd64
-
-# for app-admin/cockpit
-app-crypt/sscg ~amd64

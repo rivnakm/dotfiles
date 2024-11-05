@@ -1,9 +1,0 @@
-{
-  "type": "files",
-  "files": [
-    {
-      "src": "starship.toml",
-      "dest": "~/.config/starship.toml"
-    }
-  ]
-}

@@ -1,7 +1,3 @@
-if [ "$PWD" = "/mnt/c/Users/Michael" ]; then
-    cd $HOME
-fi
-
 # Disable vim mode (use emacs mode)
 bindkey -e
 
@@ -75,31 +71,4 @@ alias gpl="git pull"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-
-# Kernel make function
-{% if hostname == "gentoo-desktop" or hostname == "gentoo-framework" -%}
-COMMON_FLAGS="-march=znver4 -mshstk --param=l1-cache-line-size=64 --param=l1-cache-size=32 --param=l2-cache-size=1024 -O2 -pipe"
-
-function kmake() {
-    sudo CFLAGS="$COMMON_FLAGS" CXXFLAGS="$COMMON_FLAGS" CC=clang CXX=clang++ LLVM=1 make -j$(nproc) $@
-}
-{% endif -%}
-
-function rootfs_mount() {
-    dst=$1
-    sudo mount -t proc /proc $dst/proc
-    sudo mount --rbind /sys $dst/sys
-    sudo mount --rbind /dev $dst/dev
-    sudo mount --rbind /tmp $dst/tmp
-    sudo mount --bind /run $dst/run
-    sudo mount --make-rslave $dst/proc
-    sudo mount --make-rslave $dst/sys
-    sudo mount --make-rslave $dst/dev
-    sudo mount --make-rslave $dst/tmp
-    sudo mount --make-slave $dst/run
-    sudo cp -L /etc/resolv.conf $dst/etc/resolv.conf
-}
-
-export PF_INFO="ascii title os kernel shell de editor pkgs memory palette"
-pfetch
 
