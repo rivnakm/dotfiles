@@ -1,0 +1,8 @@
+[general]
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[font]
+size = 11
+normal = { family = "CaskaydiaMono Nerd Font Mono", style = "Regular" }
