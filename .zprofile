@@ -1,4 +1,4 @@
-export PATH=$HOME/.cargo/bin:$PATH:$HOME/.local/bin:$HOME/go/bin
+export PATH=$HOME/.cargo/bin:$PATH:$HOME/.local/bin:$HOME/go/bin:$HOME/.dotnet/tools
 export LANG=en_US.UTF-8
 export TZ=America/New_York
 export EDITOR=nvim
