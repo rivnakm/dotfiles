@@ -9,4 +9,4 @@ dynamic_title = false
 
 [font]
 size = 11
-normal = { family = "CaskaydiaMono Nerd Font Mono", style = "Regular" }
+normal = { family = "CaskaydiaMono Nerd Font Propo", style = "Regular" }
