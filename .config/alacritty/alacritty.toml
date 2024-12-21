@@ -8,5 +8,5 @@ dimensions = { columns = 130, lines = 42 }
 dynamic_title = false
 
 [font]
-size = 11
+size = 10
 normal = { family = "JetBrainsMono Nerd Font Propo", style = "Regular" }
