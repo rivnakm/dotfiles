@@ -286,7 +286,7 @@ pane_frames true
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "catppuccin-mocha"
+theme "modus_vivendi"
 
 // The name of the default layout to load on startup
 // Default: "default"

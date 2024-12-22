@@ -1,0 +1,40 @@
+{
+    "themes": [
+        {
+            "name": "modus_vivendi",
+            "type": "dark"
+        },
+        {
+            "name": "modus_operandi",
+            "type": "light"
+        }
+    ],
+    "aliases": {
+        "dark": "modus_vivendi",
+        "light": "modus_operandi"
+    },
+    "programs": [
+        {
+            "name": "alacritty",
+            "root_dir": "~/.config/alacritty",
+            "patterns": [
+                "^import = \\[\\s+.*?\\\"~/\\.config/alacritty/(?P<name>.*)\\.toml\\\""
+            ]
+        },
+        {
+            "name": "neovim",
+            "root_dir": "~/.config/nvim",
+            "patterns": [
+                "^vim\\.o\\.background = \\\"(?P<type>dark|light)\\\"$",
+                "^vim\\.cmd\\.colorscheme\\(\\\"(?P<name>.*)\\\"\\)$"
+            ]
+        },
+        {
+            "name": "zellij",
+            "root_dir": "~/.config/zellij",
+            "patterns": [
+                "^theme \\\"(?P<name>.*)\\\"$"
+            ]
+        }
+    ]
+}
