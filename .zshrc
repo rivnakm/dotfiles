@@ -45,7 +45,7 @@ HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=0
 
 # zsh-autosuggestions configuration
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#989898"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=15"
 bindkey '^y' autosuggest-accept
 
 # Load starship
@@ -63,11 +63,16 @@ alias nv=nvim
 alias snv="EDITOR=nvim sudo -e"
 alias nj=ninja
 
+alias csd="chcolors set dark"
+alias csl="chcolors set light"
+
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit -m"
 alias gpu="git push"
 alias gpl="git pull"
+alias gd="git diff"
+alias gds="git diff --staged"
 
 alias ..="cd .."
 alias ...="cd ../.."
