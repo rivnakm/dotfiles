@@ -2,11 +2,11 @@
     "themes": [
         {
             "name": "modus_vivendi",
-            "type": "dark"
+            "type": "Dark"
         },
         {
             "name": "modus_operandi",
-            "type": "light"
+            "type": "Light"
         }
     ],
     "aliases": {
@@ -25,7 +25,7 @@
             "name": "neovim",
             "root_dir": "~/.config/nvim",
             "patterns": [
-                "^vim\\.o\\.background = \\\"(?P<type>dark|light)\\\"$",
+                "^vim\\.o\\.background = string\\.lower\\(\\\"(?P<type>Dark|Light)\\\"\\)$",
                 "^vim\\.cmd\\.colorscheme\\(\\\"(?P<name>.*)\\\"\\)$"
             ]
         },
