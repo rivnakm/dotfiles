@@ -63,8 +63,8 @@ alias nv=nvim
 alias snv="EDITOR=nvim sudo -e"
 alias nj=ninja
 
-alias csd="chcolors set dark"
-alias csl="chcolors set light"
+alias csd="chcolors set dark; lookandfeeltool --apply org.kde.breezedark.desktop"
+alias csl="chcolors set light; lookandfeeltool --apply org.kde.breeze.desktop"
 
 alias gs="git status"
 alias ga="git add"
@@ -79,3 +79,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 fastfetch
+
+echo -e "\n"
+projfetch --compact --max-width 72 $HOME/Code
+
