@@ -13,6 +13,11 @@ $env.NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins') # add <nushell-config-dir>/plugins
 ]
 
+# Prompt setup
+# Starship handles most things, but it doesn't have vi-mode integration with nu yet
+$env.PROMPT_INDICATOR_VI_NORMAL = "| "
+$env.PROMPT_INDICATOR_VI_INSERT = ": "
+
 # User environment setup
 $env.SHELL = "nu"
 $env.LANG = "en_US.UTF-8"
