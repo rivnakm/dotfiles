@@ -13,6 +13,14 @@ export CMAKE_GENERATOR=Ninja
 export VCPKG_ROOT=$HOME/.local/share/vcpkg
 export PATH=$PATH:$VCPKG_ROOT
 
+# dotnet CLI configuration
+export DOTNET_NOLOGO=true
+
 # opam configuration
 [[ ! -r /home/michael/.opam/opam-init/init.zsh ]] || source /home/michael/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+
+
+# Added by Toolbox App
+export PATH="$PATH:/home/michael/.local/share/JetBrains/Toolbox/scripts"
 

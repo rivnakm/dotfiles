@@ -1,3 +1,6 @@
+# Skip loading if not an interactive shell
+[[ $- == *i* ]] || return
+
 # Disable vim mode (use emacs mode)
 bindkey -e
 
