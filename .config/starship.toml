@@ -5,6 +5,7 @@ $directory\
 $container\
 $all\
 """
+follow_symlinks = false # Avoid indexing symlinks to NFS/SMB network mounts
 
 [character]
 success_symbol = "[>](bold green)"
@@ -27,10 +28,6 @@ style = "purple"
 disabled = false
 style_user = "bold blue"
 
-[docker_context]
-symbol = "docker "
-style = "blue"
-
 [container]
 format = 'in [$name]($style) '
 symbol = ""
@@ -49,9 +46,6 @@ format = "via [$output]($style) "
 [cmake]
 symbol = "cmake "
 
-[dart]
-symbol = "dart "
-
 [dotnet]
 symbol = ".NET "
 format = "via [$symbol($version )]($style)"
@@ -59,14 +53,20 @@ format = "via [$symbol($version )]($style)"
 [directory]
 read_only = " ro"
 
+[elixir]
+symbol = "ex "
+
 [git_branch]
 symbol = "git "
+
+[gleam]
+symbol = "gleam "
 
 [golang]
 symbol = "go "
 
-[hg_branch]
-symbol = "hg "
+[haskell]
+symbol = "hs "
 
 [java]
 symbol = "java "
@@ -80,12 +80,20 @@ symbol = "node "
 [ocaml]
 symbol = "ocaml "
 
+[os]
+disabled = false
+style = "bold blue"
+
+[os.symbols]
+Arch = " "
+Debian = " "
+Fedora = " "
+Gentoo = " "
+Windows = " "
+
 [package]
 disabled = true
 symbol = "pkg "
-
-[perl]
-symbol = "perl "
 
 [python]
 symbol = "py "
