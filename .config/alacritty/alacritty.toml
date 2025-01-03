@@ -10,3 +10,6 @@ dynamic_title = false
 [font]
 size = 10
 normal = { family = "JetBrainsMono Nerd Font Propo", style = "Regular" }
+
+[terminal]
+shell = "/usr/bin/nu"

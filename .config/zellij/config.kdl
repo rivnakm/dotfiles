@@ -1,5 +1,9 @@
 keybinds clear-defaults=true {
     normal {
+        bind "Alt Shift h" { MoveFocus "Left"; }
+        bind "Alt Shift l" { MoveFocus "Right"; }
+        bind "Alt Shift j" { MoveFocus "Down"; }
+        bind "Alt Shift k" { MoveFocus "Up"; }
     }
     locked {
         bind "Alt g" { SwitchToMode "Normal"; }
