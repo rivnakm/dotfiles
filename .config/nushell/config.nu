@@ -76,7 +76,6 @@ def csl [] {
 
 # Use starship prompt
 use "~/.cache/starship/init.nu"
-use "~/.cache/opam/init.nu"
 
 fastfetch
 
