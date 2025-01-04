@@ -12,7 +12,7 @@ $env.config = {
 
     # Whether an error message should be printed if an error of a certain kind is triggered.
     display_errors: {
-        exit_code: true
+        exit_code: false
         termination_signal: true
     }
     datetime_format: {
@@ -73,10 +73,35 @@ def csl [] {
     lookandfeeltool --apply org.kde.breeze.desktop
 }
 
+def gitignore [params] {
+    if ($params == "list") {
+        return (curl -sL https://www.toptal.com/developers/gitignore/api/($params) | split row -r '\s|,')
+    }
+    curl -sL https://www.toptal.com/developers/gitignore/api/($params)
+}
 
 # Use starship prompt
 use "~/.cache/starship/init.nu"
-use "~/.cache/opam/init.nu"
+
+# Completions
+# Unfortunately since the paths must be known at compile time, we can't use a loop or glob or anything to source these
+const completions_dir = $nu.data-dir | path join "completions"
+source $"($completions_dir)/cargo-completions.nu"
+source $"($completions_dir)/curl-completions.nu"
+source $"($completions_dir)/dotnet-completions.nu"
+source $"($completions_dir)/gh-completions.nu"
+source $"($completions_dir)/git-completions.nu"
+source $"($completions_dir)/make-completions.nu"
+source $"($completions_dir)/man-completions.nu"
+source $"($completions_dir)/npm-completions.nu"
+source $"($completions_dir)/podman-completions.nu"
+source $"($completions_dir)/pytest-completions.nu"
+source $"($completions_dir)/rustup-completions.nu"
+source $"($completions_dir)/ssh-completions.nu"
+source $"($completions_dir)/tar-completions.nu"
+source $"($completions_dir)/uv-completions.nu"
+source $"($completions_dir)/virsh-completions.nu"
+source $"($completions_dir)/zellij-completions.nu"
 
 fastfetch
 

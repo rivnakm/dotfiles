@@ -50,7 +50,5 @@ $env.DOTNET_NOLOGO = true
 # Generate starship env file
 starship init nu | save -f "~/.cache/starship/init.nu"
 
-# Generate opam env file
-# opam doesn't support nu so this is a wonky adapter I wrote
-mkdir ~/.cache/opam
-python ~/.local/share/opam_env_nushell_adapter/main.py | save -f "~/.cache/opam/init.nu"
+# Python virtual environments add an additional component to the prompt, starship already does this for us
+$env.VIRTUAL_ENV_DISABLE_PROMPT = true
