@@ -4,7 +4,7 @@ import = [
 ]
 
 [window]
-dimensions = { columns = 130, lines = 42 }
+dimensions = { columns = 172, lines = 54 }
 dynamic_title = false
 
 [font]
