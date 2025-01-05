@@ -1,22 +1,59 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "source": "fedora-linux-small"
+    "type": "small",
+    "padding": {
+      "top": 1
+    }
+  },
+  "display": {
+    "separator": " "
   },
   "modules": [
-    "title",
-    "separator",
-    "os",
-    "host",
-    "kernel",
-    "packages",
-    "shell",
-    "de",
-    "terminal",
-    "cpu",
-    "gpu",
-    "memory",
-    "break",
-    "colors"
+    {
+      "key": "{icon} distro   {#keys}",
+      "type": "os"
+    },
+    {
+      "key": " kernel   {#keys}",
+      "type": "kernel"
+    },
+    {
+      "key": "󰏗 packages {#keys}",
+      "type": "packages"
+    },
+    {
+      "key": " shell    {#keys}",
+      "type": "shell"
+    },
+    {
+      "key": "󰍛 cpu      {#keys}",
+      "type": "cpu",
+      "showPeCoreCount": true,
+      "temp": true
+    },
+    {
+      "key": "󰘚 memory   {#keys}",
+      "type": "memory"
+    },
+    {
+      "key": "󰍛 gpu      {#keys}",
+      "type": "gpu",
+      "temp": true
+    },
+    {
+      "key": " weather  {#keys}",
+      "type": "weather"
+    },
+    {
+      "key": "󰅩 code     {#keys}",
+      "type": "command",
+      "text": "projfetch -s -u 5 ~/Code"
+    },
+    {
+      "key": " colors   {#keys}",
+      "type": "colors",
+      "symbol": "circle"
+    }
   ]
 }
