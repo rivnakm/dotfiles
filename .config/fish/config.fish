@@ -15,7 +15,13 @@ set -x CXX clang++
 set -x CMAKE_GENERATOR Ninja
 
 # Cargo environment
-set -x PATH $PATH "$HOME/.cargo/bin" 
+set -x PATH $PATH "$HOME/.cargo/bin"
+
+# Zig environment
+set -x PATH $PATH "$HOME/.local/share/zigup"
+# zigup uses ~/zig by default, which is messy
+# https://github.com/marler8997/zigup/issues/148
+alias zigup="zigup --install-dir $HOME/.zig"
 
 # vcpkg environment
 set -x VCPKG_ROOT "$HOME/.local/share/vcpkg"
