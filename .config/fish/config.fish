@@ -41,7 +41,8 @@ if status is-interactive
     alias pf=pfetch
     alias nv=nvim
     alias snv="EDITOR=nvim sudo -e"
-    alias nj=ninja
+    alias na=ninja
+    alias zj=zellij
 
     alias csd="chcolors set dark; lookandfeeltool --apply org.kde.breezedark.desktop"
     alias csl="chcolors set light; lookandfeeltool --apply org.kde.breeze.desktop"
