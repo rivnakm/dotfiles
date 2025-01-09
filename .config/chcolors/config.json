@@ -16,22 +16,30 @@
     "programs": [
         {
             "name": "alacritty",
-            "root_dir": "~/.config/alacritty",
+            "path": "~/.config/alacritty/alacritty.toml",
             "patterns": [
                 "^import = \\[\\s+.*?\\\"~/\\.config/alacritty/(?P<name>.*)\\.toml\\\""
             ]
         },
         {
             "name": "neovim",
-            "root_dir": "~/.config/nvim",
+            "path": "~/.config/nvim/*.lua",
             "patterns": [
                 "^vim\\.o\\.background = string\\.lower\\(\\\"(?P<type>Dark|Light)\\\"\\)$",
                 "^vim\\.cmd\\.colorscheme\\(\\\"(?P<name>.*)\\\"\\)$"
             ]
         },
         {
+            "name": "plasma",
+            "path": "~/.config/kdeglobals",
+            "patterns": [],
+            "hooks": [
+                "if [ $CHCOLORS_TYPE == \"Dark\" ]; then lookandfeeltool --apply org.kde.breezedark.desktop; else lookandfeeltool --apply org.kde.breeze.desktop; fi"
+            ]
+        },
+        {
             "name": "zellij",
-            "root_dir": "~/.config/zellij",
+            "path": "~/.config/zellij/config.kdl",
             "patterns": [
                 "^theme \\\"(?P<name>.*)\\\"$"
             ]

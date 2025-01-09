@@ -39,19 +39,27 @@ test -r '/home/michael/.opam/opam-init/init.fish' && source '/home/michael/.opam
 
 if status is-interactive
     # Aliases
-    alias ls="ls --color=auto"
-    alias l="ls -lah"
-    alias la="ls -a"
+    alias ls="eza \
+        --group \
+        --long \
+        --octal-permissions \
+        --git \
+        --icons auto \
+        --time-style long-iso \
+        --header \
+        --smart-group"
+    alias l="ls --all"
+    alias lr="ls --all --total-size"
+
     alias rf="rm -rf"
     alias ff=fastfetch
-    alias pf=pfetch
     alias nv=nvim
     alias snv="EDITOR=nvim sudo -e"
     alias na=ninja
     alias zj=zellij
 
-    alias csd="chcolors set dark; lookandfeeltool --apply org.kde.breezedark.desktop"
-    alias csl="chcolors set light; lookandfeeltool --apply org.kde.breeze.desktop"
+    alias csd="chcolors set dark"
+    alias csl="chcolors set light"
 
     alias gs="git status"
     alias ga="git add"
@@ -68,9 +76,6 @@ if status is-interactive
     starship init fish | source
 
     fastfetch
-
-    echo -e "\n"
-    projfetch --compact --max-width 72 $HOME/Code
 end
 
 
