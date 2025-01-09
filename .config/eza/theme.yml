@@ -32,6 +32,8 @@ perms:
     foreground: Red
   other_execute:
     foreground: Green
+punctuation:
+  foreground: LightGray
 filenames:
   # Just change the icon glyph
   # Cargo.toml: {icon: {glyph: 🦀}}
