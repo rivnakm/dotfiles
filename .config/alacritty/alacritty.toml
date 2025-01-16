@@ -8,8 +8,5 @@ dimensions = { columns = 172, lines = 54 }
 dynamic_title = false
 
 [font]
-size = 10
+size = 11
 normal = { family = "JetBrainsMono Nerd Font Propo", style = "Regular" }
-
-[terminal]
-shell = "/usr/bin/nu"
