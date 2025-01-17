@@ -1,6 +1,7 @@
 # Fish configuration
 set fish_greeting
 set fish_color_autosuggestion gray
+set -x fish_function_path $fish_function_path "$HOME/.local/share/fish/user_functions.d"
 
 # Environment variables
 set -x PATH $PATH "$HOME/.local/bin"
@@ -9,6 +10,7 @@ set -x TZ "America/New_York"
 set -x EDITOR "nvim"
 set -x TOOLBOX_SHELL (which fish)
 set -x GPG_TTY (tty)
+set -x MANPAGER "sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
 
 # C/C++ environment
 set -x CC clang
@@ -58,6 +60,7 @@ if status is-interactive
     alias snv="EDITOR=nvim sudo -e"
     alias na=ninja
     alias zj=zellij
+    alias cat=bat
 
     alias csd="chcolors set dark"
     alias csl="chcolors set light"

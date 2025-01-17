@@ -22,6 +22,16 @@
             ]
         },
         {
+            "name": "bat",
+            "path": "~/.config/bat/config",
+            "patterns": [
+                "^--theme=\\\"(?P<name>.*)\\\"$"
+            ],
+            "hooks": [
+                "bat cache --build"
+            ]
+        },
+        {
             "name": "neovim",
             "path": "~/.config/nvim/*.lua",
             "patterns": [
