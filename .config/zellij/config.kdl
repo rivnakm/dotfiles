@@ -162,4 +162,4 @@ ui {
         hide_session_name true
     }
 }
-theme "modus_vivendi"
+theme "vscode_dark"

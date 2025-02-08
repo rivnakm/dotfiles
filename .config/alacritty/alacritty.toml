@@ -1,6 +1,6 @@
 [general]
 import = [
-  "~/.config/alacritty/modus_vivendi.toml"
+  "~/.config/alacritty/vscode_dark.toml"
 ]
 
 [window]

@@ -7,11 +7,19 @@
         {
             "name": "modus_operandi",
             "type": "Light"
+        },
+        {
+            "name": "vscode_dark",
+            "type": "Dark"
+        },
+        {
+            "name": "vscode_light",
+            "type": "Light"
         }
     ],
     "aliases": {
-        "dark": "modus_vivendi",
-        "light": "modus_operandi"
+        "dark": "vscode_dark",
+        "light": "vscode_light"
     },
     "programs": [
         {
