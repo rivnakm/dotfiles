@@ -1,9 +1,8 @@
 # Modus Themes for Yazi
 # Auto generated with https://github.com/miikanissi/modus-themes.nvim/blob/master/lua/modus-themes/extras/yazi.lua
 
-[manager]
-# NOTE: can combined with tmTheme (sublime colorshceme file) for preview code highlight
-# highlight = "path/to/tmTheme"
+[mgr]
+syntect_theme = "/home/michael/.config/bat/themes/modus_vivendi.tmTheme"
 
 cwd = { fg = "#00d3d0", italic = true }
 
@@ -36,9 +35,10 @@ border_symbol = "│"
 border_style  = { fg = "#C4C4C4" }
 
 [status]
-separator_open  = ""
-separator_close = ""
 separator_style = { fg = "#0f0f0f", bg = "#0f0f0f" }
+
+[indicator]
+padding = { open = "▐", close = "▌" }
 
 # Mode
 mode_normal = { fg = "#000000", bg = "#2fafff", bold = true }
@@ -132,4 +132,3 @@ rules = [
 	# Fallback
 	{ name = "*/", fg = "#2fafff" }
 ]
-    
