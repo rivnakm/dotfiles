@@ -1,0 +1,30 @@
+[core]
+	excludesFile = ~/.gitignore
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	side-by-side = true
+	dark = true
+	syntax-theme = modus_vivendi
+	minus-style = "syntax \"#4f1119\""
+	minus-non-emph-style = "syntax \"#380a0f\""
+	minus-emph-style = "syntax \"#781a1f\""
+	line-numbers-minus-style = "\"#ffbfbf\""
+	plus-style = "syntax \"#00381f\""
+	plus-non-emph-style = "syntax \"#002910\""
+	plus-emph-style = "syntax \"#034f2f\""
+	line-numbers-plus-style = "\"#a0e0a0\""
+	line-numbers-zero-style = "\"#989898\""
+[merge]
+	conflictStyle = zdiff3
+[user]
+	name = Mike Rivnak
+	email = rivnakm1@gmail.com
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

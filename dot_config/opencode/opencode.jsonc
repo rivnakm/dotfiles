@@ -1,0 +1,37 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/kimi-k2.5",
+  "small_model": "opencode/minimax-m2.5-free",
+  "plugin": [
+    "@tarquinen/opencode-dcp",
+    "opencode-plugin-openspec",
+    "opencode-vibeguard",
+    "opencode-wakatime",
+    "superpowers@git+https://github.com/obra/superpowers.git"
+  ],
+  "mcp": {
+    "serena": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "--from", "git+https://github.com/oraios/serena",
+        "serena", "start-mcp-server",
+        "--context", "ide",
+        "--project-from-cwd"
+      ]
+    }
+  },
+  "permission": {
+    "bash": {
+      "ansible-vault *": "deny"
+    },
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow",
+      ".become_password": "deny",
+      ".vault_password": "deny"
+    }
+  }
+}

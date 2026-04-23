@@ -1,0 +1,34 @@
+# Settings
+close_on_shild_death yes
+remember_window_size no
+{{- if eq .chezmoi.hostname "fedora-framework" }}
+initial_window_width 900
+initial_window_height 600
+{{- else }}
+initial_window_width 1280
+initial_window_height 800
+{{- end }}
+window_padding_width 0
+enable_audio_bell no
+shell /usr/bin/fish
+
+# Cursor
+cursor_trail 1
+
+# I don't plan to use tabs since I typically use zellij
+# So I'm removing all the default keybinds to avoid some conflicts
+clear_all_shortcuts yes
+
+# Basic keybinds
+map ctrl+shift+c copy_to_clipboard
+map ctrl+shift+v paste_from_clipboard
+
+# Theme
+include modus_vivendi.conf
+
+# BEGIN_KITTY_FONTS
+font_family      family="CaskaydiaMono Nerd Font Mono"
+bold_font        family="CaskaydiaMono Nerd Font Mono"
+italic_font      family="CaskaydiaMono Nerd Font Mono"
+bold_italic_font family="CaskaydiaMono Nerd Font Mono"
+# END_KITTY_FONTS
