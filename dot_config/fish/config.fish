@@ -152,6 +152,10 @@ if status is-interactive
         alias zed=zedit
     end
 
+    if command -q batcat
+        alias bat=batcat
+    end
+
     direnv hook fish | source
     starship init fish | source
     zoxide init fish | source
