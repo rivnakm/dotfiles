@@ -22,9 +22,16 @@
 [user]
 	name = Mike Rivnak
 	email = rivnakm1@gmail.com
+	signingKey = 42AA951DC50C16C00300223A07F5DF05A893938A
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true

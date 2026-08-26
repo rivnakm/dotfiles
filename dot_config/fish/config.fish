@@ -5,16 +5,29 @@ set fish_greeting
 fish_add_path "$HOME/.local/bin"
 set -x LANG "en_US.UTF-8"
 set -x TZ "America/New_York"
-set -x EDITOR "nvim"
 set -x TOOLBOX_SHELL (which fish)
 set -x GPG_TTY (tty)
 set -x MANPAGER "sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -lman'"
 set -x DOCKER_HOST "unix://$XDG_RUNTIME_DIR/podman/podman.sock"
 
+set -l zed_is_zedit (not command -q zed; and command -q zedit)
+
+# EDITOR
+if test "$ZED" = 1
+    # zed is `zedit` on Gentoo
+    if not command -q zed; and command -q zedit
+        set -x EDITOR "zedit --wait"
+    else
+        set -x EDITOR "zed --wait"
+    end
+else
+    set -x EDITOR "nvim"
+end
+
 # C/C++ environment
-set -x CC clang
-set -x CXX clang++
-set -x FC flang
+set -x CC gcc
+set -x CXX g++
+set -x FC gfortran
 set -x CMAKE_GENERATOR Ninja
 
 # Cargo environment
@@ -111,9 +124,13 @@ if status is-interactive
     alias j=just
     alias ya=yazi
     alias oc=opencode
-    alias code="code-insiders"
     alias chm=chezmoi
+    alias sudo="sudo-rs"
 
+    # jj
+    alias jst="jj status"
+
+    # git
     alias gs="git status"
     alias ga="git add"
     alias gc="git commit -m"
@@ -126,16 +143,20 @@ if status is-interactive
     alias ext="exercism test"
     alias exs="exercism submit"
 
-    alias dni="sudo dnf install"
-    alias dns="dnf search"
-
     alias ..="cd .."
     alias ...="cd ../.."
     alias ....="cd ../../.."
 
+    # zed is `zedit` on Gentoo
+    if not command -q zed; and command -q zedit
+        alias zed=zedit
+    end
+
+    direnv hook fish | source
     starship init fish | source
     zoxide init fish | source
-    direnv hook fish | source
 
     test -r '/home/michael/.opam/opam-init/init.fish' && source '/home/michael/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
+
+    fastfetch
 end

@@ -1,0 +1,19 @@
+IdentityFile ~/.ssh/id_ed25519
+
+Host codeberg.org
+    User git
+
+Host server
+    Hostname 192.168.68.55
+
+Host nuc
+    Hostname 192.168.68.61
+
+Host desktop
+    Hostname 192.168.68.65
+
+Host laptop
+    Hostname 192.168.68.71
+
+Host orangepi
+    Hostname 192.168.68.64

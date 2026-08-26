@@ -1,0 +1,87 @@
+# vim: ft=toml
+
+[window]
+{{- if eq .chezmoi.hostname "gentoo-framework" }}
+dimensions = { columns = 120, lines = 30 }
+{{- else }}
+dimensions = { columns = 128, lines = 36 }
+{{- end }}
+padding = { x = 4, y = 4 }
+dynamic_padding = false
+
+[scrolling]
+history = 10000
+
+[font]
+normal = { family = "IosevkaCustom Nerd Font Mono", style = "Regular" }
+bold = { family = "IosevkaCustom Nerd Font Mono", style = "Bold" }
+italic = { family = "IosevkaCustom Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "IosevkaCustom Nerd Font Mono", style = "Bold Italic" }
+size = 10.5
+
+[bell]
+duration = 0  # Disable audio bell
+
+[terminal]
+shell = "/usr/bin/fish"
+
+[cursor]
+style = { shape = "Block", blinking = "Off" }
+
+[colors]
+# Modus Vivendi theme
+[colors.primary]
+background = "#000000"
+foreground = "#ffffff"
+
+[colors.cursor]
+text = "#000000"
+cursor = "#ffffff"
+
+[colors.selection]
+text = "#ffffff"
+background = "#7030af"
+
+[colors.normal]
+black = "#000000"
+red = "#ff5f59"
+green = "#44bc44"
+yellow = "#d0bc00"
+blue = "#2fafff"
+magenta = "#feacd0"
+cyan = "#00d3d0"
+white = "#ffffff"
+
+[colors.bright]
+black = "#595959"
+red = "#ff5f5f"
+green = "#44df44"
+yellow = "#efef00"
+blue = "#338fff"
+magenta = "#ff66ff"
+cyan = "#00eff0"
+white = "#989898"
+
+# Extended palette colors (for full 256 color support)
+[[colors.indexed_colors]]
+index = 16
+color = "#fec43f"
+
+[[colors.indexed_colors]]
+index = 17
+color = "#ff9580"
+
+[mouse]
+hide_when_typing = true
+
+[keyboard]
+bindings = [
+  { key = "C", mods = "Control|Shift", action = "Copy" },
+  { key = "V", mods = "Control|Shift", action = "Paste" },
+  { key = "N", mods = "Control|Shift", action = "SpawnNewInstance" },
+  { key = "Q", mods = "Control|Shift", action = "Quit" },
+  { key = "F", mods = "Control|Shift", action = "ToggleFullscreen" },
+  { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
+  { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+  { key = "0", mods = "Control", action = "ResetFontSize" },
+]

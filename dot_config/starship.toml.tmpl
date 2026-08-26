@@ -12,13 +12,6 @@ success_symbol = "[>](bold green)"
 error_symbol = "[>](bold red)"
 vicmd_symbol = "[<](bold green)"
 
-[git_status]
-ahead = ">"
-behind = "<"
-diverged = "<>"
-renamed = "r"
-deleted = "x"
-
 [hostname]
 disabled = false
 ssh_symbol = "ssh:"
@@ -62,6 +55,24 @@ symbol = "ex "
 
 [git_branch]
 symbol = "git "
+disabled = true
+
+[git_commit]
+disabled = true
+
+[git_status]
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
+disabled = true
+
+[custom.jj]
+# disabled = true
+when = "jj-starship detect"
+shell = ["jj-starship", "--jj-symbol", "jj ", "--git-symbol", "git ", "--no-jj-status", "--no-git-status"]
+format = "$output "
 
 [gleam]
 symbol = "gleam "
@@ -79,7 +90,7 @@ symbol = "java "
 symbol = "lua "
 
 [custom.meson]
-command = "meson --version"
+command = "meson-version"
 detect_files = ["meson.build"]
 style = "bold #39207c"
 format = "via [meson v($output)]($style) "
@@ -92,7 +103,13 @@ symbol = "ocaml "
 
 [os]
 disabled = false
-style = "bold blue"
+{{ if eq .chezmoi.osRelease.id "fedora" }}
+style = "#51a2da"
+{{ else if eq .chezmoi.osRelease.id "gentoo" }}
+style = "#61538D"
+{{ else if eq .chezmoi.osRelease.id "debian" }}
+style = "#CE0056"
+{{ end }}
 
 [os.symbols]
 Arch = " "

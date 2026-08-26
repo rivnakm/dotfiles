@@ -1,0 +1,17 @@
+[aliases]
+init = ["git", "init"]
+push = ["git", "push"]
+
+[ui]
+pager = "delta"
+diff-formatter = ":git"
+default-command = "log"
+
+[user]
+name = "Mike Rivnak"
+email = "rivnakm1@gmail.com"
+
+[signing]
+behavior = "own"
+backend = "gpg"
+key = "42AA951DC50C16C00300223A07F5DF05A893938A"
