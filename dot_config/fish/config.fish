@@ -95,6 +95,16 @@ if status is-interactive
     set -g fish_pager_color_selected_background --background=$selection
 
     # Aliases
+    # zed is `zedit` on Gentoo
+    if not command -q zed; and command -q zedit
+        alias zed=zedit
+    end
+
+    # bat is `batcat` on Debian
+    if command -q batcat
+        alias bat=batcat
+    end
+
     alias ls="eza \
         --group \
         --long \
@@ -146,16 +156,6 @@ if status is-interactive
     alias ..="cd .."
     alias ...="cd ../.."
     alias ....="cd ../../.."
-
-    # zed is `zedit` on Gentoo
-    if not command -q zed; and command -q zedit
-        alias zed=zedit
-    end
-
-    # bat is `batcat` on Debian
-    if command -q batcat
-        alias bat=batcat
-    end
 
     direnv hook fish | source
     starship init fish | source
