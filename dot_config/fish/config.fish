@@ -54,7 +54,7 @@ test -r '/home/michael/.opam/opam-init/init.fish' && source '/home/michael/.opam
 
 # pnpm
 set -x PNPM_HOME "/home/michael/.local/share/pnpm"
-fish_add_path "$PNPM_HOME"
+fish_add_path "$PNPM_HOME/bin"
 
 # fzf.fish configuration
 set fzf_diff_highlighter delta --paging=never --width=20
@@ -152,6 +152,7 @@ if status is-interactive
         alias zed=zedit
     end
 
+    # bat is `batcat` on Debian
     if command -q batcat
         alias bat=batcat
     end
