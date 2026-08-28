@@ -3,12 +3,12 @@ set fish_greeting
 
 # zed is `zedit` on Gentoo
 if not command -q zed; and command -q zedit
-    set -l zed_is_zedit
+    set -l zed_is_zedit "1"
 end
 
 # bat is `batcat` on Debian
 if command -q batcat
-    set -l bat_is_batcat
+    set -l bat_is_batcat "1"
 end
 
 # Environment variables
@@ -174,3 +174,6 @@ if status is-interactive
 
     fastfetch
 end
+
+set -e zed_is_zedit
+set -e bat_is_batcat
