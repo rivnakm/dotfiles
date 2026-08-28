@@ -11,6 +11,11 @@ if command -q batcat
     set bat_is_batcat "1"
 end
 
+# fd is `fdfind` on Debian
+if command -q fdfind
+    set fd_is_fdfind "1"
+end
+
 # Environment variables
 fish_add_path "$HOME/.local/bin"
 set -x LANG "en_US.UTF-8"
@@ -114,6 +119,10 @@ if status is-interactive
         alias bat=batcat
     end
 
+    if test -n "$fd_is_fdfind"
+        alias fd=fdfind
+    end
+
     alias ls="eza \
         --group \
         --long \
@@ -177,3 +186,4 @@ end
 
 set -e zed_is_zedit
 set -e bat_is_batcat
+set -e fd_is_fdfind
