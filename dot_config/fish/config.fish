@@ -1,21 +1,33 @@
 # Fish configuration
 set fish_greeting
 
+# zed is `zedit` on Gentoo
+if not command -q zed; and command -q zedit
+    set -l zed_is_zedit
+end
+
+# bat is `batcat` on Debian
+if command -q batcat
+    set -l bat_is_batcat
+end
+
 # Environment variables
 fish_add_path "$HOME/.local/bin"
 set -x LANG "en_US.UTF-8"
 set -x TZ "America/New_York"
 set -x TOOLBOX_SHELL (which fish)
 set -x GPG_TTY (tty)
-set -x MANPAGER "sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -lman'"
 set -x DOCKER_HOST "unix://$XDG_RUNTIME_DIR/podman/podman.sock"
+if test -n "$bat_is_batcat"
+    set -x MANPAGER "sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | batcat -lman'"
+else
+    set -x MANPAGER "sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -lman'"
+end
 
-set -l zed_is_zedit (not command -q zed; and command -q zedit)
 
 # EDITOR
 if test "$ZED" = 1
-    # zed is `zedit` on Gentoo
-    if not command -q zed; and command -q zedit
+    if test -n "$zed_is_zedit"
         set -x EDITOR "zedit --wait"
     else
         set -x EDITOR "zed --wait"
@@ -94,14 +106,11 @@ if status is-interactive
     set -g fish_pager_color_description $comment
     set -g fish_pager_color_selected_background --background=$selection
 
-    # Aliases
-    # zed is `zedit` on Gentoo
-    if not command -q zed; and command -q zedit
+    if test -n "$zed_is_zedit"
         alias zed=zedit
     end
 
-    # bat is `batcat` on Debian
-    if command -q batcat
+    if test -n "$bat_is_batcat"
         alias bat=batcat
     end
 
