@@ -33,9 +33,9 @@ end
 # EDITOR
 if test "$ZED" = 1
     if test -n "$zed_is_zedit"
-        set -x EDITOR "zedit --wait"
+        set -x EDITOR "zedit --wait --existing"
     else
-        set -x EDITOR "zed --wait"
+        set -x EDITOR "zed --wait --existing"
     end
 else
     set -x EDITOR "nvim"
