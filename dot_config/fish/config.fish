@@ -157,6 +157,9 @@ if status is-interactive
 
     # jj
     alias jst="jj status"
+    alias jdsc="jj describe"
+    alias jn="jj new"
+    alias jpu="jj git push"
 
     # git
     alias gs="git status"
@@ -178,6 +181,7 @@ if status is-interactive
     direnv hook fish | source
     starship init fish | source
     zoxide init fish | source
+    zed --completions fish | source
 
     test -r '/home/michael/.opam/opam-init/init.fish' && source '/home/michael/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
 
