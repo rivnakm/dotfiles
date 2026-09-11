@@ -131,7 +131,8 @@ if status is-interactive
         --icons auto \
         --time-style long-iso \
         --header \
-        --smart-group"
+        --smart-group \
+        --mounts"
     alias l="ls --all"
     alias lr="ls --all --total-size"
 

@@ -105,7 +105,6 @@ hovered = { bg = "#646464" }
 footer  = { fg = "#ffffff", bg = "#0f0f0f" }
 
 [filetype]
-
 rules = [
 	# Images
 	{ mime = "image/*", fg = "#00d3d0" },
@@ -124,11 +123,9 @@ rules = [
 	# { mime = "inode/x-empty", fg = "#ff5f59" },
 
 	# Special files
-	{ name = "*", is = "orphan", bg = "#ff5f59" },
-	{ name = "*", is = "exec"  , fg = "#44bc44" },
-
-	{ name = "*.rs", fg = "#db7b5f" },
+	{ url = "*", is = "orphan", bg = "#ff5f59" },
+	{ url = "*", is = "exec"  , fg = "#44bc44" },
 
 	# Fallback
-	{ name = "*/", fg = "#2fafff" }
+	{ url = "*/", fg = "#2fafff" }
 ]

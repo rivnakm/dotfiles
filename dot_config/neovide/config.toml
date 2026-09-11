@@ -5,5 +5,5 @@ left = 3
 right = 3
 
 [font]
-normal = [{ family = "CaskaydiaMono Nerd Font Mono" }]
+normal = [{ family = "IosevkaCustom Nerd Font Mono" }]
 size = 12.0
