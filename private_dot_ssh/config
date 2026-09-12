@@ -17,3 +17,6 @@ Host laptop
 
 Host orangepi
     Hostname 192.168.68.64
+
+Host pidmg
+    Hostname 192.168.68.58
