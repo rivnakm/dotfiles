@@ -1,11 +1,6 @@
 # Fish configuration
 set fish_greeting
 
-# zed is `zedit` on Gentoo
-if not command -q zed; and command -q zedit
-    set zed_is_zedit "1"
-end
-
 # bat is `batcat` on Debian
 if command -q batcat
     set bat_is_batcat "1"
@@ -31,15 +26,7 @@ end
 
 
 # EDITOR
-if test "$ZED" = 1
-    if test -n "$zed_is_zedit"
-        set -x EDITOR "zedit --wait --existing"
-    else
-        set -x EDITOR "zed --wait --existing"
-    end
-else
-    set -x EDITOR "nvim"
-end
+set -x EDITOR "hx"
 
 # C/C++ environment
 set -x CC gcc
@@ -111,10 +98,6 @@ if status is-interactive
     set -g fish_pager_color_description $comment
     set -g fish_pager_color_selected_background --background=$selection
 
-    if test -n "$zed_is_zedit"
-        alias zed=zedit
-    end
-
     if test -n "$bat_is_batcat"
         alias bat=batcat
     end
@@ -136,7 +119,10 @@ if status is-interactive
     alias l="ls --all"
     alias lr="ls --all --total-size"
 
-    alias sudo="sudo-rs"
+    if command -q sudo-rs
+        alias sudo="sudo-rs"
+    end
+
     alias rf="rm -rf"
     alias ff=fastfetch
     alias projfetch="projfetch --max-width 80"
@@ -144,6 +130,7 @@ if status is-interactive
     alias of=onefetch
     alias nv=nvim
     alias snv="EDITOR=nvim sudo -e"
+    alias shx="EDITOR=hx sudo -e"
     alias na=ninja
     alias zj=zellij
     alias cat=bat
@@ -151,14 +138,12 @@ if status is-interactive
     alias diff=delta
     alias bw=bitwise
     alias j=just
-    alias ya=yazi
     alias oc=opencode
     alias chm=chezmoi
-    alias sudo="sudo-rs"
 
     # jj
     alias jst="jj status"
-    alias jdsc="jj describe"
+    alias jds="jj describe"
     alias jn="jj new"
     alias jpu="jj git push"
 
@@ -182,13 +167,11 @@ if status is-interactive
     direnv hook fish | source
     starship init fish | source
     zoxide init fish | source
-    zed --completions fish | source
 
     test -r '/home/michael/.opam/opam-init/init.fish' && source '/home/michael/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
 
     fastfetch
 end
 
-set -e zed_is_zedit
 set -e bat_is_batcat
 set -e fd_is_fdfind

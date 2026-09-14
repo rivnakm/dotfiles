@@ -1,9 +1,0 @@
-[padding]
-top = 3
-bottom = 3
-left = 3
-right = 3
-
-[font]
-normal = [{ family = "IosevkaCustom Nerd Font Mono" }]
-size = 12.0

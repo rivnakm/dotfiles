@@ -1,0 +1,26 @@
+theme = "modus_vivendi"
+
+[editor]
+bufferline = "multiple"
+end-of-line-diagnostics = "hint"
+scrolloff = 8
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.statusline]
+right = ["diagnostics", "file-type", "selections", "register", "position", "file-encoding"]
